@@ -1,0 +1,4 @@
+/home/francesco/ros_ws1/src/qb_interface/include/qb_force_control.h:4:25: fatal error: qbInterface.h: No such file or directory
+ #include <qbInterface.h>
+                         ^
+compilation terminated.

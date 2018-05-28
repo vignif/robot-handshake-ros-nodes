@@ -1,0 +1,8 @@
+prefix=/home/sirslab/ros_ws_handshake/devel
+
+Name: rosserial_mbed
+Description: Description of rosserial_mbed
+Version: 0.7.7
+Cflags: -I/home/sirslab/ros_ws_handshake/devel/include
+Libs: -L/home/sirslab/ros_ws_handshake/devel/lib 
+Requires: message_runtime
