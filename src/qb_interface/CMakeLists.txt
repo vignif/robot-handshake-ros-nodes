@@ -200,6 +200,9 @@ target_link_libraries(FSRtoClosure   ${catkin_LIBRARIES} )
 add_executable(OpenClose src/Open_close.cpp)
 target_link_libraries(OpenClose   ${catkin_LIBRARIES} )
 
+add_executable(hand_detect_closure src/hand_detect_closure.cpp)
+target_link_libraries(hand_detect_closure   ${catkin_LIBRARIES} )
+
 
 add_executable(FSR_current_control src/FSR_current_control.cpp)
 target_link_libraries(FSR_current_control   ${catkin_LIBRARIES} )
