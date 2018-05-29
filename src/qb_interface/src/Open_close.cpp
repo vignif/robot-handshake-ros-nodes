@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 // increasing k means execute more steps so for k=10. 1000/1100/1200 ...
 
     int k=10;
-    int upbound =15;
+    int upbound =19;
     for (int j =-upbound*k; j <= upbound*k ; j++){
     value=1000/k;
     state.closure.clear();
