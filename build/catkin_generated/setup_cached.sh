@@ -7,8 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CPATH="/home/sirslab/ros_ws/devel/include:/opt/ros/indigo/include"
-export LD_LIBRARY_PATH="/home/sirslab/ros_ws/devel/lib:/opt/ros/indigo/lib:/opt/ros/indigo/lib/x86_64-linux-gnu"
-export PKG_CONFIG_PATH="/home/sirslab/ros_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig"
-export PWD="/home/sirslab/ros_ws_handshake/build"
-export PYTHONPATH="/home/sirslab/ros_ws/devel/lib/python2.7/dist-packages:/opt/ros/indigo/lib/python2.7/dist-packages"
+export CPATH="/opt/ros/indigo/include"
+export LD_LIBRARY_PATH="/opt/ros/indigo/lib"
+export PKG_CONFIG_PATH="/opt/ros/indigo/lib/pkgconfig"
+export PWD="/home/francesco/ros_ws_handshake/build"
+export PYTHONPATH="/opt/ros/indigo/lib/python2.7/dist-packages"

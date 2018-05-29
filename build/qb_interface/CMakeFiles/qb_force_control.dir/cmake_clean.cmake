@@ -5,8 +5,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/qb_force_control.dir/src/qbHand.cpp.o"
   "CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.o"
   "CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.o"
-  "/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_force_control.pdb"
-  "/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_force_control"
+  "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_force_control.pdb"
+  "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_force_control"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,10 +1,16 @@
 #include <ros.h>
-#include <std_msgs/String.h>
+#include <qb_interface/handRef.h> //includi custom message in modo
+//che arduino invii direttamente a ros il valore closure.
+//path per includere libreria ~/Arduino/libraries/Rosserial_Arduino_Library/src/
+
+#include <std_msgs/Float32MultiArray.h>
 
 ros::NodeHandle nh;
+const int queue_size=0; //infinit queue can overload arduino memory if the not dequeued properly
+std_msgs::Float32MultiArray sensors;
+ros::Publisher chatter("sensors_FSR", &sensors, queue_size);
 
-std_msgs::String str_msg;
-ros::Publisher chatter("chatter", &str_msg);
+
 /******************************************************************************
   Force_Sensitive_Resistor_Example.ino
   Example sketch for SparkFun's force sensitive resistors
@@ -38,6 +44,9 @@ const float threshold=5;
 
 
 float ComputeForce(float fsrADC, float VCC){
+  // If the FSR has no pressure, the resistance will be
+  // near infinite. So the voltage should be near 0.
+  
     float force;
     float fsrV = fsrADC * VCC / 1023.0;
  // Use voltage and static resistor value to
@@ -61,12 +70,15 @@ return force;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(57600);
+  nh.getHardware()->setBaud(57600);
   pinMode(FSR_PIN, INPUT);
+  
   nh.initNode();
   nh.advertise(chatter);
-
-
+  sensors.data_length=6;
+  sensors.data = (float *)malloc(sizeof(float)*6);
+  float fsrADC[6];
 }
 
 void loop()
@@ -77,100 +89,61 @@ void loop()
   int fsrADC4 = analogRead(FSR_PIN4);
   int fsrADC5 = analogRead(FSR_PIN5);
   int fsrADC6 = analogRead(FSR_PIN6);
+  float force1, force2, force3, force4 ,force5, force6;
 
 
-  float force1;
-  float force2;
-  float force3;
-  float force4;
-  float force5;
-  float force6;
+//at each iteration forces are set to zero if lower the threshold 
+  force1 = force2 = force3 = force4 = force5 = force6 = 0;
 
-  // If the FSR has no pressure, the resistance will be
-  // near infinite. So the voltage should be near 0.
-  //Sensor 1
-  if (fsrADC > threshold) // If the analog reading is non-zero
-  {
-   force1 = ComputeForce(fsrADC, VCC);
-  }
-  else
-  {
-    // No pressure detected
-    force1 = 0;
-  }
-
+//threshold condition, values close to zero are set to zero
+  if (fsrADC > threshold)
+  force1 = ComputeForce(fsrADC, VCC);
+ 
   //sensor 2
-  if (fsrADC2 > threshold) // If the analog reading is non-zero
-  {
+  if (fsrADC2 > threshold)  
   force2 = ComputeForce(fsrADC2, VCC);
-  }
-  else
-  {
-    // No pressure detected
-    force2 = 0;
-  }
-
-
+  
   //sensor 3
-  if (fsrADC3 > threshold) // If the analog reading is non-zero
-  {
+  if (fsrADC3 > threshold) 
    force3 = ComputeForce(fsrADC3, VCC);
-  }
-  else
-  {
-    // No pressure detected
-    force3 = 0;
-  }
-
-
+ 
   //sensor 4
-  if (fsrADC4 > threshold) // If the analog reading is non-zero
-  {
-   force4 = ComputeForce(fsrADC4, VCC);
-  }
-  else
-  {
-    // No pressure detected
-    force4 = 0;
-  }
-
+  if (fsrADC4 > threshold) 
+   force4 = ComputeForce(fsrADC4, VCC);  
 
   //sensor 5
-  if (fsrADC5 > threshold) // If the analog reading is non-zero
-  {
- force5 = ComputeForce(fsrADC5, VCC);
-  }
-  else
-  {
-    // No pressure detected
-    force5 = 0;
-  }
-
+  if (fsrADC5 > threshold) 
+  force5 = ComputeForce(fsrADC5, VCC);
+ 
   //sensor 6
-  if (fsrADC6 > threshold) // If the analog reading is non-zero
-  {
-      force6 = ComputeForce(fsrADC6, VCC);
-  }
-  else
-  {
-    // No pressure detected
-  }
-//Serial.println(analogRead(FSR_PIN));
-//delay(200);
+  if (fsrADC6 > threshold) 
+  force6 = ComputeForce(fsrADC6, VCC);
 
-  // disp forces
+//assign force values to array for topic publish
+sensors.data[0]=force1;
+sensors.data[1]=force2;
+sensors.data[2]=force3;
+sensors.data[3]=force4;
+sensors.data[4]=force5;
+sensors.data[5]=force6;
+
+  //If a force is detected.
   if ((force1 != 0) || (force2 != 0) || (force3 != 0) || (force4 != 0) || (force5 != 0) || (force6 != 0)){
-    //Serial.println(String(force1) + ";" + String(force2) + ";" + String(force3) + ";" + String(force4) + ";" + String(force5) + ";" + String(force6));
-   
-    String message = String(force1) + ";" + String(force2) + ";" + String(force3) + ";" + String(force4) + ";" + String(force5) + ";" + String(force6);
-    str_msg.data = message.c_str();
-    chatter.publish( &str_msg );
-    nh.spinOnce();
+  //Serial.println(String(sensor_array[0]) + ";" + String(force2) + ";" + String(force3) + ";" + String(force4) + ";" + String(force5) + ";" + String(force6));
+  //String message = String(force1) + ";" + String(force2) + ";" + String(force3) + ";" + String(force4) + ";" + String(force5) + ";" + String(force6);
+  //str_msg.data = message.c_str();
+  //chatter.publish( &sensors );
+  //nh.spinOnce();
+  //delay(10);
   }
   else
   {
     //no forces detected
   }
-  //delay(500);
-}
 
+//always publish even if values are all zeros
+
+chatter.publish( &sensors );
+nh.spinOnce();
+delay(1); 
+}
