@@ -1,6 +1,6 @@
 #include <qb_force_control.h>
 #include "ros/ros.h"
-
+void OpenClose(qb_interface::handPos state, ros::Publisher pub);
 int main(int argc, char **argv)
 {
 
@@ -13,25 +13,31 @@ int main(int argc, char **argv)
 
 	while (ros::ok())
 	{
+    ros::spinOnce();
 
-    float value=0;
 
 
 // start step closure test
 // k stepfactor. for k=1 the closure will go at 1000 steps. 1000/2000/3000 .... 
 // increasing k means execute more steps so for k=10. 1000/1100/1200 ...
 
-    int k=10;
-    int upbound =19;
-    for (int j =-upbound*k; j <= upbound*k ; j++){
-    value=1000/k;
-    state.closure.clear();
-    state.closure.push_back(abs(value*j));
-    pub.publish(state);
-    usleep(20000);
-    }
-    
-     ros::spinOnce();
+    OpenClose(state,pub);
+
+
    
 }
+}
+
+void OpenClose(qb_interface::handPos state, ros::Publisher pub){
+	int k=10;
+	    int upbound =19;
+	    float value=0;
+	    for (int j =-upbound*k; j <= upbound*k ; j++){
+	    value=1000/k;
+	    state.closure.clear();
+	    state.closure.push_back(abs(value*j));
+	    pub.publish(state);
+	    usleep(20000);
+	    }
+
 }
