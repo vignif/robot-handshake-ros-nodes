@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 
     qb_interface::handPos state;
     cout << "[INFO] OpenClose node started" << endl;
-
+    
 	while (ros::ok())
 	{
     ros::spinOnce();

@@ -4,12 +4,12 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/main2.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.o"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/qbCube.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.o"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/qbHand.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.o"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.o"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/qb_force_control.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.o"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp" "/home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/main2.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_force_control.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.o"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp" "/home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,9 +26,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/francesco/ros_ws_handshake/devel/include"
+  "/home/sirslab/ros_ws_handshake/devel/include"
   "/opt/ros/indigo/include"
-  "/home/francesco/ros_ws_handshake/src/qb_interface/include"
+  "/home/sirslab/ros_ws_handshake/src/qb_interface/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

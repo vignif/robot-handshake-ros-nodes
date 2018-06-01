@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/francesco/ros_ws_handshake/build/CMakeFiles /home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/progress.marks
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/francesco/ros_ws_handshake/build/CMakeFiles 0
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/sirslab/ros_ws_handshake/build/CMakeFiles /home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/progress.marks
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sirslab/ros_ws_handshake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/clean
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/preinstall
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/preinstall
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 qb_interface/CMakeFiles/FSR_current_control.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSR_current_control.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSR_current_control.dir/rule
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/rule
 
 # fast build rule for target.
 FSR_current_control/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/build
 .PHONY : FSR_current_control/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/FSRtoClosure.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSRtoClosure.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSRtoClosure.dir/rule
 .PHONY : qb_interface/CMakeFiles/FSRtoClosure.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ FSRtoClosure: qb_interface/CMakeFiles/FSRtoClosure.dir/rule
 
 # fast build rule for target.
 FSRtoClosure/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/build
 .PHONY : FSRtoClosure/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/OpenClose.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/OpenClose.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/OpenClose.dir/rule
 .PHONY : qb_interface/CMakeFiles/OpenClose.dir/rule
 
 # Convenience name for target.
@@ -188,26 +188,12 @@ OpenClose: qb_interface/CMakeFiles/OpenClose.dir/rule
 
 # fast build rule for target.
 OpenClose/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/build
 .PHONY : OpenClose/fast
 
 # Convenience name for target.
-qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/build.make qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/rule
 
 # Convenience name for target.
@@ -216,12 +202,12 @@ _qb_interface_generate_messages_check_deps_cubeCurrent: qb_interface/CMakeFiles/
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_cubeCurrent/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_cubeCurrent/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/rule
 
 # Convenience name for target.
@@ -230,12 +216,12 @@ _qb_interface_generate_messages_check_deps_cubeEq_Preset: qb_interface/CMakeFile
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_cubeEq_Preset/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_cubeEq_Preset/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/rule
 
 # Convenience name for target.
@@ -244,12 +230,12 @@ _qb_interface_generate_messages_check_deps_cubePos: qb_interface/CMakeFiles/_qb_
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_cubePos/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_cubePos/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/rule
 
 # Convenience name for target.
@@ -258,12 +244,12 @@ _qb_interface_generate_messages_check_deps_cubeRef: qb_interface/CMakeFiles/_qb_
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_cubeRef/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_cubeRef/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/rule
 
 # Convenience name for target.
@@ -272,12 +258,12 @@ _qb_interface_generate_messages_check_deps_handCurrent: qb_interface/CMakeFiles/
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_handCurrent/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_handCurrent/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/rule
 
 # Convenience name for target.
@@ -286,12 +272,12 @@ _qb_interface_generate_messages_check_deps_handPos: qb_interface/CMakeFiles/_qb_
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_handPos/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_handPos/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/rule
 .PHONY : qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/rule
 
 # Convenience name for target.
@@ -300,12 +286,26 @@ _qb_interface_generate_messages_check_deps_handRef: qb_interface/CMakeFiles/_qb_
 
 # fast build rule for target.
 _qb_interface_generate_messages_check_deps_handRef/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_handRef/fast
 
 # Convenience name for target.
+qb_interface/CMakeFiles/hand_detect_closure.dir/rule:
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/hand_detect_closure.dir/rule
+.PHONY : qb_interface/CMakeFiles/hand_detect_closure.dir/rule
+
+# Convenience name for target.
+hand_detect_closure: qb_interface/CMakeFiles/hand_detect_closure.dir/rule
+.PHONY : hand_detect_closure
+
+# fast build rule for target.
+hand_detect_closure/fast:
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/build
+.PHONY : hand_detect_closure/fast
+
+# Convenience name for target.
 qb_interface/CMakeFiles/qb_force_control.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_force_control.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_force_control.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_force_control.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ qb_force_control: qb_interface/CMakeFiles/qb_force_control.dir/rule
 
 # fast build rule for target.
 qb_force_control/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/build
 .PHONY : qb_force_control/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/rule
 
 # Convenience name for target.
@@ -328,12 +328,12 @@ qb_interface: qb_interface/CMakeFiles/qb_interface.dir/rule
 
 # fast build rule for target.
 qb_interface/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/build
 .PHONY : qb_interface/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_gencpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_gencpp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_gencpp.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_gencpp.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ qb_interface_gencpp: qb_interface/CMakeFiles/qb_interface_gencpp.dir/rule
 
 # fast build rule for target.
 qb_interface_gencpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_gencpp.dir/build.make qb_interface/CMakeFiles/qb_interface_gencpp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_gencpp.dir/build.make qb_interface/CMakeFiles/qb_interface_gencpp.dir/build
 .PHONY : qb_interface_gencpp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_generate_messages.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -356,12 +356,12 @@ qb_interface_generate_messages: qb_interface/CMakeFiles/qb_interface_generate_me
 
 # fast build rule for target.
 qb_interface_generate_messages/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build
 .PHONY : qb_interface_generate_messages/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -370,12 +370,12 @@ qb_interface_generate_messages_cpp: qb_interface/CMakeFiles/qb_interface_generat
 
 # fast build rule for target.
 qb_interface_generate_messages_cpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build
 .PHONY : qb_interface_generate_messages_cpp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -384,12 +384,12 @@ qb_interface_generate_messages_lisp: qb_interface/CMakeFiles/qb_interface_genera
 
 # fast build rule for target.
 qb_interface_generate_messages_lisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build
 .PHONY : qb_interface_generate_messages_lisp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -398,12 +398,12 @@ qb_interface_generate_messages_py: qb_interface/CMakeFiles/qb_interface_generate
 
 # fast build rule for target.
 qb_interface_generate_messages_py/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build
 .PHONY : qb_interface_generate_messages_py/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_genlisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_genlisp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_genlisp.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_genlisp.dir/rule
 
 # Convenience name for target.
@@ -412,12 +412,12 @@ qb_interface_genlisp: qb_interface/CMakeFiles/qb_interface_genlisp.dir/rule
 
 # fast build rule for target.
 qb_interface_genlisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_genlisp.dir/build.make qb_interface/CMakeFiles/qb_interface_genlisp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_genlisp.dir/build.make qb_interface/CMakeFiles/qb_interface_genlisp.dir/build
 .PHONY : qb_interface_genlisp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/qb_interface_genpy.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_genpy.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/qb_interface_genpy.dir/rule
 .PHONY : qb_interface/CMakeFiles/qb_interface_genpy.dir/rule
 
 # Convenience name for target.
@@ -426,12 +426,12 @@ qb_interface_genpy: qb_interface/CMakeFiles/qb_interface_genpy.dir/rule
 
 # fast build rule for target.
 qb_interface_genpy/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_genpy.dir/build.make qb_interface/CMakeFiles/qb_interface_genpy.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface_genpy.dir/build.make qb_interface/CMakeFiles/qb_interface_genpy.dir/build
 .PHONY : qb_interface_genpy/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -440,12 +440,12 @@ roscpp_generate_messages_cpp: qb_interface/CMakeFiles/roscpp_generate_messages_c
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -454,12 +454,12 @@ roscpp_generate_messages_lisp: qb_interface/CMakeFiles/roscpp_generate_messages_
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -468,12 +468,12 @@ roscpp_generate_messages_py: qb_interface/CMakeFiles/roscpp_generate_messages_py
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/build.make qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -482,12 +482,12 @@ rosgraph_msgs_generate_messages_cpp: qb_interface/CMakeFiles/rosgraph_msgs_gener
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -496,12 +496,12 @@ rosgraph_msgs_generate_messages_lisp: qb_interface/CMakeFiles/rosgraph_msgs_gene
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -510,12 +510,12 @@ rosgraph_msgs_generate_messages_py: qb_interface/CMakeFiles/rosgraph_msgs_genera
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ std_msgs_generate_messages_cpp: qb_interface/CMakeFiles/std_msgs_generate_messag
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -538,12 +538,12 @@ std_msgs_generate_messages_lisp: qb_interface/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -552,7 +552,7 @@ std_msgs_generate_messages_py: qb_interface/CMakeFiles/std_msgs_generate_message
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 src/FSR_current_control.o: src/FSR_current_control.cpp.o
@@ -560,7 +560,7 @@ src/FSR_current_control.o: src/FSR_current_control.cpp.o
 
 # target to build an object file
 src/FSR_current_control.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o
 .PHONY : src/FSR_current_control.cpp.o
 
 src/FSR_current_control.i: src/FSR_current_control.cpp.i
@@ -568,7 +568,7 @@ src/FSR_current_control.i: src/FSR_current_control.cpp.i
 
 # target to preprocess a source file
 src/FSR_current_control.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i
 .PHONY : src/FSR_current_control.cpp.i
 
 src/FSR_current_control.s: src/FSR_current_control.cpp.s
@@ -576,7 +576,7 @@ src/FSR_current_control.s: src/FSR_current_control.cpp.s
 
 # target to generate assembly for a file
 src/FSR_current_control.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s
 .PHONY : src/FSR_current_control.cpp.s
 
 src/FSRtoClosure.o: src/FSRtoClosure.cpp.o
@@ -584,7 +584,7 @@ src/FSRtoClosure.o: src/FSRtoClosure.cpp.o
 
 # target to build an object file
 src/FSRtoClosure.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.o
 .PHONY : src/FSRtoClosure.cpp.o
 
 src/FSRtoClosure.i: src/FSRtoClosure.cpp.i
@@ -592,7 +592,7 @@ src/FSRtoClosure.i: src/FSRtoClosure.cpp.i
 
 # target to preprocess a source file
 src/FSRtoClosure.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.i
 .PHONY : src/FSRtoClosure.cpp.i
 
 src/FSRtoClosure.s: src/FSRtoClosure.cpp.s
@@ -600,7 +600,7 @@ src/FSRtoClosure.s: src/FSRtoClosure.cpp.s
 
 # target to generate assembly for a file
 src/FSRtoClosure.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.s
 .PHONY : src/FSRtoClosure.cpp.s
 
 src/Open_close.o: src/Open_close.cpp.o
@@ -608,7 +608,7 @@ src/Open_close.o: src/Open_close.cpp.o
 
 # target to build an object file
 src/Open_close.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.o
 .PHONY : src/Open_close.cpp.o
 
 src/Open_close.i: src/Open_close.cpp.i
@@ -616,7 +616,7 @@ src/Open_close.i: src/Open_close.cpp.i
 
 # target to preprocess a source file
 src/Open_close.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.i
 .PHONY : src/Open_close.cpp.i
 
 src/Open_close.s: src/Open_close.cpp.s
@@ -624,15 +624,39 @@ src/Open_close.s: src/Open_close.cpp.s
 
 # target to generate assembly for a file
 src/Open_close.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.s
 .PHONY : src/Open_close.cpp.s
+
+src/hand_detect_closure.o: src/hand_detect_closure.cpp.o
+.PHONY : src/hand_detect_closure.o
+
+# target to build an object file
+src/hand_detect_closure.cpp.o:
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/src/hand_detect_closure.cpp.o
+.PHONY : src/hand_detect_closure.cpp.o
+
+src/hand_detect_closure.i: src/hand_detect_closure.cpp.i
+.PHONY : src/hand_detect_closure.i
+
+# target to preprocess a source file
+src/hand_detect_closure.cpp.i:
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/src/hand_detect_closure.cpp.i
+.PHONY : src/hand_detect_closure.cpp.i
+
+src/hand_detect_closure.s: src/hand_detect_closure.cpp.s
+.PHONY : src/hand_detect_closure.s
+
+# target to generate assembly for a file
+src/hand_detect_closure.cpp.s:
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/src/hand_detect_closure.cpp.s
+.PHONY : src/hand_detect_closure.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -640,7 +664,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -648,7 +672,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/main2.o: src/main2.cpp.o
@@ -656,7 +680,7 @@ src/main2.o: src/main2.cpp.o
 
 # target to build an object file
 src/main2.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.o
 .PHONY : src/main2.cpp.o
 
 src/main2.i: src/main2.cpp.i
@@ -664,7 +688,7 @@ src/main2.i: src/main2.cpp.i
 
 # target to preprocess a source file
 src/main2.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.i
 .PHONY : src/main2.cpp.i
 
 src/main2.s: src/main2.cpp.s
@@ -672,7 +696,7 @@ src/main2.s: src/main2.cpp.s
 
 # target to generate assembly for a file
 src/main2.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/main2.cpp.s
 .PHONY : src/main2.cpp.s
 
 src/qbCube.o: src/qbCube.cpp.o
@@ -680,8 +704,8 @@ src/qbCube.o: src/qbCube.cpp.o
 
 # target to build an object file
 src/qbCube.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.o
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o
 .PHONY : src/qbCube.cpp.o
 
 src/qbCube.i: src/qbCube.cpp.i
@@ -689,8 +713,8 @@ src/qbCube.i: src/qbCube.cpp.i
 
 # target to preprocess a source file
 src/qbCube.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.i
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.i
 .PHONY : src/qbCube.cpp.i
 
 src/qbCube.s: src/qbCube.cpp.s
@@ -698,8 +722,8 @@ src/qbCube.s: src/qbCube.cpp.s
 
 # target to generate assembly for a file
 src/qbCube.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.s
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbCube.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.s
 .PHONY : src/qbCube.cpp.s
 
 src/qbHand.o: src/qbHand.cpp.o
@@ -707,8 +731,8 @@ src/qbHand.o: src/qbHand.cpp.o
 
 # target to build an object file
 src/qbHand.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.o
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o
 .PHONY : src/qbHand.cpp.o
 
 src/qbHand.i: src/qbHand.cpp.i
@@ -716,8 +740,8 @@ src/qbHand.i: src/qbHand.cpp.i
 
 # target to preprocess a source file
 src/qbHand.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.i
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.i
 .PHONY : src/qbHand.cpp.i
 
 src/qbHand.s: src/qbHand.cpp.s
@@ -725,8 +749,8 @@ src/qbHand.s: src/qbHand.cpp.s
 
 # target to generate assembly for a file
 src/qbHand.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.s
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbHand.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.s
 .PHONY : src/qbHand.cpp.s
 
 src/qbInterface.o: src/qbInterface.cpp.o
@@ -734,8 +758,8 @@ src/qbInterface.o: src/qbInterface.cpp.o
 
 # target to build an object file
 src/qbInterface.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.o
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o
 .PHONY : src/qbInterface.cpp.o
 
 src/qbInterface.i: src/qbInterface.cpp.i
@@ -743,8 +767,8 @@ src/qbInterface.i: src/qbInterface.cpp.i
 
 # target to preprocess a source file
 src/qbInterface.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.i
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i
 .PHONY : src/qbInterface.cpp.i
 
 src/qbInterface.s: src/qbInterface.cpp.s
@@ -752,8 +776,8 @@ src/qbInterface.s: src/qbInterface.cpp.s
 
 # target to generate assembly for a file
 src/qbInterface.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.s
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbInterface.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s
 .PHONY : src/qbInterface.cpp.s
 
 src/qb_class.o: src/qb_class.cpp.o
@@ -761,7 +785,7 @@ src/qb_class.o: src/qb_class.cpp.o
 
 # target to build an object file
 src/qb_class.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o
 .PHONY : src/qb_class.cpp.o
 
 src/qb_class.i: src/qb_class.cpp.i
@@ -769,7 +793,7 @@ src/qb_class.i: src/qb_class.cpp.i
 
 # target to preprocess a source file
 src/qb_class.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.i
 .PHONY : src/qb_class.cpp.i
 
 src/qb_class.s: src/qb_class.cpp.s
@@ -777,7 +801,7 @@ src/qb_class.s: src/qb_class.cpp.s
 
 # target to generate assembly for a file
 src/qb_class.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.s
 .PHONY : src/qb_class.cpp.s
 
 src/qb_force_control.o: src/qb_force_control.cpp.o
@@ -785,7 +809,7 @@ src/qb_force_control.o: src/qb_force_control.cpp.o
 
 # target to build an object file
 src/qb_force_control.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.o
 .PHONY : src/qb_force_control.cpp.o
 
 src/qb_force_control.i: src/qb_force_control.cpp.i
@@ -793,7 +817,7 @@ src/qb_force_control.i: src/qb_force_control.cpp.i
 
 # target to preprocess a source file
 src/qb_force_control.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.i
 .PHONY : src/qb_force_control.cpp.i
 
 src/qb_force_control.s: src/qb_force_control.cpp.s
@@ -801,7 +825,7 @@ src/qb_force_control.s: src/qb_force_control.cpp.s
 
 # target to generate assembly for a file
 src/qb_force_control.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qb_force_control.cpp.s
 .PHONY : src/qb_force_control.cpp.s
 
 src/qbmove_communications.o: src/qbmove_communications.cpp.o
@@ -809,8 +833,8 @@ src/qbmove_communications.o: src/qbmove_communications.cpp.o
 
 # target to build an object file
 src/qbmove_communications.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.o
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.o
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o
 .PHONY : src/qbmove_communications.cpp.o
 
 src/qbmove_communications.i: src/qbmove_communications.cpp.i
@@ -818,8 +842,8 @@ src/qbmove_communications.i: src/qbmove_communications.cpp.i
 
 # target to preprocess a source file
 src/qbmove_communications.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.i
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.i
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i
 .PHONY : src/qbmove_communications.cpp.i
 
 src/qbmove_communications.s: src/qbmove_communications.cpp.s
@@ -827,8 +851,8 @@ src/qbmove_communications.s: src/qbmove_communications.cpp.s
 
 # target to generate assembly for a file
 src/qbmove_communications.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.s
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/src/qbmove_communications.cpp.s
+	cd /home/sirslab/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s
 .PHONY : src/qbmove_communications.cpp.s
 
 # Help Target
@@ -840,7 +864,6 @@ help:
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... _qb_interface_generate_messages_check_deps_cubeCurrent"
 	@echo "... _qb_interface_generate_messages_check_deps_cubeEq_Preset"
 	@echo "... _qb_interface_generate_messages_check_deps_cubePos"
@@ -849,6 +872,7 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
 	@echo "... edit_cache"
+	@echo "... hand_detect_closure"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -882,6 +906,9 @@ help:
 	@echo "... src/Open_close.o"
 	@echo "... src/Open_close.i"
 	@echo "... src/Open_close.s"
+	@echo "... src/hand_detect_closure.o"
+	@echo "... src/hand_detect_closure.i"
+	@echo "... src/hand_detect_closure.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -917,6 +944,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

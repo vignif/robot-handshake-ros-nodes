@@ -35,88 +35,88 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
 
 # Utility rule file for qb_interface_generate_messages_py.
 
 # Include the progress variables for this target.
 include qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/progress.make
 
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
-qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
+qb_interface/CMakeFiles/qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py
 
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubePos.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubePos"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubePos.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
-
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/handCurrent.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/handCurrent"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/handCurrent.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
-
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/handRef.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/handRef"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/handRef.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
-
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/handPos.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handPos.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/handPos"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/handPos.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handPos.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
 
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeCurrent.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubeCurrent"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeCurrent.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handRef.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/handRef"
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handRef.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
 
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeEq_Preset.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubeEq_Preset"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeEq_Preset.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handCurrent.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/handCurrent"
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/handCurrent.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
 
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py: /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeRef.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_7)
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubePos.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubePos"
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubePos.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeRef.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubeRef"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeRef.msg -Iqb_interface:/home/francesco/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeRef.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
 
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
-/home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_8)
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeEq_Preset.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubeEq_Preset"
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeEq_Preset.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py: /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeCurrent.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG qb_interface/cubeCurrent"
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sirslab/ros_ws_handshake/src/qb_interface/msg/cubeCurrent.msg -Iqb_interface:/home/sirslab/ros_ws_handshake/src/qb_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p qb_interface -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg
+
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
+/home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for qb_interface"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /home/francesco/anaconda2/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg --initpy
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg --initpy
 
 qb_interface_generate_messages_py: qb_interface/CMakeFiles/qb_interface_generate_messages_py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
-qb_interface_generate_messages_py: /home/francesco/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handPos.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handRef.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_handCurrent.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubePos.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeRef.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeEq_Preset.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/_cubeCurrent.py
+qb_interface_generate_messages_py: /home/sirslab/ros_ws_handshake/devel/lib/python2.7/dist-packages/qb_interface/msg/__init__.py
 qb_interface_generate_messages_py: qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build.make
 .PHONY : qb_interface_generate_messages_py
 
@@ -125,10 +125,10 @@ qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build: qb_interfac
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build
 
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/clean:
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/qb_interface_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/qb_interface_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/clean
 
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/depend:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src/qb_interface /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/qb_interface /home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src/qb_interface /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/qb_interface /home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/depend
 

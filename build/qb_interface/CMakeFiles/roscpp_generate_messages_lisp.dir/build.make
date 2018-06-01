@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
 
 # Utility rule file for roscpp_generate_messages_lisp.
 
@@ -56,10 +56,10 @@ qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build: roscpp_generate
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 
 qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/depend:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src/qb_interface /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/qb_interface /home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src/qb_interface /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/qb_interface /home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 

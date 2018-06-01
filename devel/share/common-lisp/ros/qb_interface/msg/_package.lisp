@@ -1,19 +1,19 @@
 (cl:defpackage qb_interface-msg
   (:use )
   (:export
-   "<HANDPOS>"
-   "HANDPOS"
+   "<CUBEEQ_PRESET>"
+   "CUBEEQ_PRESET"
+   "<CUBECURRENT>"
+   "CUBECURRENT"
    "<CUBEPOS>"
    "CUBEPOS"
    "<CUBEREF>"
    "CUBEREF"
-   "<CUBECURRENT>"
-   "CUBECURRENT"
-   "<CUBEEQ_PRESET>"
-   "CUBEEQ_PRESET"
-   "<HANDCURRENT>"
-   "HANDCURRENT"
    "<HANDREF>"
    "HANDREF"
+   "<HANDPOS>"
+   "HANDPOS"
+   "<HANDCURRENT>"
+   "HANDCURRENT"
   ))
 

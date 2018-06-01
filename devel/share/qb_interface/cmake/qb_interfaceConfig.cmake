@@ -67,14 +67,14 @@ set(qb_interface_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(qb_interface_SOURCE_PREFIX /home/francesco/ros_ws_handshake/src/qb_interface)
-  set(qb_interface_DEVEL_PREFIX /home/francesco/ros_ws_handshake/devel)
+  set(qb_interface_SOURCE_PREFIX /home/sirslab/ros_ws_handshake/src/qb_interface)
+  set(qb_interface_DEVEL_PREFIX /home/sirslab/ros_ws_handshake/devel)
   set(qb_interface_INSTALL_PREFIX "")
   set(qb_interface_PREFIX ${qb_interface_DEVEL_PREFIX})
 else()
   set(qb_interface_SOURCE_PREFIX "")
   set(qb_interface_DEVEL_PREFIX "")
-  set(qb_interface_INSTALL_PREFIX /home/francesco/ros_ws_handshake/install)
+  set(qb_interface_INSTALL_PREFIX /home/sirslab/ros_ws_handshake/install)
   set(qb_interface_PREFIX ${qb_interface_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(qb_interface_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/francesco/ros_ws_handshake/devel/include;/home/francesco/ros_ws_handshake/src/qb_interface/include " STREQUAL " ")
+if(NOT "/home/sirslab/ros_ws_handshake/devel/include;/home/sirslab/ros_ws_handshake/src/qb_interface/include " STREQUAL " ")
   set(qb_interface_INCLUDE_DIRS "")
-  set(_include_dirs "/home/francesco/ros_ws_handshake/devel/include;/home/francesco/ros_ws_handshake/src/qb_interface/include")
+  set(_include_dirs "/home/sirslab/ros_ws_handshake/devel/include;/home/sirslab/ros_ws_handshake/src/qb_interface/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/francesco/ros_ws_handshake/devel/include;/home/francesco/ros_ws_ha
         message(FATAL_ERROR "Project 'qb_interface' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Alessandro Raugi <alessandro.raugi@qbrobotics.com>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'qb_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/francesco/ros_ws_handshake/src/qb_interface/${idir}'.  Ask the maintainer 'Alessandro Raugi <alessandro.raugi@qbrobotics.com>' to fix it.")
+      message(FATAL_ERROR "Project 'qb_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sirslab/ros_ws_handshake/src/qb_interface/${idir}'.  Ask the maintainer 'Alessandro Raugi <alessandro.raugi@qbrobotics.com>' to fix it.")
     endif()
     _list_append_unique(qb_interface_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/francesco/ros_ws_handshake/devel/lib;/home/francesco/ros_ws_handshake/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/sirslab/ros_ws_handshake/devel/lib;/home/sirslab/ros_ws_handshake/devel/lib;/home/sirslab/ros_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

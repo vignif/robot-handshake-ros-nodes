@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
 
 # Utility rule file for clean_test_results.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/home/francesco/anaconda2/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/francesco/ros_ws_handshake/build/test_results
+	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/sirslab/ros_ws_handshake/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

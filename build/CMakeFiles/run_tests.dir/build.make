@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
 
 # Utility rule file for run_tests.
 
@@ -60,6 +60,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

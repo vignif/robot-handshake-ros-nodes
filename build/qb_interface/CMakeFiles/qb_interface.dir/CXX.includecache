@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/cubeCurrent.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/cubeCurrent.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/cubeEq_Preset.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/cubeEq_Preset.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/cubePos.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/cubePos.h
 string
 -
 vector
@@ -54,7 +54,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/cubeRef.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/cubeRef.h
 string
 -
 vector
@@ -70,7 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/handCurrent.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/handCurrent.h
 string
 -
 vector
@@ -86,7 +86,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/handPos.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/handPos.h
 string
 -
 vector
@@ -102,7 +102,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/devel/include/qb_interface/handRef.h
+/home/sirslab/ros_ws_handshake/devel/include/qb_interface/handRef.h
 string
 -
 vector
@@ -118,23 +118,23 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/commands.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/commands.h
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/definitions.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/definitions.h
 math.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbCube.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbCube.h
 iostream
 -
 qbInterface.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbInterface.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbInterface.h
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbHand.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbHand.h
 qbInterface.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbInterface.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbInterface.h
 string.h
 -
 iostream
@@ -144,13 +144,13 @@ math.h
 unistd.h
 -
 qbmove_communications.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
 definitions.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/definitions.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/definitions.h
 ../src/qbInterface.tpp
-/home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qb_class.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qb_class.h
 ros/ros.h
 -
 ros/console.h
@@ -178,35 +178,93 @@ map
 iostream
 -
 qbCube.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbCube.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbCube.h
 qbHand.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbHand.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbHand.h
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
 windows.h
 -
 termios.h
 -
 commands.h
-/home/francesco/ros_ws_handshake/src/qb_interface/include/commands.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/commands.h
 stdint.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/include/sensors.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/include/sensors.h
 std_msgs/Float32MultiArray.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/src/main.cpp
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/main.cpp
 qb_class.h
-/home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.h
 sensors.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp
+qbCube.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.h
 
-/home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp
+qbHand.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.h
+
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp
+iostream
+-
+qbInterface.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.h
+
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
+
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
 qb_class.h
-/home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.h
+
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp
+stdio.h
+-
+string.h
+-
+stdint.h
+-
+ctype.h
+-
+time.h
+-
+windows.h
+-
+unistd.h
+-
+fcntl.h
+-
+errno.h
+-
+termios.h
+-
+sys/ioctl.h
+-
+dirent.h
+-
+sys/time.h
+-
+stdlib.h
+-
+linux/serial.h
+-
+IOKit/IOKitLib.h
+-
+IOKit/serial/IOSerialKeys.h
+-
+IOKit/serial/ioss.h
+-
+IOKit/IOBSD.h
+-
+qbmove_communications.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.h
+commands.h
+/home/sirslab/ros_ws_handshake/src/qb_interface/src/commands.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

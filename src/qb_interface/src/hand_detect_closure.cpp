@@ -112,8 +112,8 @@ void control_FSR(float last_closure, ros::NodeHandle n){
     }
     value=value*3.4;
     //printf("\n");
-    stiff=(0.8/(limit-last_closure))*(value-last_closure)+0.1;
-    n.setParam("/stiffness",stiff);
+   // stiff=(0.8/(limit-last_closure))*(value-last_closure)+0.1;
+    //n.setParam("/stiffness",stiff);
     if( value > limit){
         value = limit;
     }

@@ -37,7 +37,7 @@ while (ros::ok())
         //printf("%f, ", Arr[j]);
         value+=Arr[j];
     }
-    value=value*1.9;
+    value=value*3.4;
     //printf("\n");
     if( value > limit){
         value = limit;
