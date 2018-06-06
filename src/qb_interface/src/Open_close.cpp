@@ -1,5 +1,7 @@
 #include <qb_force_control.h>
 #include "ros/ros.h"
+
+
 void OpenClose(qb_interface::handPos state, ros::Publisher pub);
 int main(int argc, char **argv)
 {
