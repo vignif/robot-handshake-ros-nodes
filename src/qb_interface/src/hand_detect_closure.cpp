@@ -8,33 +8,27 @@
 #include "ros/ros.h"
 #include <std_msgs/Float32MultiArray.h>
 #include <std_msgs/String.h>
-
-#include <boost/statechart/state_machine.hpp>
-#include <boost/statechart/simple_state.hpp>
-#include <boost/statechart/transition.hpp>
+#include <std_msgs/Int32.h>
 
 float Arr[6];
 float sensors_threshold=10;
 bool hand_detected=false;
 float value=0;
-char *t;
 
-enum class MachineState: char{
+/*
 	start =0,
 	handshake =1,
 	stop=2
-};
+*/
 
 class Listener{
     public:
-        char *cmd;
-        void toggle(const std_msgs::String::ConstPtr& str);
+        int cmd;
+        void toggle(const std_msgs::Int32::ConstPtr str);
 };
 
-void Listener::toggle(const std_msgs::String::ConstPtr& str){
-	 ROS_INFO("I heard: %s", str->data.c_str());
-	  cmd= (char *)str->data.c_str();
-	 //t=(char )str->data.c_str();
+void Listener::toggle(const std_msgs::Int32::ConstPtr str){
+	cmd = str->data;// variable cmd now has value from topic
 }
 
 void OpenClose(qb_interface::handPos state, ros::Publisher pub, bool hand_detected);
@@ -46,8 +40,7 @@ void update_hand_status();
 
 int main(int argc, char **argv)
 {
-	MachineState s;
-	s=static_cast<MachineState> ("start");
+
 	ros::init(argc, argv, "hand_detect_closure");
 
 	Listener listen;
@@ -61,25 +54,27 @@ int main(int argc, char **argv)
 	int iterations=0;
 
 	while (ros::ok()){
-		s=static_cast<MachineState> (*listen.cmd);
-		switch(s){
 
-		case 'start':
+		cout << listen.cmd << endl;
+		/*
+		switch(listen.cmd){
+
+		case 0: //start
 			cout << "im in start state, ready to hand shake, waiting for toggle" << endl;
-			if(strcmp(listen.cmd,"handshake")) s=handshake;
+			if(listen.cmd==1) listen.cmd=1;
 			break;
 
-		case handshake:
+		case 1: //handshake
 			cout << "im in handshake state" << endl;
-			if(strcmp(listen.cmd,"stop")) s=stop;
+			if(listen.cmd==2) listen.cmd=2;
 			break;
 
-		case stop:
+		case 2: //stop
 			cout << "im in stop state" << endl;
-			if(strcmp(listen.cmd,"start")) s=start;
+			if(listen.cmd==0) listen.cmd=0;
 			break;
 		}
-
+*/
 
 		int k=10;	//fraction rate
 		int UB =17; //valore massimo di chiusura
