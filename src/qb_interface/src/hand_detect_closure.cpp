@@ -9,22 +9,19 @@
 #include <std_msgs/Float32MultiArray.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Int32.h>
+#include <functions.h>
 
-float Arr[6];
-float sensors_threshold=10;
-bool hand_detected=false;
-float value=0;
 
 /*
 	start =0,
 	handshake =1,
 	stop=2
-*/
+ */
 
 class Listener{
-    public:
-        int cmd;
-        void toggle(const std_msgs::Int32::ConstPtr str);
+public:
+	int cmd;
+	void toggle(const std_msgs::Int32::ConstPtr str);
 };
 
 void Listener::toggle(const std_msgs::Int32::ConstPtr str){
@@ -32,9 +29,7 @@ void Listener::toggle(const std_msgs::Int32::ConstPtr str){
 }
 
 void OpenClose(qb_interface::handPos state, ros::Publisher pub, bool hand_detected);
-void arrayCallback(const std_msgs::Float32MultiArray::ConstPtr& array);
-void control_FSR(float last_closure, ros::NodeHandle n);
-void update_hand_status();
+void control_FSR(ros::NodeHandle n);
 
 
 
@@ -45,7 +40,7 @@ int main(int argc, char **argv)
 
 	Listener listen;
 	ros::NodeHandle n;
-	ros::Subscriber sub = n.subscribe("sensors_FSR", 100, arrayCallback);
+	ros::Subscriber sub = n.subscribe("sensors_FSR", 100, arrayCallback_sensors);
 	ros::Publisher pub = n.advertise<qb_interface::handRef>("/qb_class/hand_ref", 100);
 	ros::Subscriber tog = n.subscribe("start_stop", 100, &Listener::toggle, &listen);
 	qb_interface::handPos state;
@@ -54,45 +49,25 @@ int main(int argc, char **argv)
 	int iterations=0;
 
 	while (ros::ok()){
-
-		cout << listen.cmd << endl;
-		/*
 		switch(listen.cmd){
 
 		case 0: //start
-			cout << "im in start state, ready to hand shake, waiting for toggle" << endl;
-			if(listen.cmd==1) listen.cmd=1;
+			cout << "OFF - waiting for toggle" << endl;
 			break;
-
 		case 1: //handshake
-			cout << "im in handshake state" << endl;
-			if(listen.cmd==2) listen.cmd=2;
-			break;
-
-		case 2: //stop
-			cout << "im in stop state" << endl;
-			if(listen.cmd==0) listen.cmd=0;
+			cout << "ON - im in handshake state" << endl;
+			control_FSR(n);
 			break;
 		}
-*/
 
-		int k=10;	//fraction rate
-		int UB =17; //valore massimo di chiusura
-		int LB =0;  //valore minimo di chiusura
-		float closure=0;
-		float last_closure;
-	//	update_hand_status();			//update hand_detected
+
+
+		update_hand_status();			//update hand_detected
 		//openclose hand
-/*
+		/*
 		for (int j =LB*k; j <= UB*k ; j++){ //contatore valore di chiusura mano
 			if(hand_detected==0){
-				value=1000/k;
-				closure=abs(value*j);
-				state.closure.push_back(closure);
 
-				//		cout << "hand detected: " <<hand_detected << endl;
-				//				cout<< "sens: " << Arr[0] << endl;
-				last_closure=closure;
 				//n.setParam("/stiffness",0.2); //publish parameter to ros
 			}else{
 				//n.setParam("/stiffness",0.5); //publish parameter to ros
@@ -106,7 +81,7 @@ int main(int argc, char **argv)
 
 			state.closure.clear();
 		}
-		*/
+		 */
 		usleep(200000);
 		ros::spinOnce();
 		//OpenClose(state, pub, hand_detected);
@@ -117,8 +92,8 @@ int main(int argc, char **argv)
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		//pub.publish(state);
 		//usleep(10000);  //dynamic usleeps takes microseconds in input
-		iterations+=1;
-		cout <<"iterations: " << iterations << endl;
+		//iterations+=1;
+		//cout <<"iterations: " << iterations << endl;
 
 		//cout <<  << endl;
 	}	//end while(ros::ok)
@@ -126,24 +101,24 @@ int main(int argc, char **argv)
 }		//end main
 
 
-void OpenClose(qb_interface::handPos state, ros::Publisher pub, bool hand_detected){
-
-}
-
-
-void arrayCallback(const std_msgs::Float32MultiArray::ConstPtr& array)
-{
-	int i = 0;
-	// print all the remaining numbers
-	for(std::vector<float>::const_iterator it = array->data.begin(); it != array->data.end(); ++it)
-	{
-		Arr[i] = *it;
-		i++;
+void OpenClose(qb_interface::handPos state, ros::Publisher pub){
+	int k=10;	//fraction rate
+	int UB =17; //valore massimo di chiusura
+	int LB =0;  //valore minimo di chiusura
+	float last_closure;
+	float closure=0;
+	for (int j =LB*k; j <= UB*k ; j++){
+		value=1000/k;
+		closure=abs(value*j);
+		state.closure.push_back(closure);
+		last_closure=closure;
 	}
 }
 
 
-void control_FSR(float last_closure, ros::NodeHandle n){
+
+
+void control_FSR(ros::NodeHandle n){
 	float stiff;
 	n.getParam("/stiffness", stiff);
 	value=0;
@@ -159,22 +134,9 @@ void control_FSR(float last_closure, ros::NodeHandle n){
 	if( value > limit){
 		value = limit;
 	}
-	if(value < last_closure){
-		value = last_closure;
-	}
 }
 
 
-void update_hand_status(){
-	if( Arr[0]<sensors_threshold && Arr[1]<sensors_threshold){
-		ROS_DEBUG_STREAM("hand_NOT_detected");
-		hand_detected=false;
-	}else{
-		ROS_DEBUG_STREAM("hand_detected");
-		//n.setParam("/stiffness",0.2); //publish parameter to ros
-		hand_detected=true;
-	}
-}
 
 
 
