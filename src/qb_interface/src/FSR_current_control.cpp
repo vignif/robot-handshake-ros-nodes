@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 		media.data = 0;
 
 		ros::spinOnce();
-		value = scale_closure(value, 3.4);
+		value = scale_closure(value, 3.4, 0, 5);
 
 		//compute average of last [history_window] element in the vector from current
 		media = historyAvg(listen.current, history_window);

@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 		ros::spinOnce();
 		state.closure.clear();
 
-		value = scale_closure(value, 3.4);
+		value = scale_closure(value, 3.4, 0 , 5);
 		state.closure.push_back((int)value); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);

@@ -1,6 +1,6 @@
 #include <std_msgs/Float32.h>
 
-float value=0;
+static float value=0;
 float Arr[6];
 bool hand_detected=false;
 float sensors_threshold=10;
@@ -19,10 +19,12 @@ void arrayCallback_sensors(const std_msgs::Float32MultiArray::ConstPtr& array)
 	}
 }
 
+//minSensor =0
+//maxSensor =5
 
-float scale_closure(float value, float factor) {
+float scale_closure(float value, float factor, int minSensor, int maxSensor) {
 	int limit = 19000; //hand limit closure input
-	for (int j = 0; j < 6; j++) {
+	for (int j = minSensor; j <= maxSensor; j++) {
 		//printf("%f, ", Arr[j]);
 		value += Arr[j];
 	}
