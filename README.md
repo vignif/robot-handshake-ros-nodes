@@ -1,6 +1,6 @@
 # Master Thesis Repo
-## Computer and Automation Engineering
-## Track: Robotics and Automation Engineering
+Università degli studi di Siena
+Computer and Automation Engineering Track: Robotics and Automation Engineering
 ## Human-Robot HANDSHAKE
 This repo involves ros packages from softhand from pisa/iit
 additional packages has been developed in order to improve 
