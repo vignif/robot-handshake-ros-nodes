@@ -1,0 +1,11 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}The state of the Art}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}The Idea}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Hardware setup}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Pisa/IIT qbhand}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}The Sensors}{6}{section.3.2}
+\contentsline {section}{\numberline {3.3}}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Ros}{6}{section.3.4}

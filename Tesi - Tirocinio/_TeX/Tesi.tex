@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper,oneside]{book}
+% Scheletro di sorgente LaTeX per la scrittura 
+% di una tesi di laurea.
+% Per la grafica 
+\usepackage{graphicx}
+\usepackage{forest}
+\usepackage{subcaption}
+%\usepackage[]{mcode}
+\usepackage{tikz}
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{calc,arrows}
+\usetikzlibrary{scopes,matrix,positioning}
+\tikzset{%	
+  every neuron/.style={
+    circle,
+    draw,
+    minimum size=0.5cm
+  },
+  neuron missing/.style={
+    draw=none, 
+    scale=3,
+    text height=0.333cm,
+    execute at begin node=\color{black}$\vdots$
+  },
+  neuron missingl/.style={
+    draw=none, 
+    scale=2,
+    text height=0.333cm,
+    execute at begin node=\color{black}$\vdots$
+  },
+}
+\usepackage[a4paper,top=3.5cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=5mm]{geometry}
+\usepackage{gensymb}
+%% Per aggiungere la bibliografia nella \tableofcontents
+%%\let\oldbib\bibliography
+%\renewcommand{\bibliography}{\cleardoublepage1
+%\addcontentsline{toc}{chapter}{\bibname}
+%\oldbib}
+%\usepackage[nottoc]{tocbibind}
+%\onehalfspacing
+
+%\usepackage{epigraph}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+
+\usepackage[pdfpagemode={UseOutlines},colorlinks=true,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage}]{hyperref}
+
+\usepackage[english]{babel}
+\usepackage{microtype}
+
+%\usepackage{enumitem} %personalizza liste puntate e numerate
+%\setlist{leftmargin=*,nolistsep}
+%\renewcommand\theenumi {\alph{enumi})}% lettere al posto di numeri
+%\renewcommand\labelenumi{\theenumi}% parentesi al posto di punti
+
+
+\usepackage{array}
+\usepackage{eurosym}
+%\usepackage[figure]{hypcap} %link nel pdf alla figura e non alla didascalia
+\usepackage{graphicx}
+
+\usepackage{setspace}
+\doublespacing
+%\usepackage{emptypage}
+
+\usepackage{fancyhdr}
+%\renewcommand{\chaptermark}[1]% 
+%%{\markboth{\sc{\thechapter.\ #1}}{}} 
+%\renewcommand{\sectionmark}[1]%
+%{\markright{\sc{\thesection.\ #1}}}
+
+
+
+\begin{document}
+
+
+%\include{tesi-cgt-frn}
+\include{frontespizio}
+\tableofcontents
+
+%\listoffigures
+%\listoftables
+ 
+
+\include{chap1}
+
+
+\end{document}
