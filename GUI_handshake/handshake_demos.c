@@ -6,6 +6,36 @@
 gchar stiff;
 //char stiff_char;
 
+
+G_MODULE_EXPORT void demo1_switch_cb(GtkSwitch *demo1_switch, GParamSpec *pspec, GtkLabel *label)
+{
+
+    if (gtk_switch_get_active (demo1_switch)){
+//active
+        gtk_label_set_text (label, "Active");
+
+  printf("starting: qb_force_control\n");
+    system("gnome-terminal -x sh -c \"rosrun qb_interface OpenClose; bash\"");
+ 
+   }else{
+        gtk_label_set_text (label, "In-Active");
+
+printf("Stop: qb_force_control\n");
+
+system("rosnode kill /Open_close");              //stop
+//non active    
+}
+}
+
+
+G_MODULE_EXPORT void state1_clicked_cb(GtkButton *state1, gpointer data)
+{
+  printf("loading: conf.yaml\n");
+  system("rostopic pub /qb_class/hand_ref qb_interface/handRef \"closure: [1000]\" ");
+  
+}
+
+
 G_MODULE_EXPORT void load_yaml_cb(GtkButton *load_yaml, gpointer data)
 {
   printf("loading: conf.yaml\n");
@@ -16,7 +46,7 @@ G_MODULE_EXPORT void load_yaml_cb(GtkButton *load_yaml, gpointer data)
 G_MODULE_EXPORT void run_qb_force_corntrol_cb(GtkButton *run_qb_force_corntrol, gpointer data)
 {
   printf("starting: qb_force_control\n");
-    system("rosrun qb_interface qb_force_control");
+    system("gnome-terminal -x sh -c \"rosrun qb_interface qb_force_control; bash\"");
 }
 
 G_MODULE_EXPORT void run_rosserial_arduino_sensors_cb(GtkButton *run_rosserial_arduino_sensors, gpointer data)
