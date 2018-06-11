@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/FSRtoClosure.dir/src/FSRtoClosure.cpp.o"
-  "/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSRtoClosure.pdb"
-  "/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSRtoClosure"
+  "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSRtoClosure.pdb"
+  "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSRtoClosure"
 )
 
 # Per-language clean rules from dependency scanning.

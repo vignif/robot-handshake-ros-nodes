@@ -1,0 +1,8 @@
+prefix=/home/francesco/ros_ws_handshake/devel
+
+Name: rosbridge_server
+Description: Description of rosbridge_server
+Version: 0.9.0
+Cflags: 
+Libs: -L/home/francesco/ros_ws_handshake/devel/lib 
+Requires: 

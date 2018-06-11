@@ -6,17 +6,53 @@
 
 #IncludeRegexTransform: 
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/commands.h
+/home/francesco/ros_ws_handshake/devel/include/qb_interface/handPos.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/definitions.h
+/home/francesco/ros_ws_handshake/devel/include/qb_interface/handRef.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/francesco/ros_ws_handshake/src/qb_interface/include/commands.h
+
+/home/francesco/ros_ws_handshake/src/qb_interface/include/definitions.h
 math.h
 -
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbHand.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/functions.h
+std_msgs/Float32.h
+-
+
+/home/francesco/ros_ws_handshake/src/qb_interface/include/qbHand.h
 qbInterface.h
 -
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbInterface.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/qbInterface.h
 string.h
 -
 iostream
@@ -26,13 +62,13 @@ math.h
 unistd.h
 -
 qbmove_communications.h
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
 definitions.h
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/definitions.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/definitions.h
 ../src/qbInterface.tpp
-/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
+/home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/qb_force_control.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/qb_force_control.h
 qbInterface.h
 -
 ros/ros.h
@@ -46,27 +82,29 @@ vector
 qbHand.h
 -
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
 windows.h
 -
 termios.h
 -
 commands.h
-/home/sirslab/ros_ws_handshake/src/qb_interface/include/commands.h
+/home/francesco/ros_ws_handshake/src/qb_interface/include/commands.h
 stdint.h
 -
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
+/home/francesco/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
 qb_force_control.h
 -
 ros/ros.h
-/home/sirslab/ros_ws_handshake/src/qb_interface/src/ros/ros.h
+/home/francesco/ros_ws_handshake/src/qb_interface/src/ros/ros.h
 std_msgs/Float32MultiArray.h
 -
 std_msgs/Float32.h
 -
+functions.h
+-
 
-/home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
+/home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.tpp
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

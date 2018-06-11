@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
 
 # Include any dependencies generated for this target.
 include qb_interface/CMakeFiles/qb_interface.dir/depend.make
@@ -50,18 +50,18 @@ include qb_interface/CMakeFiles/qb_interface.dir/progress.make
 include qb_interface/CMakeFiles/qb_interface.dir/flags.make
 
 qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
+qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/main.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/main.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/main.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/main.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/main.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/main.cpp > CMakeFiles/qb_interface.dir/src/main.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/main.cpp > CMakeFiles/qb_interface.dir/src/main.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/main.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/main.cpp -o CMakeFiles/qb_interface.dir/src/main.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/main.cpp -o CMakeFiles/qb_interface.dir/src/main.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o.requires
@@ -73,18 +73,18 @@ qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o.provides: qb_interface/C
 qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o.provides.build: qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_2)
+qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qb_class.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qb_class.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/qb_class.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.cpp > CMakeFiles/qb_interface.dir/src/qb_class.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.cpp > CMakeFiles/qb_interface.dir/src/qb_class.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/qb_class.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/qb_class.cpp -o CMakeFiles/qb_interface.dir/src/qb_class.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/qb_class.cpp -o CMakeFiles/qb_interface.dir/src/qb_class.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o.requires
@@ -96,18 +96,18 @@ qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o.provides: qb_interfa
 qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o.provides.build: qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_3)
+qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/qbCube.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbCube.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbCube.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/qbCube.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/qbCube.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp > CMakeFiles/qb_interface.dir/src/qbCube.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/qbCube.cpp > CMakeFiles/qb_interface.dir/src/qbCube.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/qbCube.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbCube.cpp -o CMakeFiles/qb_interface.dir/src/qbCube.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/qbCube.cpp -o CMakeFiles/qb_interface.dir/src/qbCube.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o.requires
@@ -119,18 +119,18 @@ qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o.provides: qb_interface
 qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o.provides.build: qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_4)
+qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/qbHand.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbHand.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbHand.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/qbHand.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/qbHand.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp > CMakeFiles/qb_interface.dir/src/qbHand.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/qbHand.cpp > CMakeFiles/qb_interface.dir/src/qbHand.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/qbHand.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbHand.cpp -o CMakeFiles/qb_interface.dir/src/qbHand.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/qbHand.cpp -o CMakeFiles/qb_interface.dir/src/qbHand.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o.requires
@@ -142,18 +142,18 @@ qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o.provides: qb_interface
 qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o.provides.build: qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_5)
+qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp > CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp > CMakeFiles/qb_interface.dir/src/qbInterface.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp -o CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/qbInterface.cpp -o CMakeFiles/qb_interface.dir/src/qbInterface.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o.requires
@@ -165,18 +165,18 @@ qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o.provides: qb_inte
 qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o.provides.build: qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o: qb_interface/CMakeFiles/qb_interface.dir/flags.make
-qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_6)
+qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp > CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp > CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.i
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp -o CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/qbmove_communications.cpp -o CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.s
 
 qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o.requires
@@ -199,36 +199,36 @@ qb_interface_OBJECTS = \
 # External object files for target qb_interface
 qb_interface_EXTERNAL_OBJECTS =
 
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/build.make
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libroscpp.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/liblog4cxx.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librostime.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libcpp_common.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qb_interface.dir/link.txt --verbose=$(VERBOSE)
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qb_class.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbCube.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbHand.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbInterface.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/src/qbmove_communications.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/build.make
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libroscpp.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/liblog4cxx.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/librostime.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /opt/ros/indigo/lib/libcpp_common.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface: qb_interface/CMakeFiles/qb_interface.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface"
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qb_interface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-qb_interface/CMakeFiles/qb_interface.dir/build: /home/sirslab/ros_ws_handshake/devel/lib/qb_interface/qb_interface
+qb_interface/CMakeFiles/qb_interface.dir/build: /home/francesco/ros_ws_handshake/devel/lib/qb_interface/qb_interface
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/build
 
 qb_interface/CMakeFiles/qb_interface.dir/requires: qb_interface/CMakeFiles/qb_interface.dir/src/main.cpp.o.requires
@@ -240,10 +240,10 @@ qb_interface/CMakeFiles/qb_interface.dir/requires: qb_interface/CMakeFiles/qb_in
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/requires
 
 qb_interface/CMakeFiles/qb_interface.dir/clean:
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/qb_interface.dir/cmake_clean.cmake
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/qb_interface.dir/cmake_clean.cmake
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/clean
 
 qb_interface/CMakeFiles/qb_interface.dir/depend:
-	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src/qb_interface /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/qb_interface /home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_interface.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src/qb_interface /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/qb_interface /home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/qb_interface.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/depend
 

@@ -1,0 +1,8 @@
+prefix=/home/francesco/ros_ws_handshake/install
+
+Name: rosbridge_library
+Description: Description of rosbridge_library
+Version: 0.9.0
+Cflags: -I/home/francesco/ros_ws_handshake/install/include
+Libs: -L/home/francesco/ros_ws_handshake/install/lib 
+Requires: message_runtime std_msgs geometry_msgs

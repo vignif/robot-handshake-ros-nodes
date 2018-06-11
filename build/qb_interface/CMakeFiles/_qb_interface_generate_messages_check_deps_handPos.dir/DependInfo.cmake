@@ -16,9 +16,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/sirslab/ros_ws_handshake/devel/include"
+  "/home/francesco/ros_ws_handshake/devel/include"
   "/opt/ros/indigo/include"
-  "/home/sirslab/ros_ws_handshake/src/qb_interface/include"
+  "/home/francesco/ros_ws_handshake/src/qb_interface/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

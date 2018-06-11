@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sirslab/ros_ws_handshake/src
+CMAKE_SOURCE_DIR = /home/francesco/ros_ws_handshake/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sirslab/ros_ws_handshake/build
+CMAKE_BINARY_DIR = /home/francesco/ros_ws_handshake/build
 
 # Include any dependencies generated for this target.
 include qb_interface/CMakeFiles/FSR_current_control.dir/depend.make
@@ -50,18 +50,18 @@ include qb_interface/CMakeFiles/FSR_current_control.dir/progress.make
 include qb_interface/CMakeFiles/FSR_current_control.dir/flags.make
 
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: qb_interface/CMakeFiles/FSR_current_control.dir/flags.make
-qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /home/sirslab/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sirslab/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
+qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o -c /home/sirslab/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp
 
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sirslab/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp > CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp > CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.i
 
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sirslab/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp -o CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/FSR_current_control.cpp -o CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.s
 
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o.requires:
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o.requires
@@ -79,41 +79,41 @@ FSR_current_control_OBJECTS = \
 # External object files for target FSR_current_control
 FSR_current_control_EXTERNAL_OBJECTS =
 
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/build.make
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libroscpp.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/liblog4cxx.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librostime.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libcpp_common.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control"
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FSR_current_control.dir/link.txt --verbose=$(VERBOSE)
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/build.make
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libroscpp.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/liblog4cxx.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/librostime.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /opt/ros/indigo/lib/libcpp_common.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control: qb_interface/CMakeFiles/FSR_current_control.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control"
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FSR_current_control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-qb_interface/CMakeFiles/FSR_current_control.dir/build: /home/sirslab/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control
+qb_interface/CMakeFiles/FSR_current_control.dir/build: /home/francesco/ros_ws_handshake/devel/lib/qb_interface/FSR_current_control
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/build
 
 qb_interface/CMakeFiles/FSR_current_control.dir/requires: qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o.requires
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/requires
 
 qb_interface/CMakeFiles/FSR_current_control.dir/clean:
-	cd /home/sirslab/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/FSR_current_control.dir/cmake_clean.cmake
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && $(CMAKE_COMMAND) -P CMakeFiles/FSR_current_control.dir/cmake_clean.cmake
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/clean
 
 qb_interface/CMakeFiles/FSR_current_control.dir/depend:
-	cd /home/sirslab/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sirslab/ros_ws_handshake/src /home/sirslab/ros_ws_handshake/src/qb_interface /home/sirslab/ros_ws_handshake/build /home/sirslab/ros_ws_handshake/build/qb_interface /home/sirslab/ros_ws_handshake/build/qb_interface/CMakeFiles/FSR_current_control.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/francesco/ros_ws_handshake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francesco/ros_ws_handshake/src /home/francesco/ros_ws_handshake/src/qb_interface /home/francesco/ros_ws_handshake/build /home/francesco/ros_ws_handshake/build/qb_interface /home/francesco/ros_ws_handshake/build/qb_interface/CMakeFiles/FSR_current_control.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/depend
 
