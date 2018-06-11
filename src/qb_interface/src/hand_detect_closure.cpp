@@ -50,8 +50,7 @@ int main(int argc, char **argv)
 
 	while (ros::ok()){
 		switch(listen.cmd){
-
-		case 0: //start
+		case 0:
 			if(value!=0){
 				state.closure.clear();
 				cout << "OFF - waiting for toggle" << endl;
@@ -60,7 +59,16 @@ int main(int argc, char **argv)
 				pub.publish(state);
 			}
 			break;
-		case 1: //handshake
+		case 1: //start
+			if(value!=6000){
+				state.closure.clear();
+				cout << "OFF - waiting for toggle" << endl;
+				value=6000;
+				state.closure.push_back((int)value); //round the closure value to the closest integers
+				pub.publish(state);
+			}
+			break;
+		case 2: //handshake
 			state.closure.clear();
 			cout << "ON - im in handshake state" << endl;
 			control_FSR(n);
