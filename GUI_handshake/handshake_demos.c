@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* stiff;
+gchar stiff;
+//char stiff_char;
 
 G_MODULE_EXPORT void load_yaml_cb(GtkButton *load_yaml, gpointer data)
 {
@@ -50,24 +51,34 @@ G_MODULE_EXPORT void run_demo3_cb(GtkButton *run_demo3, gpointer data)
 G_MODULE_EXPORT gchar* stiffness_value_cb (GtkScale *stiffness,
                        gdouble   value)
 {
-return g_strdup_printf ("%0.*g",
-                          gtk_scale_get_digits (stiffness), value);
-
-stiff= g_strdup_printf ("%0.*g",gtk_scale_get_digits (stiffness), value);
+/*
+//printf("%d",gtk_scale_get_digits (stiffness));
+stiff=g_strdup_printf ("%0.*g", (stiffness.get_value), value);
+*/
+return g_strdup_printf ("%0.*g", gtk_scale_get_digits (stiffness), value);
 }
+
 
 G_MODULE_EXPORT void setstiff_clicked_cb(GtkButton *setstiff, gpointer data)
 {
-  printf("setting stiffness\n");
-char str[30]= "rosparam set /stiffness ";
-strcat(str, *stiff);
+//sprintf(stiff_char, "%98s\n", stiff);
+//printf("%d\n",stiff);
+//system(str);
+}
 
-    system(str);
+G_MODULE_EXPORT void entry1_activate_cb(GtkEntry *entry, gpointer data)
+{
+
+char str[30]= "rosparam set /stiffness ";
+
+strcat(str, gtk_entry_get_text(entry));
+system(str);
+printf("setting stiffness: %s\n",gtk_entry_get_text(entry));
 }
 
 
-int
-main (int argc, char *argv[])
+
+int main (int argc, char *argv[])
 {
         GtkBuilder  *builder;
         GtkWidget   *window;

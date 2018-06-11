@@ -8,6 +8,16 @@
     <property name="step_increment">0.050000000000000003</property>
     <property name="page_increment">10</property>
   </object>
+  <object class="GtkScale" id="stiffness">
+    <property name="name">Stiffness</property>
+    <property name="sensitive">False</property>
+    <property name="can_focus">False</property>
+    <property name="double_buffered">False</property>
+    <property name="adjustment">adjustment1</property>
+    <property name="round_digits">1</property>
+    <property name="digits">2</property>
+    <signal name="value-changed" handler="stiffness_value_cb" swapped="no"/>
+  </object>
   <object class="GtkTextBuffer" id="textbuffer1">
     <property name="text" translatable="yes">
 Welcome to the HANDSHAKE GUI
@@ -331,7 +341,9 @@ with states:
               <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Stiffness</property>
+                <property name="label" translatable="yes">Stiffness 
+min: 0.1 ---Max: 0.9 </property>
+                <property name="justify">center</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -341,14 +353,11 @@ with states:
               </packing>
             </child>
             <child>
-              <object class="GtkScale" id="stiffness">
-                <property name="name">Stiffness</property>
+              <object class="GtkEntry" id="entry1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="adjustment">adjustment1</property>
-                <property name="round_digits">1</property>
-                <property name="digits">2</property>
-                <signal name="format-value" handler="stiffness_value_cb" swapped="no"/>
+                <property name="text" translatable="yes">0.4</property>
+                <signal name="activate" handler="entry1_activate_cb" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -358,19 +367,7 @@ with states:
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="setstiff">
-                <property name="label" translatable="yes">Set Stiffness</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <signal name="clicked" handler="setstiff_clicked_cb" swapped="no"/>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">4</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
-              </packing>
+              <placeholder/>
             </child>
             <child>
               <placeholder/>

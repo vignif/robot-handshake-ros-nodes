@@ -348,7 +348,7 @@ with states:
                 <property name="adjustment">adjustment1</property>
                 <property name="round_digits">1</property>
                 <property name="digits">2</property>
-                <signal name="format-value" handler="stiffness_value_cb" swapped="no"/>
+                <signal name="value-changed" handler="stiffness_value_cb" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -358,11 +358,12 @@ with states:
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="button1">
+              <object class="GtkButton" id="setstiff">
                 <property name="label" translatable="yes">Set Stiffness</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <signal name="clicked" handler="setstiff_clicked_cb" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -372,7 +373,18 @@ with states:
               </packing>
             </child>
             <child>
-              <placeholder/>
+              <object class="GtkEntry" id="entry1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="text" translatable="yes">0.4</property>
+                <signal name="activate" handler="entry1_activate_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
+              </packing>
             </child>
             <child>
               <placeholder/>
