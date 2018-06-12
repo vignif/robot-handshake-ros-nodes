@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 void OpenClose(qb_interface::handPos state, ros::Publisher pub){
 	int k=10;
-	    int upbound =19;
+	    int upbound =16;
 	    float value=0;
 	    for (int j =-upbound*k; j <= upbound*k ; j++){
 	    value=1000/k;
