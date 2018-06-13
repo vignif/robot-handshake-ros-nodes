@@ -7,17 +7,21 @@ import smach_ros
 from docutils.nodes import transition
 from std_msgs.msg import Float32MultiArray
 from std_msgs.msg import Int32
-from sympy.physics.units.dimensions import current
+from qb_interface import msg
+from qb_interface.msg._handPos import handPos
+from time import sleep
 
 class Callbacks():
-    def current_cb(data):
-        current=data.closure[2]
+    @staticmethod
+    def current_cb(handPos):
+        current=handPos.closure[2]
+        #print current
         return current
-    #print current
 
     def sensors_array_cb(data):
         #print "Here are some floats:", str(data.data)
         sensors=data.data[2:]
+        return sensors
         # rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
 
 
@@ -27,9 +31,8 @@ class Start(smach.State):
         smach.State.__init__(self, outcomes=['sensors_triggered'])
 
     def execute(self, userdata):
+        print current
         rospy.loginfo('Executing state Start')
-        Callbacks.current_cb
-        
         return 'sensors_triggered'
 
 
@@ -58,6 +61,7 @@ class Final(smach.State):
 
     def execute(self, userdata):
         rospy.loginfo('Executing state Final')
+        sleep(1)
         return 'timeout'
 
 
@@ -66,7 +70,7 @@ class Final(smach.State):
 def main():
     rospy.init_node('smach')
     rospy.Subscriber("sensors_FSR", Float32MultiArray, Callbacks.sensors_array_cb)
-    rospy.Subscriber("qb_class/hand_measurement", Int32, Callbacks.current_cb)
+    rospy.Subscriber("qb_class/hand_measurement", msg.handPos, Callbacks.current_cb)
 
     # Create a SMACH state machine
     sm = smach.StateMachine(outcomes=['Start'])

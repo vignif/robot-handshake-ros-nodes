@@ -5,7 +5,17 @@ float Arr[6];
 bool hand_detected=false;
 float sensors_threshold=10;
 std::vector<int> history;
-
+class callbacks{
+public:
+	float closure;
+	float current;
+	void cb_closure(const qb_interface::handRef::Ptr& msg){
+	closure=msg->closure[0];
+	}
+	void cb_current(const qb_interface::handPos::Ptr& msg){
+	current=msg->closure[2];
+	}
+};
 
 // read FSR sensor value from arduino and store them in a vector
 void arrayCallback_sensors(const std_msgs::Float32MultiArray::ConstPtr& array)
@@ -62,36 +72,36 @@ std_msgs::Float32 computeAvg(std::vector<int> v){
 	avg.data=avg.data/size;
 	return avg;
 }
-*/
+ */
 
 
 
 //funzione che ritorna la media mobile degli ultimi [window] valori
 
 std_msgs::Float32 historyAvg(int current,int window){
-std_msgs::Float32 avg;
-avg.data=0;
-int	sum=0;
-int rise_up_threshold=50;
-if(history.size()<window){
-	history.push_back(current); //current from listener::current
-}else{
-history.erase (history.begin());  //erase first element
-history.push_back(current); //current from listener::current
-}
-cout <<"history size: "<< history.size() << endl;
-cout << "[";
-for (int i=0; i<=history.size()-1; i++){
-    if(history[i]<rise_up_threshold){
-    //std::fill(history.begin(), history.end(), 0);  //se anche solo un elemento della corrente e` inferiore alla soglia, saturo tutto il vettore a zero
-    history[i]=0; //se il valore di corrente e` inferiore alla soglia lo saturo a zero
-    sum=0;
-    }else{
-    sum+=history[i];
-    }
-    cout <<history[i] << ' ';
-		}//esegui media del vettore
-cout <<"]" << endl;
-avg.data =sum/history.size();
-return avg;
+	std_msgs::Float32 avg;
+	avg.data=0;
+	int	sum=0;
+	int rise_up_threshold=50;
+	if(history.size()<window){
+		history.push_back(current); //current from listener::current
+	}else{
+		history.erase (history.begin());  //erase first element
+		history.push_back(current); //current from listener::current
+	}
+	cout <<"history size: "<< history.size() << endl;
+	cout << "[";
+	for (int i=0; i<=history.size()-1; i++){
+		if(history[i]<rise_up_threshold){
+			//std::fill(history.begin(), history.end(), 0);  //se anche solo un elemento della corrente e` inferiore alla soglia, saturo tutto il vettore a zero
+			history[i]=0; //se il valore di corrente e` inferiore alla soglia lo saturo a zero
+			sum=0;
+		}else{
+			sum+=history[i];
+		}
+		cout <<history[i] << ' ';
+	}//esegui media del vettore
+	cout <<"]" << endl;
+	avg.data =sum/history.size();
+	return avg;
 }
