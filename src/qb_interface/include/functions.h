@@ -9,11 +9,15 @@ class callbacks{
 public:
 	float closure;
 	float current;
+	float smooth_current;
 	void cb_closure(const qb_interface::handRef::Ptr& msg){
 	closure=msg->closure[0];
 	}
 	void cb_current(const qb_interface::handPos::Ptr& msg){
 	current=msg->closure[2];
+	}
+	void cb_smooth_current(const std_msgs::Float32::Ptr& msg){
+	smooth_current= (float)msg->data;
 	}
 };
 
