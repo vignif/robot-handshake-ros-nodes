@@ -74,7 +74,7 @@ def main():
     rospy.Subscriber("sensors_FSR", Float32MultiArray, sensors_array_cb)
     rospy.Subscriber("qb_class/hand_measurement", msg.handPos, current_cb)
     rospy.Publisher("qb_class/hand_ref",msg.handRef,queue_size= 1000)
-
+    
     
     
     # Create a SMACH state machine
