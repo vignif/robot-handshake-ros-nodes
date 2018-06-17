@@ -36,6 +36,7 @@ def monitor_cb_hand(ud, msg):
     return False
     
 def sens_trig(ud, msg):
+    print ud.sm_calibrated_array
     td=20
     sensors=msg.data[2:]
     sensors=np.sum(msg.data[2:])
@@ -57,7 +58,8 @@ class start(smach.State):
 class calibrate(smach.State):
     def __init__(self):
         smach.State.__init__(self, 
-                             outcomes=['valid','preempted'])
+                             outcomes=['valid','preempted'],
+                             output_keys=['calibrate_out'])
         self.pub = rospy.Publisher("qb_class/hand_ref", msg.handRef, queue_size= 1000)
         self.sub = rospy.Subscriber("qb_class/hand_measurement", msg.handPos, self.current_cb)
         self.cal_q=[]
@@ -76,8 +78,9 @@ class calibrate(smach.State):
             self.cal_i.append(self.current)
             self.calibrated_q_i = np.column_stack((np.array(self.cal_q),np.array(self.cal_i)))
             rate.sleep()
+        ud.calibrate_out=self.calibrated_q_i
         print self.calibrated_q_i
-        print self.current
+#         print self.current
         return 'valid'
 
 
@@ -98,17 +101,17 @@ def main():
                                transitions={'valid':'CALIBRATE'})
 #         smach.StateMachine.add('CALIBRATE', smach_ros.MonitorState("/qb_class/hand_measurement",  handPos, monitor_cb_hand), transitions={'invalid':'FSR_CONTROL', 'valid':'FOO', 'preempted':'FOO'})
         smach.StateMachine.add('CALIBRATE', calibrate(), 
-                               transitions={'valid':'FSR_CONTROL', 'preempted':'FOO'})
+                               transitions={'valid':'FSR_CONTROL', 'preempted':'FOO'},
+                               remapping={'calibrate_out':'sm_calibrated_array'})
 
         smach.StateMachine.add('FSR_CONTROL', 
-                               smach_ros.MonitorState("/sensors_FSR", Float32MultiArray, sens_trig), 
+                               smach_ros.MonitorState("/sensors_FSR", Float32MultiArray, sens_trig, input_keys=['sm_calibrated_array']), 
                                transitions={'invalid':'WAIT', 'valid':'FOO', 'preempted':'FOO'})
 
         smach.StateMachine.add('FOO', 
                                smach_ros.MonitorState("/sm_reset", Empty, monitor_cb), 
                                transitions={'invalid':'FOO', 'valid':'FOO', 'preempted':'FOO'})
 #         smach.StateMachine.add('hand', smach_ros.MonitorState("/qb_class/hand_measurement", handPos, ), transitions={'invalid':'BAR', 'valid':'FOO', 'preempted':'FOO'})
-
        
     sis = smach_ros.IntrospectionServer('smach_server', sm, '/SM_ROOT')
     sis.start()
