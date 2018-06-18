@@ -56,13 +56,16 @@ class fsr_control(smach.State):
             
             #print "shape: " + str(item.shape)
             #print "item: " + str(item)
+            ## item[0] == POSITION
+            ## item[1] == RESIDUAL CURRENT
             if item[1] > rng*0.1:
                 self.Qt1=item[0]
                 continue
-            print "First closure position: " + str(self.Qt1)
+        print "First closure position: " + str(self.Qt1)
         
         while(rospy.is_shutdown()==False):
-            value=[np.sum(self.FSR_value)+self.Qt1]
+            
+            value=[np.sum(self.FSR_value)*3+self.Qt1]
             self.pub.publish(value)
         return 'valid'
         
@@ -87,7 +90,7 @@ class calibrate(smach.State):
         
     def execute(self, ud):
         rospy.loginfo("Execute empty calibration")
-        rate = rospy.Rate(40)
+        rate = rospy.Rate(70)
         rg=range(-19000,19000,100)
         for value in rg:
             self.cls=[19000-np.abs(value)]
@@ -97,7 +100,7 @@ class calibrate(smach.State):
             self.calibrated_q_i = np.column_stack((np.array(self.cal_q),np.array(self.cal_i)))
             rate.sleep()
         ud.calibrate_out=self.calibrated_q_i
-        print self.calibrated_q_i
+       # print self.calibrated_q_i
 #         print self.current
         return 'valid'
 
@@ -126,7 +129,7 @@ class calibrate_full(smach.State):
     def execute(self, ud):
         rospy.loginfo("Execute full calibration")
         self.empty=ud.calibrate_in
-        rate = rospy.Rate(40)
+        rate = rospy.Rate(70)
         rg=range(-19000,19000,100)
         for value in rg:
             self.cls=[19000-np.abs(value)]
@@ -141,7 +144,7 @@ class calibrate_full(smach.State):
  #       temp[:,1]-=self.empty[:,1]
   #      ud.calibrate_out=temp
         ud.calibrate_out[:,0]=self.calibrated_q_i[:,0]
-        print ud.calibrate_out
+        #print ud.calibrate_out
         rospy.sleep(3)
 #         print self.current
         return 'valid'
