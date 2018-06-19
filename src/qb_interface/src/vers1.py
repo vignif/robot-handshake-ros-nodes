@@ -9,7 +9,6 @@ from qb_interface import msg
 from qb_interface.msg._handPos import handPos
 from std_msgs.msg import Empty
 
-
 class final(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['valid'])
@@ -49,7 +48,8 @@ class fsr_control(smach.State):
         Max=max(self.calibrated_array[:,1])
         Min=min(self.calibrated_array[:,1])
         rng=Max-Min
-        print "Threshold = " + str(rng*0.1)
+        threshold = rng*0.10 ## 10 % of max load current for detecting hand
+        print "Threshold = " + str(threshold)
         print "Shape = " + str(self.calibrated_array.shape)
         for index, item in enumerate(self.calibrated_array):
 #           print index
@@ -58,19 +58,29 @@ class fsr_control(smach.State):
             #print "item: " + str(item)
             ## item[0] == POSITION
             ## item[1] == RESIDUAL CURRENT
-            if item[1] > rng*0.1:
+
+            if item[1] > threshold:
                 self.Qt1=item[0]
                 continue
         print "First closure position: " + str(self.Qt1)
         
         while(rospy.is_shutdown()==False):
-            
-            value=[np.sum(self.FSR_value)*3+self.Qt1]
-            self.pub.publish(value)
+            #print self.FSR_value
+            adj_FSR=(self.FSR_value/8000)*(19000-self.Qt1)
+            print adj_FSR
+            value=[adj_FSR+self.Qt1]
+            if(value>[19000]):
+                self.pub.publish([19000])
+            else:
+                self.pub.publish(value)
         return 'valid'
         
     def sens_cb(self,msg):
-        self.FSR_value=msg.data[2:]
+        self.FSR_value=np.sum(msg.data[2:])
+        if self.FSR_value>8000:
+            self.FSR_value=8000
+        else:
+            self.FSR_value=np.sum(msg.data[2:])
         return self.FSR_value
         
 
@@ -89,11 +99,12 @@ class calibrate(smach.State):
 
         
     def execute(self, ud):
+        Bound=16000
         rospy.loginfo("Execute empty calibration")
         rate = rospy.Rate(70)
-        rg=range(-19000,19000,100)
+        rg=range(-Bound,Bound,100)
         for value in rg:
-            self.cls=[19000-np.abs(value)]
+            self.cls=[Bound-np.abs(value)]
             self.pub.publish(self.cls)
             self.cal_q.append(self.cls)
             self.cal_i.append(self.current)
@@ -127,12 +138,13 @@ class calibrate_full(smach.State):
 
         
     def execute(self, ud):
+        Bound=16000
         rospy.loginfo("Execute full calibration")
         self.empty=ud.calibrate_in
         rate = rospy.Rate(70)
-        rg=range(-19000,19000,100)
+        rg=range(-Bound,Bound,100)
         for value in rg:
-            self.cls=[19000-np.abs(value)]
+            self.cls=[Bound-np.abs(value)]
             self.pub.publish(self.cls)
             self.cal_q.append(self.cls)
             self.cal_i.append(self.current)
@@ -145,7 +157,7 @@ class calibrate_full(smach.State):
   #      ud.calibrate_out=temp
         ud.calibrate_out[:,0]=self.calibrated_q_i[:,0]
         #print ud.calibrate_out
-        rospy.sleep(3)
+        #rospy.sleep(3)
 #         print self.current
         return 'valid'
 
@@ -158,7 +170,7 @@ class calibrate_full(smach.State):
 
 def main():
     rospy.init_node("monitor_example")
-
+    
     sm = smach.StateMachine(outcomes=['DONE'])
     
     
