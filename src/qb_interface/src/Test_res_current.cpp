@@ -9,8 +9,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <time.h>
 
+#include <iostream>
+#include <chrono>
 
 using namespace std;
 
@@ -18,7 +19,7 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-	clock_t start = clock();
+
 	callbacks cb;
 	ros::init(argc, argv, "Test_res_current");
 	ros::NodeHandle n;
@@ -42,23 +43,28 @@ int main(int argc, char **argv)
 	 */
 	char dir[50];
 	char name[20];
-	strcpy(dir,"ros_ws_handshake/tests/");
-	strcpy(name,"Maria_4.csv");
+	strcpy(dir,"/home/francesco/ros_ws_handshake/tests/");
+	strcpy(name,"Davide_0.csv");
 	strcat(dir,name);
 
 	std::ofstream outFile(dir);
 
-	for(int i=0; i <1;i++){
-		int k=10;
+	//start set param
+		float step=50; //step
+		int freq=8; //frequency of publisher (Hz)
+	//end
+
+		int k= 1000/step;
 		int upbound =19;
-		float value=0;
+		int iterations=2*upbound*k;
+		chrono::high_resolution_clock::time_point start = chrono::high_resolution_clock::now();
+	for(int i=0; i <1;i++){
 		for (int j =-upbound*k; j <= upbound*k ; j++){
-			value=1000/k;
 			state.closure.clear();
-			state.closure.push_back(upbound*1000-abs(value*j));
+			state.closure.push_back(upbound*1000-abs(step*j));
 			pub.publish(state);
 			ros::spinOnce();
-			usleep(10000);
+			usleep(freq*1000); //(Hz*1000)
 			if(cb.closure>=1) //salto la prima lettura
 			{
 				cout <<"Closure: "<< cb.closure << " Current: "<< cb.current << endl;
@@ -69,10 +75,15 @@ int main(int argc, char **argv)
 				 */
 			}
 		}
-
 		//usleep(10000);
 	}
-	outFile.close();
+    chrono::high_resolution_clock::time_point end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::milliseconds>( end - start ).count();
+	cout << "step resolution: " << step <<endl;
+    cout << "iterations: " << iterations << endl;
+    cout << "estimated time elapsed(ms): " << iterations*freq << endl;
+    cout <<"real time elapsed(ms): " << duration<< endl;
+    outFile.close();
 
 
 

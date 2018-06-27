@@ -9,7 +9,7 @@ from qb_interface import msg
 from qb_interface.msg._handPos import handPos
 from std_msgs.msg import Empty
 from std_msgs.msg import String
-
+import csv
 
 class final(smach.State):
     def __init__(self):
@@ -24,21 +24,75 @@ class start(smach.State):
     def __init__(self):
         self.FSR_value=0
         smach.State.__init__(self, outcomes=['valid'])
-        self.pub = rospy.Publisher("test",String, queue_size=1000)
+
     def execute(self, userdata):        
         rospy.loginfo("Waiting for 3 seconds")
         rate = rospy.Rate(70)
 
-        while(rospy.is_shutdown()==False):
-            rospy.loginfo("rate test")
-            self.pub.publish("rate test")
-            rate.sleep()
         for i in xrange(3,0,-1):
             rospy.sleep(1)
             print i
+        #while(rospy.is_shutdown()==False):
+            #rospy.loginfo("rate test")
+#            self.pub.publish("rate test")
+         #   rate.sleep()
+ #           rospy.loginfo(self.FSR)
         return 'valid'
     
 
+class zero(smach.State):
+    def __init__(self):
+        smach.State.__init__(self, 
+                             outcomes=['valid'],
+                             output_keys=['calibrate_out'])
+        self.pub = rospy.Publisher("qb_class/hand_ref", msg.handRef, queue_size= 1000)
+        self.sub = rospy.Subscriber("qb_class/hand_measurement", msg.handPos, self.current_cb)
+        self.cal_q=[]
+        self.cal_i=[]
+        self.calibrated_q_i=[]
+        self.current=0
+
+        
+    def execute(self, ud):
+        self.sub = rospy.Subscriber("sensors_FSR", Float32MultiArray, self.sens_cb)
+        Bound=16000
+        rospy.loginfo("Execute zero state")
+        rate = rospy.Rate(70)
+        rg=range(-Bound,Bound,100)
+        for value in rg:
+            self.cls=[Bound-np.abs(value)]
+            self.pub.publish(self.cls)
+            self.cal_q.append(self.cls)
+            self.cal_i.append(self.current)
+            self.calibrated_q_i = np.column_stack((np.array(self.cal_q),np.array(self.cal_i)))
+            rate.sleep()
+        ud.calibrate_out=self.calibrated_q_i
+        self.FSR=[0,0,0,0]
+#        print self.calibrated_q_i
+#        print self.current
+        return 'valid'
+
+
+    def current_cb(self,handPos):
+        self.current=handPos.closure[2]
+        #     Start.execute(current)
+        return self.current
+    
+    def sens_cb(self,msg):
+        self.FSR_value=np.sum(msg.data[2:])
+        self.FSR=np.array(msg.data[2:])
+        with open(r'FSR', 'a') as f:
+            writer = csv.writer(f)
+            writer.writerow(self.FSR)
+    #np.savetxt("FSR.csv", self.FSR,  fmt='%.2f', delimiter=',', header=" #1,  #2,  #3,  #4")
+       # if self.FSR_value>9000:
+       #     self.FSR_value=9000
+       # else:
+       #     self.FSR_value=np.sum(msg.data[2:])
+        return self.FSR
+    
+        
+        
 class fsr_control(smach.State):
     def __init__(self):
         smach.State.__init__(self,
@@ -97,50 +151,15 @@ class fsr_control(smach.State):
     
     def sens_cb(self,msg):
         self.FSR_value=np.sum(msg.data[2:])
-        if self.FSR_value>9000:
-            self.FSR_value=9000
-        else:
-            self.FSR_value=np.sum(msg.data[2:])
+        np.savetxt("FSR.csv", msg.data , delimiter=",")
+       # if self.FSR_value>9000:
+       #     self.FSR_value=9000
+       # else:
+       #     self.FSR_value=np.sum(msg.data[2:])
         return self.FSR_value
         
 
 
-class calibrate(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, 
-                             outcomes=['valid'],
-                             output_keys=['calibrate_out'])
-        self.pub = rospy.Publisher("qb_class/hand_ref", msg.handRef, queue_size= 1000)
-        self.sub = rospy.Subscriber("qb_class/hand_measurement", msg.handPos, self.current_cb)
-        self.cal_q=[]
-        self.cal_i=[]
-        self.calibrated_q_i=[]
-        self.current=0
-
-        
-    def execute(self, ud):
-        Bound=16000
-        rospy.loginfo("Execute empty calibration")
-        rate = rospy.Rate(70)
-        rg=range(-Bound,Bound,100)
-        for value in rg:
-            self.cls=[Bound-np.abs(value)]
-            self.pub.publish(self.cls)
-            self.cal_q.append(self.cls)
-            self.cal_i.append(self.current)
-            self.calibrated_q_i = np.column_stack((np.array(self.cal_q),np.array(self.cal_i)))
-            rate.sleep()
-        ud.calibrate_out=self.calibrated_q_i
-       # print self.calibrated_q_i
-#         print self.current
-        return 'valid'
-
-
-    def current_cb(self,handPos):
-        self.current=handPos.closure[2]
-        #     Start.execute(current)
-        return self.current
-    
     
 class calibrate_full(smach.State):
     def __init__(self):
@@ -201,9 +220,9 @@ def main():
     with sm:
         
         smach.StateMachine.add('WAIT', start(), 
-                               transitions={'valid':'CALIBRATE'})
+                               transitions={'valid':'0'})
 #         smach.StateMachine.add('CALIBRATE', smach_ros.MonitorState("/qb_class/hand_measurement",  handPos, monitor_cb_hand), transitions={'invalid':'FSR_CONTROL', 'valid':'FOO', 'preempted':'FOO'})
-        smach.StateMachine.add('CALIBRATE', calibrate(), 
+        smach.StateMachine.add('0', zero(), 
                                transitions={'valid':'CALIBRATE_FULL'},
                                remapping={'calibrate_out':'sm_calibrated_empty'})
         
