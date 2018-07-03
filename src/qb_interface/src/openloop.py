@@ -102,7 +102,8 @@ class fsr_control(smach.State):
         self.sub = rospy.Subscriber("sensors_FSR", Float32MultiArray, self.sens_cb)
         self.Qt1=0
         self.Qtf=5000
-    
+        self.FSR_value=0
+
     def execute(self,ud):
         rospy.loginfo("execute FSR_CONTROL")
         self.calibrated_array=ud.calibrate_in

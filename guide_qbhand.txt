@@ -1,0 +1,122 @@
+==== Nuova qbHand (18/01/2018) ====
+1. Follow this guide to install the command line utility: 
+	https://bitbucket.org/qbrobotics/qbdevice-api
+
+2. >> cd Desktop/mp_workingcopy/qbadmin/bin_unix
+
+3. >> ./qbadmin -t
+	output: Choose the serial port for your QB:
+
+		[1] - /dev/ttyUSB0
+
+		Serial port: 1
+
+4. >> ./qbadmin -p
+	it should output the parameters of the hand
+
+5. Set the zero position:
+   >> ./qbadmin 1 -z
+	output: Press CTRL-C to set Zero Position
+
+		Press return to proceed
+	5.1. press return
+	5.2. completely open the hand manually
+	5.3. press Ctrl+C
+	     output: Setting zero position
+
+
+6. >> ./qbadmin -p
+	Check the ID of the hand (that must be written in the configuration file 
+	/home/sirslab/ros_ws/src/qb_interface_node/conf/config.yaml) and the control mode.
+	If the control mode is not "Current" do:
+	6.1. >> ./qbparam
+	6.2. setParam (press "s")
+	6.3. set control mode to be "current" (don't worry too much if a segmentation fault occurs)
+	6.4. do again >> ./qbadmin -p and check that the control mode is current
+
+
+==== ROS package for force control (usare questo)
+1. Download ros package from https://github.com/SIRSIIT/qb_interface_node
+2. Copy it in the ROS workspace and do catkin_make
+3. Terminal 1: >> roscore
+4. Terminal 2: 
+	4.1. Load the configuration file:
+		>> rosparam load $(rospack find qb_interface)/conf/config.yaml
+	4.2. Start the ros node:
+		>> rosrun qb_interface qb_force_control
+		output: Unable to retrieve hand params. ID: 2
+			[INFO] Start to spin qb_interface_node
+5. Terminal 3 (set position): >> rostopic pub /qb_class/hand_ref qb_interface/handRef "closure: [9000]"
+	N.B. The grasp closure is within [0-19000] (0 open, 19000 (or more) closed)
+6. Terminal 4 (set stiffness): >> rosparam set /stiffness 0.1
+	N.B. Stiffness is within [0-1.0]
+    
+Possible error: "[ERROR] Connection error in spin() function."
+Solution:
+>> cd Desktop/mp_workingcopy/qbadmin/bin_unix
+
+3. >> ./qbadmin -t
+	output: Choose the serial port for your QB:
+
+		[1] - /dev/ttyUSB0
+
+		Serial port: 1
+
+4. >> ./qbadmin -p
+	it should output the parameters of the hand - check if it's /dev/ttyUSB0 or /dev/ttyUSB1 and put this info 
+    in the config file of the hand by doing: 
+    
+5.  >> nano $(rospack find qb_interface)/conf/config.yaml
+
+================================= Spiegazione di Joao
+so you set a certain stiffness, say 0.5
+and you set a position, say 10000
+and let's say the hand is open at 0
+so it will start by giving a current of 
+cur=0.5*(10000-0) = 5000A (which saturates)
+and then it starts closing on an object and grasps it when the encoder is at 8000
+so now it will keep gripping with motor current of:
+cur=0.5*(10000-8000)=1000mA
+so then you can grip it tighter by either setting a larger position or increasing the stiffness...
+say you set stiffness to 0.6, now the new current will be 1200mA
+so it's k*(x_ref-x_now)
+I gave this to virginia now, because I think they should work on this, not me
+to add also some feedforward current that will depend on the elasticity of the hand, on the friction, etc.
+so in the end we should have something like:
+current=k(x_ref-x_now)+feedfwd(x,x')
+=================================
+
+
+
+=================================  
+Install qbadmin and qbAPI 29/05/2018
+=================================
+
+
+1 - create directory in Desktop called 'my_working_copy'
+2 - Download and open here https://bitbucket.org/qbrobotics/qbdevice-api/downloads/
+3 - rename the folder as qbAPI
+4 - Download and open here https://bitbucket.org/qbrobotics/qbdevice-admin/downloads/
+5 - rename the folder as qbadmin
+
+in order to compile API open a terminal and type:
+1 - cd ~/Desktop/my_working_copy/qbAPI/src
+2 - make
+
+in order to compile admin tools open a terminali and type:
+1 - cd ~/Desktop/my_working_copy/qbadmin/src
+2 - make
+
+the executable needed for managing the softhand is in 
+1 - cd ~/Desktop/my_working_copy/qbadmin/bin_unix
+
+add the user to the group 'dialout', type in the terminal 
+sudo adduser 'user' dialout //substitute 'user' with the name of the current computer user.
+
+reboot the computer
+
+try the qbadmintools, open a terminal and type:
+1 - cd ~/Desktop/my_working_copy/qbadmin/bin_unix
+2 - ./qbadmin -p //to show details about all the interfaces connected
+
+have fun!
