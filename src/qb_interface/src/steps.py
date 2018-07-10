@@ -15,7 +15,54 @@ from std_msgs.msg import String
 import curses
 from datetime import datetime
 
+##include for emergency break
+import sys, termios, atexit
+from select import select
+import time
+
 tstart = datetime.now()
+
+# save the terminal settings
+fd = sys.stdin.fileno()
+new_term = termios.tcgetattr(fd)
+old_term = termios.tcgetattr(fd)
+
+# new terminal setting unbuffered
+new_term[3] = (new_term[3] & ~termios.ICANON & ~termios.ECHO)
+
+# switch to normal terminal
+def set_normal_term():
+    termios.tcsetattr(fd, termios.TCSAFLUSH, old_term)
+
+# switch to unbuffered terminal
+def set_curses_term():
+    termios.tcsetattr(fd, termios.TCSAFLUSH, new_term)
+
+def putch(ch):
+    sys.stdout.write(ch)
+
+def getch():
+    return sys.stdin.read(1)
+
+def getche():
+    ch = getch()
+    putch(ch)
+    return ch
+
+def kbhit():
+    dr,dw,de = select([sys.stdin], [], [], 0)
+    return dr <> []
+
+def emergency(pos):
+    if getch() == 'x':
+        print "EXIT"
+        rospy.sleep(0.1)
+        pos.publish([0])
+        rospy.signal_shutdown("Emergency")
+        rospy.on_shutdown(h)
+        
+def h():
+    print "Emergency shutdown!"
 
 
 def main():
@@ -31,28 +78,37 @@ def main():
     SEED = 448 
     random.seed(SEED)
     random.shuffle(steps)
-#     steps=[9000, 9000, 15000]
+  #  steps=[9000, 9000, 15000, 15000]
     rate=rospy.Rate(100) #100 Hz
     
     for i in steps:
-#         Mg.sentpos(i)
         for a in range(0,300,1):
             pub.publish([i])
             Mg.sent_pos(i)
+            ## write a row in the file at each iteration
+            Mg.save() 
             rate.sleep()
-                     
-#             if keyboard.is_pressed('x'):
-#                 rospy.sleep(0.1)
-#                 pub.publish([0])
-#                 rospy.signal_shutdown("Emergency")
-#             else:
-#                 continue
+            if kbhit():
+                emergency(pub)
+                halt=True
+                break
+            if rospy.is_shutdown():
+                break
+        if rospy.is_shutdown():
+                break
+                
+                
+            
+    rospy.sleep(1)
+    pub.publish([0])
     tend = datetime.now()
     print tend-tstart
-    
+        
+
  
 class manage_cb:
     def __init__(self):
+        
         self.sub_current = rospy.Subscriber("qb_class/hand_measurement", msg.handPos , self.current_cb)
         self.sub_sensors = rospy.Subscriber("sensors_FSR", Float32MultiArray, self.sens_cb)
         self.sub_realpos = rospy.Subscriber("qb_class/hand_measurement", msg.handPos , self.realpos_cb)
@@ -68,35 +124,32 @@ class manage_cb:
     
     def realpos_cb(self,handPos):
         self.realpos=handPos.closure[0]
-        self.save()
+#         self.save()
         return self.realpos
     
     def current_cb(self,handPos):
         self.current=handPos.closure[2]
-        self.save()
+#         self.save()
         return self.current
     
     def sens_cb(self,msg):
 #         FSR_value=np.sum(msg.data[2:])
         self.FSR=np.array(msg.data)
         self.FSR=np.around(self.FSR, decimals=2)
-        self.save()
+#         self.save()
         return self.FSR
     
     def sent_pos(self,pos):
         self.sentpos=pos
-        self.save()
+#         self.save()
         return self.sentpos
     
-    def save(self):
-       # if ('self.FSR' and 'self.realpos' and 'self.current') in locals():
-
-#         tosave = np.append(tosave, self.sentpos)
+    def save(self):        
         tosave = np.append(self.FSR, np.around(self.current , decimals=2))
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
         tosave = np.append(tosave, np.around(self.sentpos, decimals=2))
         dir="/home/francesco/ros_ws_handshake/openloop_saves/"
-        name="xp_test_time_stiff" 
+        name="test" 
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
             writer.writerow(tosave)
@@ -107,6 +160,8 @@ class manage_cb:
         
 if __name__=="__main__":
     try:
+        atexit.register(set_normal_term)
+        set_curses_term()
         main()
     except rospy.ROSInterruptException:
         pass

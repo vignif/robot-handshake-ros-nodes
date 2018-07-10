@@ -1,6 +1,6 @@
 clear all
 close all
-data = csvread('xp3_stiff_07.csv');
+data = csvread('test.csv');
 FSR=data(:,1:4);
 current=data(:,5);
 realpos=data(:,6);
@@ -38,7 +38,10 @@ ylabel('force (mN)')
 figure
 subplot(2,1,1)
 plot(current)
+ylabel('Current')
 subplot(2,1,2)
 plot(realpos)
+ylabel('Position')
 hold on
-plot(sentpos)
+plot(sentpos,'r')
+legend('Real Position','Referenced Position')
