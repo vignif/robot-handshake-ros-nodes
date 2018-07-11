@@ -1,6 +1,6 @@
 clear all
 close all
-data = csvread('test.csv');
+data = csvread('Francesco_onestep_stiff07.csv');
 FSR=data(:,1:4);
 current=data(:,5);
 realpos=data(:,6);
