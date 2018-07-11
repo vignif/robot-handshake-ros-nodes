@@ -2,8 +2,6 @@
 ## 03_july_18
 import roslib
 import rospy
-import smach
-import smach_ros
 import std_msgs
 import numpy as np
 import csv
@@ -21,6 +19,9 @@ from select import select
 import time
 
 tstart = datetime.now()
+
+
+## input char from keyboard
 
 # save the terminal settings
 fd = sys.stdin.fileno()
@@ -68,17 +69,19 @@ def h():
 def main():
     pub = rospy.Publisher("qb_class/hand_ref", msg.handRef, queue_size= 1000)
     rospy.init_node("steps", anonymous=True)
-
+    
     #Class for managing subscription and file with relevant data
     Mg=manage_cb()
-
+    
     # 22 different values
     steps=range(6000,17000,500)
+    
     #initial seed to make a pseudorandom shuffle
     SEED = 448 
     random.seed(SEED)
     random.shuffle(steps)
-  #  steps=[9000, 9000, 15000, 15000]
+ ##for one step experiment uncomment the next row
+    steps=[9000, 9000, 15000, 15000]
     rate=rospy.Rate(100) #100 Hz
     
     for i in steps:
@@ -88,6 +91,8 @@ def main():
             ## write a row in the file at each iteration
             Mg.save() 
             rate.sleep()
+            ## if a key is hitted, check if its the safe key 'x'
+            ## send a safe position '0' and stop the experiment
             if kbhit():
                 emergency(pub)
                 halt=True
@@ -103,6 +108,7 @@ def main():
     pub.publish([0])
     tend = datetime.now()
     print tend-tstart
+    print "END"
         
 
  
@@ -115,45 +121,37 @@ class manage_cb:
         self.FSR=[0,0,0,0]
         self.current=0
         self.realpos=0
-#         self.sub_sentpos = rospy.Subscriber("qb_class/hand_ref", msg.handRef , self.sentpos_cb)
-#         
-#     def sentpos(self, closure):
-#         self.sentpos = closure
-#         self.save()
-#         return self.sentpos
     
     def realpos_cb(self,handPos):
         self.realpos=handPos.closure[0]
-#         self.save()
         return self.realpos
     
     def current_cb(self,handPos):
         self.current=handPos.closure[2]
-#         self.save()
         return self.current
     
     def sens_cb(self,msg):
-#         FSR_value=np.sum(msg.data[2:])
         self.FSR=np.array(msg.data)
         self.FSR=np.around(self.FSR, decimals=2)
-#         self.save()
         return self.FSR
     
     def sent_pos(self,pos):
         self.sentpos=pos
-#         self.save()
         return self.sentpos
     
-    def save(self):        
+    def save(self):
+        ##File structure
+        ## [FSR1, FSR2, FSR3, FSR4, current, realpos, sentpos]
+                
         tosave = np.append(self.FSR, np.around(self.current , decimals=2))
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
-        tosave = np.append(tosave, np.around(self.sentpos, decimals=2))
-        dir="/home/francesco/ros_ws_handshake/openloop_saves/"
-        name="test" 
+        tosave = np.append(tosave, self.sentpos)
+        dir="/home/francesco/ros_ws_handshake/openloop_saves/officials/"
+        name="Francesco_onestep_stiff07"
+        
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
-            writer.writerow(tosave)
-         
+            writer.writerow(tosave)         
         print tosave
 
  
