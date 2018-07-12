@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{espen}
+E.~Knoop, M.~Bächer, V.~Wall, R.~Deimel, O.~Brock, and P.~Beardsley.
+\newblock Handshakiness: Benchmarking for human-robot hand interactions.
+\newblock In {\em 2017 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 4982--4989, Sept 2017.
+
+\bibitem{papageorgiou}
+D.~Papageorgiou and Z.~Doulgeri.
+\newblock A kinematic controller for human-robot handshaking using internal
+  motion adaptation.
+\newblock In {\em 2015 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 5622--5627, May 2015.
+
+\bibitem{facialexpressions}
+M.~Y. Tsalamlal, J.~C. Martin, M.~Ammi, A.~Tapus, and M.~A. Amorim.
+\newblock Affective handshake with a humanoid robot: How do participants
+  perceive and combine its facial and haptic expressions?
+\newblock In {\em 2015 International Conference on Affective Computing and
+  Intelligent Interaction (ACII)}, pages 334--340, Sept 2015.
+
+\bibitem{mirrorgame}
+Chao Zhai, Francesco Alderisio, Piotr Słowiński, Krasimira Tsaneva-Atanasova,
+  and Mario Di~Bernardo.
+\newblock Design of a virtual player for joint improvisation with humans in the
+  mirror game.
+\newblock 11:e0154361, 04 2016.
+
+\end{thebibliography}

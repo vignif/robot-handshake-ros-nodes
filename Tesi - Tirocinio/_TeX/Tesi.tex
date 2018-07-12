@@ -3,8 +3,8 @@
 % di una tesi di laurea.
 % Per la grafica 
 \usepackage{graphicx}
-\usepackage{forest}
-\usepackage{subcaption}
+%\usepackage{forest}
+%\usepackage{subcaption}
 %\usepackage[]{mcode}
 \usepackage{tikz}
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
@@ -32,7 +32,7 @@
   },
 }
 \usepackage[a4paper,top=3.5cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=5mm]{geometry}
-\usepackage{gensymb}
+%\usepackage{gensymb}
 %% Per aggiungere la bibliografia nella \tableofcontents
 %%\let\oldbib\bibliography
 %\renewcommand{\bibliography}{\cleardoublepage1
@@ -50,7 +50,7 @@
 \usepackage[pdfpagemode={UseOutlines},colorlinks=true,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage}]{hyperref}
 
 \usepackage[english]{babel}
-\usepackage{microtype}
+%\usepackage{microtype}
 
 %\usepackage{enumitem} %personalizza liste puntate e numerate
 %\setlist{leftmargin=*,nolistsep}
@@ -59,7 +59,7 @@
 
 
 \usepackage{array}
-\usepackage{eurosym}
+%\usepackage{eurosym}
 %\usepackage[figure]{hypcap} %link nel pdf alla figura e non alla didascalia
 \usepackage{graphicx}
 
@@ -73,6 +73,18 @@
 %\renewcommand{\sectionmark}[1]%
 %{\markright{\sc{\thesection.\ #1}}}
 
+\usepackage{comment}
+ 
+%\usepackage[
+%backend=biber,
+%style=alphabetic,
+%sorting=ynt
+%]{biblatex}
+
+%\usepackage{biblatex}
+
+%\addbibresource{biblio.bib}
+%\bibliography{biblio.bib}
 
 
 \begin{document}
@@ -88,5 +100,24 @@
 
 \include{chap1}
 
+\bibliography{biblio}
+\bibliographystyle{plain}
 
+%\begin{thebibliography}{9}
+%\bibitem{latexcompanion} 
+%Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+%\textit{The \LaTeX\ Companion}. 
+%Addison-Wesley, Reading, Massachusetts, 1993.
+% 
+%\bibitem{einstein} 
+%Albert Einstein. 
+%\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
+%[\textit{On the electrodynamics of moving bodies}]. 
+%Annalen der Physik, 322(10):891–921, 1905.
+% 
+%\bibitem{knuthwebsite} 
+%Knuth: Computers and Typesetting,
+%\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+%\end{thebibliography}
+%
 \end{document}
