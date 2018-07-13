@@ -69,12 +69,12 @@ def h():
 def main():
     pub = rospy.Publisher("qb_class/hand_ref", msg.handRef, queue_size= 1000)
     rospy.init_node("steps", anonymous=True)
-    
+    rospy.set_param('/stiffness',1.0)
     #Class for managing subscription and file with relevant data
     Mg=manage_cb()
     
     # 22 different values
-    steps=range(6000,17000,500)
+    steps=range(6000,17000,250)
     
     #initial seed to make a pseudorandom shuffle
     SEED = 448 
@@ -147,7 +147,7 @@ class manage_cb:
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
         tosave = np.append(tosave, self.sentpos)
         dir="/home/francesco/ros_ws_handshake/openloop_saves/officials/"
-        name="Francesco_onestep_stiff07"
+        name="st1_step_francesco"
         
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
