@@ -1,6 +1,6 @@
 clear all
 close all
-data = csvread('st1_step_francesco.csv');
+data = csvread('st1_Francesco3.csv');
 FSR=data(:,1:4);
 current=data(:,5);
 realpos=data(:,6);
@@ -21,6 +21,11 @@ for i=1 : size(FSR(1,:),2)
     
 end
 scaleFSR = m*1.2;
+
+x=realpos;
+F=sumofFSR;
+k=F./x;
+
 
 % plot(sumofFSR)
 % hold on
@@ -58,19 +63,24 @@ axis([s1 s2 s3 s4],[0 size(FSR(:,1),1) 0 scaleFSR])
 
 
 figure
-subplot(2,1,1)
+ax1 = subplot(2,1,1);
 plot(current)
 ylabel('Current')
-subplot(2,1,2)
+axis([0 size(FSR(:,1),1) min(current)*1.2 max(current)*1.2])
+ax2 = subplot(2,1,2);
 plot(realpos)
 ylabel('Position')
 hold on
 plot(sentpos,'r')
 legend('Real Position','Referenced Position','Location','southeast')
-axis([0 size(FSR(:,1),1) -2000 17000])
+axis([0 size(FSR(:,1),1) 0 17000])
+xlabel('time (s)')
 
 figure
 plot(sumofFSR)
 hold on
 plot(sentpos,'r')
+plot(realpos,'m')
 legend('Sum of FSR', 'Referenced Position', 'Location','southeast')
+
+%plot(k)

@@ -81,10 +81,14 @@ def main():
     random.seed(SEED)
     random.shuffle(steps)
  ##for one step experiment uncomment the next row
-    steps=[9000, 9000, 15000, 15000]
+#     steps=[9000, 9000, 15000, 15000]
     rate=rospy.Rate(100) #100 Hz
-    
+    index=0
+    ln=len(steps)
+    ln=float(ln)
     for i in steps:
+        print "Experiment status: " + str(round(index/ln,2)*100) + "%" + "\t \t closure: " + str(i)
+
         for a in range(0,300,1):
             pub.publish([i])
             Mg.sent_pos(i)
@@ -101,7 +105,7 @@ def main():
                 break
         if rospy.is_shutdown():
                 break
-                
+        index+=1
                 
             
     rospy.sleep(1)
@@ -147,12 +151,12 @@ class manage_cb:
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
         tosave = np.append(tosave, self.sentpos)
         dir="/home/francesco/ros_ws_handshake/openloop_saves/officials/"
-        name="st1_step_francesco"
-        
+        name="st1_Daniele4"
+       
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
             writer.writerow(tosave)         
-        print tosave
+        #print tosave
 
  
         
