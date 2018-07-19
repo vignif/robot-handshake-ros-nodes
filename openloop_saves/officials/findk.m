@@ -9,8 +9,8 @@ current=zeros(13200,1);
 realpos=zeros(13200,1);
 sentpos=zeros(13200,1);
 
-%for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Marco','st1_Giovanni'}
-for name = {'st1_Daniele'}
+for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco'}
+%for name = {'st1_Daniele'}
     clear A;
     sumA=zeros(0,2);
 
@@ -31,11 +31,11 @@ for i=0:number_of_experiments-1
 %   realpos=[realpos; A(:,6)];
  %  sentpos=[sentpos; A(:,7)];
 end
-
-FSR=FSR/number_of_experiments;
-current = current / number_of_experiments;
-realpos = realpos / number_of_experiments;
-sentpos = sentpos / number_of_experiments;
+% 
+FSR=FSR/(number_of_experiments+1);
+current = current / (number_of_experiments+1);
+realpos = realpos / (number_of_experiments+1);
+sentpos = sentpos / (number_of_experiments+1);
 
 end
 
@@ -120,6 +120,7 @@ set(gca,'xticklabel',(tickslabels))
 
 
 figure
+grid on
 subplot(2,1,1)
 plot(realpos,'m')
 hold on
@@ -139,11 +140,24 @@ set(gca,'xticklabel',(tickslabels))
 
 %% SORT ARRAY
 data=[FSR, current, realpos, sentpos];
-[~,idx] = sort(data(:,7)); % sort just the first column
+[~,idx] = sort(data(:,7)); % sort just the selected column
 sortedmat = data(idx,:);   % sort the whole matrix using the sort indices
 
-x=realpos;
-F=sumofFSR;
-k=F./x;
-
+x=sortedmat(:,7); %sentpos
+x=sortedmat(:,6); %realpos
 sumofFSRsorted= sortedmat(:,1)+sortedmat(:,2) + sortedmat(:,3) +sortedmat(:,4); 
+
+F=sumofFSRsorted;
+k=F./x;
+figure
+%subplot(2,1,1)
+%plot(x)
+%set(gca,'XTick',ticks)
+%set(gca,'xticklabel',(tickslabels))
+%legend('Referenced Position','Location','south')
+%subplot(2,1,2)
+plot(k)
+set(gca,'XTick',ticks)
+set(gca,'xticklabel',(tickslabels))
+
+legend('k values reordered','Location','north')

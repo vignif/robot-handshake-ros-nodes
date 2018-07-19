@@ -192,18 +192,18 @@ OpenClose/fast:
 .PHONY : OpenClose/fast
 
 # Convenience name for target.
-qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
+qb_interface/CMakeFiles/Test_res_current.dir/rule:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/Test_res_current.dir/rule
+.PHONY : qb_interface/CMakeFiles/Test_res_current.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
+Test_res_current: qb_interface/CMakeFiles/Test_res_current.dir/rule
+.PHONY : Test_res_current
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/build.make qb_interface/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+Test_res_current/fast:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/build
+.PHONY : Test_res_current/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/rule:
@@ -527,48 +527,6 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
 src/FSR_current_control.o: src/FSR_current_control.cpp.o
 .PHONY : src/FSR_current_control.o
 
@@ -640,6 +598,30 @@ src/Open_close.s: src/Open_close.cpp.s
 src/Open_close.cpp.s:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/src/Open_close.cpp.s
 .PHONY : src/Open_close.cpp.s
+
+src/Test_res_current.o: src/Test_res_current.cpp.o
+.PHONY : src/Test_res_current.o
+
+# target to build an object file
+src/Test_res_current.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/src/Test_res_current.cpp.o
+.PHONY : src/Test_res_current.cpp.o
+
+src/Test_res_current.i: src/Test_res_current.cpp.i
+.PHONY : src/Test_res_current.i
+
+# target to preprocess a source file
+src/Test_res_current.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/src/Test_res_current.cpp.i
+.PHONY : src/Test_res_current.cpp.i
+
+src/Test_res_current.s: src/Test_res_current.cpp.s
+.PHONY : src/Test_res_current.s
+
+# target to generate assembly for a file
+src/Test_res_current.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/src/Test_res_current.cpp.s
+.PHONY : src/Test_res_current.cpp.s
 
 src/hand_detect_closure.o: src/hand_detect_closure.cpp.o
 .PHONY : src/hand_detect_closure.o
@@ -878,7 +860,7 @@ help:
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... Test_res_current"
 	@echo "... _qb_interface_generate_messages_check_deps_cubeCurrent"
 	@echo "... _qb_interface_generate_messages_check_deps_cubeEq_Preset"
 	@echo "... _qb_interface_generate_messages_check_deps_cubePos"
@@ -908,9 +890,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... src/FSR_current_control.o"
 	@echo "... src/FSR_current_control.i"
@@ -921,6 +900,9 @@ help:
 	@echo "... src/Open_close.o"
 	@echo "... src/Open_close.i"
 	@echo "... src/Open_close.s"
+	@echo "... src/Test_res_current.o"
+	@echo "... src/Test_res_current.i"
+	@echo "... src/Test_res_current.s"
 	@echo "... src/hand_detect_closure.o"
 	@echo "... src/hand_detect_closure.i"
 	@echo "... src/hand_detect_closure.s"

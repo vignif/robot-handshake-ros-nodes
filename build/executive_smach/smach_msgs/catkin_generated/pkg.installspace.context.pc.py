@@ -1,0 +1,8 @@
+# generated from catkin/cmake/template/pkg.context.pc.in
+CATKIN_PACKAGE_PREFIX = ""
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/francesco/ros_ws_handshake/install/include".split(';') if "/home/francesco/ros_ws_handshake/install/include" != "" else []
+PROJECT_CATKIN_DEPENDS = "message_runtime".replace(';', ' ')
+PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
+PROJECT_NAME = "smach_msgs"
+PROJECT_SPACE_DIR = "/home/francesco/ros_ws_handshake/install"
+PROJECT_VERSION = "2.0.1"

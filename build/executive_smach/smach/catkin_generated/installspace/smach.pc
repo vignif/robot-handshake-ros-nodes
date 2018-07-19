@@ -1,0 +1,8 @@
+prefix=/home/francesco/ros_ws_handshake/install
+
+Name: smach
+Description: Description of smach
+Version: 2.0.1
+Cflags: 
+Libs: -L/home/francesco/ros_ws_handshake/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/francesco/ros_ws_handshake/install
+
+Name: rosserial_mbed
+Description: Description of rosserial_mbed
+Version: 0.7.7
+Cflags: -I/home/francesco/ros_ws_handshake/install/include
+Libs: -L/home/francesco/ros_ws_handshake/install/lib 
+Requires: message_runtime

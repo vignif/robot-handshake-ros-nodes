@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/float64_test.dir/test/float64_test.cpp.o  -o /home/francesco/ros_ws_handshake/devel/lib/rosserial_client/float64_test  -L/home/francesco/ros_ws_handshake/build/gtest -rdynamic ../../gtest/libgtest.so -lpthread -Wl,-rpath,/home/francesco/ros_ws_handshake/build/gtest 

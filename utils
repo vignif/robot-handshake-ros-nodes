@@ -1,0 +1,11 @@
+rostopic pub /sensors_FSR std_msgs/Float32MultiArray "layout:
+  dim:
+  - label: ''
+    size: 0
+    stride: 0
+  data_offset: 0
+data: [ 20, 20, 10, 20, 30, 50]"
+
+
+rostopic pub /qb_class/hand_measurement qb_interface/handPos "closure: [10, 20, 20]" 
+

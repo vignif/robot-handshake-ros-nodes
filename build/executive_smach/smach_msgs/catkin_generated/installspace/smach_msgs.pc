@@ -1,0 +1,8 @@
+prefix=/home/francesco/ros_ws_handshake/install
+
+Name: smach_msgs
+Description: Description of smach_msgs
+Version: 2.0.1
+Cflags: -I/home/francesco/ros_ws_handshake/install/include
+Libs: -L/home/francesco/ros_ws_handshake/install/lib 
+Requires: message_runtime

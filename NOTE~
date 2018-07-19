@@ -1,0 +1,56 @@
+
+//install rosserial arduino
+sudo apt-get install ros-indigo-rosserial-arduino
+sudo apt-get install ros-indigo-rosserial
+
+
+// include custom msg into arduino code
+// ~/Arduino is arduino sketchbook folder
+
+cd Arduino/libraries
+
+//include all the packages of ros into the available list of arduino
+rosrun rosserial_arduino make_libraries.py . 
+
+
+//RUN Handshake program
+//plug in softhand check with 'lsusb | grep Future'
+//plug in arduino check with 'lsusb | grep Arduino'
+
+
+Terminal-1
+roscore
+
+Terminal-2
+//start arduino node. is sending a vector of 6 floats to a topic named 'sensors_FSR'
+rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+Terminal-3
+//start 'bridge' node. is taking as inputs 
+//the 6-floats vector from arduino and publishing 'closure' in the topic '/qb_class/hand_ref'
+//FSRtoClosure is an executable of the package qb_interface
+rosrun qb_interface FSRtoClosure 
+
+Terminal-4
+//load configuration parameters for qb interface
+rosparam load $(rospack find qb_interfac/conf/config.yaml
+
+//run qb_force_control in order to send closure position
+rosrun qb_interface qb_force_control
+
+Plots
+Terminal-5
+rqt_plot
+//click plot-options icon up-right
+//select MatPlot
+//edit curve lines for a better display x axis difference to 50
+
+closure --> /qb_class/hand_ref/closure[0]
+sensors --> /sensors_FSR/data[0]
+            /sensors_FSR/data[1]
+            /sensors_FSR/data[2]
+            /sensors_FSR/data[3]
+            /sensors_FSR/data[4]
+            /sensors_FSR/data[5]
+current --> /qb_class/hand_measurement/closure[2]
+
