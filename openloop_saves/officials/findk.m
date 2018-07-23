@@ -161,3 +161,59 @@ set(gca,'XTick',ticks)
 set(gca,'xticklabel',(tickslabels))
 
 legend('k values reordered','Location','north')
+%% Remove time dependece
+% plot as prof. (qr-q) vs. qr in order to find q0
+
+
+%% Delete transient from fsrVALUES %%
+% each closure position lasts 3seconds let's define the transient as the
+% 1st second.
+
+% lets drop from the wholesize(data(:,1)) unsorted matrix the interested rows
+% delete every firsts 100 rows each 300. how to do that? 
+
+% FSR_st=data_steady(:,1:4);
+% current_st=data_steady(:,5);
+% realpos_st=data_steady(:,6);
+% sentpos_st=data_steady(:,7);
+
+
+B=data;
+figure
+skip_first=0;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,1)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+skip_first=20;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,2)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+skip_first=40;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,3)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+skip_first=60;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,4)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+skip_first=80;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,5)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+skip_first=100;
+data_cut=cut_transient(data, skip_first);
+% skip_first=100;
+subplot(3,2,6)
+scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+
+
