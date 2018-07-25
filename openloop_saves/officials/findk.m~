@@ -215,7 +215,7 @@ data_cut=cut_transient(data, skip_first);
 % skip_first=100;
 subplot(3,2,6)
 scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-sumofFSRcutted= data_cut(:,1)+data_cut(:,2)+data_cut(:,3)+data_cut(:,4);
+sumofFSRcutted= data_(:,1)+data_steady(:,2)+data_steady(:,3)+data_steady(:,4);
 figure
-scatter(data_cut(:,7),sumofFSRcutted); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
+scatter(data_cut(sumofFSRcutted,data_cut(:,7)))
 
