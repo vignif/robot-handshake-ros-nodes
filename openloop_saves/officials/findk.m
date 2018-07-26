@@ -178,7 +178,7 @@ legend('k values reordered','Location','north')
 % sentpos_st=data_steady(:,7);
 
 
-B=data;
+data=sortedmat;
 figure
 skip_first=0;
 data_cut=cut_transient(data, skip_first);
@@ -219,3 +219,24 @@ sumofFSRcutted= data_cut(:,1)+data_cut(:,2)+data_cut(:,3)+data_cut(:,4);
 figure
 scatter(data_cut(:,7),sumofFSRcutted); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
 
+% The error between reference and the output position can be modeled from
+% the input of FSR sensors only in the range when the error is high
+% (>14000) aproximaly. in this way we can have a model of the force
+% (tracking error) having as inputs the FSR sensors.
+
+%% TASKS
+% t1 - how to identify (q0)? the position in which the tracking error is relevant
+% t2 - create a model between INPUT -> FSRsensors and OUTPUT -> tracking
+% error
+% t3 - does this model makes sense?
+% t4 - use the model for the closed loop controller
+% t5 - evaluate the model with different participants
+
+dataid=iddata(sumofFSRcutted, data_cut(:,7)-data_cut(:,6),0.01);
+mm = tfest(dataid,5,2);
+T=[0:0.01:0.01*size(data_cut(:,1))-0.01];
+y=lsim(mm,data_cut(:,7),T);
+plot(y,'r')
+hold on;
+plot(sumofFSRcutted,'b')
+legend('Model','sum of FSR')
