@@ -956,6 +956,19 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named Controller1
+
+# Build rule for target.
+Controller1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controller1
+.PHONY : Controller1
+
+# fast build rule for target.
+Controller1/fast:
+	$(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/build
+.PHONY : Controller1/fast
+
+#=============================================================================
 # Target rules for targets named FSR_current_control
 
 # Build rule for target.
@@ -2005,6 +2018,7 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... Controller1"
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"

@@ -1,4 +1,7 @@
 #include <std_msgs/Float32.h>
+#include <fstream>
+#include <iostream>
+#include <cstdlib>
 
 static float value=0;
 float Arr[6];
@@ -109,3 +112,25 @@ std_msgs::Float32 historyAvg(int current,int window){
 	avg.data =sum/history.size();
 	return avg;
 }
+
+
+float scale_controller1(float sumofFSR, std::vector<float> model, int pos[], int minSensor, int maxSensor) {
+	int limit = 19000; //hand limit closure input
+	int output;
+	for (int j = minSensor; j <= maxSensor; j++) {
+		//printf("%f, ", Arr[j]);
+		sumofFSR += Arr[j];
+	}
+//load csv file and return value in which the sumofFSR index is found
+
+	output=model;
+
+
+//	value = value * ;
+	//printf("\n");
+	if (output > limit) {
+		output = limit;
+	}
+	return output;
+}
+

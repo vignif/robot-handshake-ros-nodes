@@ -234,7 +234,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  7
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -265,7 +265,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  8
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
@@ -470,9 +470,9 @@ clean: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/clean
 # Target rules for target rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir
 
 # All Build rule for target.
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -511,7 +511,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.d
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  43 44
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  44 45
 	@echo "Built target rosserial_arduino_generate_messages_cpp"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
 
@@ -543,7 +543,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  45 46
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  46 47
 	@echo "Built target rosserial_arduino_generate_messages_lisp"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
 
@@ -575,7 +575,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.di
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  47 48 49 50
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  48 49 50 51
 	@echo "Built target rosserial_arduino_generate_messages_py"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
 
@@ -781,8 +781,8 @@ clean: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_gencpp.dir/clean
 # Target rules for target rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir
 
 # All Build rule for target.
-rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/all: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/all: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/all
+rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/all: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/all: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/build
@@ -822,7 +822,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/all
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  51 52
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  52 53
 	@echo "Built target rosserial_mbed_generate_messages_cpp"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_cpp.dir/all
 
@@ -854,7 +854,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/al
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  53 54
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  54 55
 	@echo "Built target rosserial_mbed_generate_messages_lisp"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all
 
@@ -886,7 +886,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all:
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  55 56 57 58
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  56 57 58 59
 	@echo "Built target rosserial_mbed_generate_messages_py"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all
 
@@ -1225,14 +1225,14 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  59 60 61 62 63
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  60 61 62 63 64
 	@echo "Built target rosserial_msgs_generate_messages_cpp"
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 
@@ -1260,14 +1260,14 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  64 65 66 67 68
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  65 66 67 68 69
 	@echo "Built target rosserial_msgs_generate_messages_lisp"
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
 
@@ -1295,14 +1295,14 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  69 70 71 72 73 74 75
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  70 71 72 73 74 75 76
 	@echo "Built target rosserial_msgs_generate_messages_py"
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 
@@ -1493,8 +1493,8 @@ clean: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/cle
 # Target rules for target rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir
 
 # All Build rule for target.
-rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/all: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/all: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all
+rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/all: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -1559,8 +1559,8 @@ clean: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_f
 
 # All Build rule for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/tests.dir/all
-rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: rosserial/rosserial_client/CMakeFiles/clean_test_results_rosserial_client.dir/all
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/all
+rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: rosserial/rosserial_client/CMakeFiles/clean_test_results_rosserial_client.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -1626,7 +1626,7 @@ rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/CMakeFiles/gte
 rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  6
 	@echo "Built target float64_test"
 .PHONY : rosserial/rosserial_client/CMakeFiles/float64_test.dir/all
 
@@ -1783,7 +1783,7 @@ rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/all: gtest/CMakeFiles/
 rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/build.make rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/build.make rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  91
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  92
 	@echo "Built target subscriber_test"
 .PHONY : rosserial/rosserial_client/CMakeFiles/subscriber_test.dir/all
 
@@ -1977,9 +1977,9 @@ clean: executive_smach/smach_msgs/CMakeFiles/smach_msgs_gencpp.dir/clean
 # Target rules for target executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir
 
 # All Build rule for target.
-executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/all: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/all: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/all: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all
+executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/all: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/depend
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -2014,13 +2014,13 @@ clean: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages.dir/cl
 # Target rules for target executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
+executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStatus.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStructure.dir/all
-executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  81 82 83
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  82 83 84
 	@echo "Built target smach_msgs_generate_messages_cpp"
 .PHONY : executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.dir/all
 
@@ -2048,13 +2048,13 @@ clean: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_cpp.di
 # Target rules for target executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
+executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStatus.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStructure.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  84 85 86
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  85 86 87
 	@echo "Built target smach_msgs_generate_messages_lisp"
 .PHONY : executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.dir/all
 
@@ -2082,13 +2082,13 @@ clean: executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_lisp.d
 # Target rules for target executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir
 
 # All Build rule for target.
+executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
+executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStatus.dir/all
 executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerStructure.dir/all
-executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/_smach_msgs_generate_messages_check_deps_SmachContainerInitialStatusCmd.dir/all
-executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/build.make executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  87 88 89 90
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  88 89 90 91
 	@echo "Built target smach_msgs_generate_messages_py"
 .PHONY : executive_smach/smach_msgs/CMakeFiles/smach_msgs_generate_messages_py.dir/all
 
@@ -2271,6 +2271,7 @@ clean: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/c
 # Directory level rules for directory qb_interface
 
 # Convenience name for "all" pass in the directory.
+qb_interface/all: qb_interface/CMakeFiles/Controller1.dir/all
 qb_interface/all: qb_interface/CMakeFiles/FSR_current_control.dir/all
 qb_interface/all: qb_interface/CMakeFiles/FSRtoClosure.dir/all
 qb_interface/all: qb_interface/CMakeFiles/OpenClose.dir/all
@@ -2282,6 +2283,7 @@ qb_interface/all: qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all
 .PHONY : qb_interface/all
 
 # Convenience name for "clean" pass in the directory.
+qb_interface/clean: qb_interface/CMakeFiles/Controller1.dir/clean
 qb_interface/clean: qb_interface/CMakeFiles/FSR_current_control.dir/clean
 qb_interface/clean: qb_interface/CMakeFiles/FSRtoClosure.dir/clean
 qb_interface/clean: qb_interface/CMakeFiles/OpenClose.dir/clean
@@ -2316,13 +2318,48 @@ qb_interface/preinstall:
 .PHONY : qb_interface/preinstall
 
 #=============================================================================
+# Target rules for target qb_interface/CMakeFiles/Controller1.dir
+
+# All Build rule for target.
+qb_interface/CMakeFiles/Controller1.dir/all:
+	$(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/depend
+	$(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  1
+	@echo "Built target Controller1"
+.PHONY : qb_interface/CMakeFiles/Controller1.dir/all
+
+# Include target in all.
+all: qb_interface/CMakeFiles/Controller1.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+qb_interface/CMakeFiles/Controller1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francesco/ros_ws_handshake/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/Controller1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francesco/ros_ws_handshake/build/CMakeFiles 0
+.PHONY : qb_interface/CMakeFiles/Controller1.dir/rule
+
+# Convenience name for target.
+Controller1: qb_interface/CMakeFiles/Controller1.dir/rule
+.PHONY : Controller1
+
+# clean rule for target.
+qb_interface/CMakeFiles/Controller1.dir/clean:
+	$(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/clean
+.PHONY : qb_interface/CMakeFiles/Controller1.dir/clean
+
+# clean rule for target.
+clean: qb_interface/CMakeFiles/Controller1.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target qb_interface/CMakeFiles/FSR_current_control.dir
 
 # All Build rule for target.
 qb_interface/CMakeFiles/FSR_current_control.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/FSR_current_control.dir/build.make qb_interface/CMakeFiles/FSR_current_control.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  2
 	@echo "Built target FSR_current_control"
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/all
 
@@ -2357,7 +2394,7 @@ clean: qb_interface/CMakeFiles/FSR_current_control.dir/clean
 qb_interface/CMakeFiles/FSRtoClosure.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/FSRtoClosure.dir/build.make qb_interface/CMakeFiles/FSRtoClosure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  3
 	@echo "Built target FSRtoClosure"
 .PHONY : qb_interface/CMakeFiles/FSRtoClosure.dir/all
 
@@ -2392,7 +2429,7 @@ clean: qb_interface/CMakeFiles/FSRtoClosure.dir/clean
 qb_interface/CMakeFiles/OpenClose.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/OpenClose.dir/build.make qb_interface/CMakeFiles/OpenClose.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  4
 	@echo "Built target OpenClose"
 .PHONY : qb_interface/CMakeFiles/OpenClose.dir/all
 
@@ -2427,7 +2464,7 @@ clean: qb_interface/CMakeFiles/OpenClose.dir/clean
 qb_interface/CMakeFiles/Test_res_current.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  5
 	@echo "Built target Test_res_current"
 .PHONY : qb_interface/CMakeFiles/Test_res_current.dir/all
 
@@ -2679,7 +2716,7 @@ clean: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRe
 qb_interface/CMakeFiles/hand_detect_closure.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/hand_detect_closure.dir/build.make qb_interface/CMakeFiles/hand_detect_closure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  9
 	@echo "Built target hand_detect_closure"
 .PHONY : qb_interface/CMakeFiles/hand_detect_closure.dir/all
 
@@ -2714,7 +2751,7 @@ clean: qb_interface/CMakeFiles/hand_detect_closure.dir/clean
 qb_interface/CMakeFiles/qb_force_control.dir/all:
 	$(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_force_control.dir/build.make qb_interface/CMakeFiles/qb_force_control.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  9 10 11 12 13 14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  10 11 12 13 14 15
 	@echo "Built target qb_force_control"
 .PHONY : qb_interface/CMakeFiles/qb_force_control.dir/all
 
@@ -2749,7 +2786,7 @@ clean: qb_interface/CMakeFiles/qb_force_control.dir/clean
 qb_interface/CMakeFiles/qb_interface.dir/all: qb_interface/CMakeFiles/qb_interface_gencpp.dir/all
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface.dir/build.make qb_interface/CMakeFiles/qb_interface.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  15 16 17 18 19 20
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  16 17 18 19 20 21
 	@echo "Built target qb_interface"
 .PHONY : qb_interface/CMakeFiles/qb_interface.dir/all
 
@@ -2812,9 +2849,9 @@ clean: qb_interface/CMakeFiles/qb_interface_gencpp.dir/clean
 # Target rules for target qb_interface/CMakeFiles/qb_interface_generate_messages.dir
 
 # All Build rule for target.
-qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all: qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all: qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all: qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all: qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages.dir/all: qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -2850,16 +2887,16 @@ clean: qb_interface/CMakeFiles/qb_interface_generate_messages.dir/clean
 
 # All Build rule for target.
 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  21 22 23 24 25 26 27
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  22 23 24 25 26 27 28
 	@echo "Built target qb_interface_generate_messages_cpp"
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/all
 
@@ -2887,17 +2924,17 @@ clean: qb_interface/CMakeFiles/qb_interface_generate_messages_cpp.dir/clean
 # Target rules for target qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir
 
 # All Build rule for target.
-qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  28 29 30 31 32 33 34
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  29 30 31 32 33 34 35
 	@echo "Built target qb_interface_generate_messages_lisp"
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/all
 
@@ -2925,17 +2962,17 @@ clean: qb_interface/CMakeFiles/qb_interface_generate_messages_lisp.dir/clean
 # Target rules for target qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir
 
 # All Build rule for target.
-qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubePos.dir/all
-qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeCurrent.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handCurrent.dir/all
 qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeEq_Preset.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handPos.dir/all
+qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all: qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_cubeRef.dir/all
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/depend
 	$(MAKE) -f qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build.make qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  35 36 37 38 39 40 41 42
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  36 37 38 39 40 41 42 43
 	@echo "Built target qb_interface_generate_messages_py"
 .PHONY : qb_interface/CMakeFiles/qb_interface_generate_messages_py.dir/all
 
@@ -3274,9 +3311,9 @@ clean: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros.dir/clean
 
 # All Build rule for target.
 executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_state_machine.test.dir/all
-executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_introspection.test.dir/all
-executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_sequence.test.dir/all
 executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_concurrence.test.dir/all
+executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_sequence.test.dir/all
+executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_introspection.test.dir/all
 executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_smach_actionlib.test.dir/all
 executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest_test_monitor.test.dir/all
 	$(MAKE) -f executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/build.make executive_smach/smach_ros/CMakeFiles/_run_tests_smach_ros_rostest.dir/depend
@@ -3563,12 +3600,12 @@ clean: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros.dir/clean
 # Target rules for target executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir
 
 # All Build rule for target.
-executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_concurrence.test.dir/all
-executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_state_machine.test.dir/all
 executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_sequence.test.dir/all
+executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_state_machine.test.dir/all
+executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_concurrence.test.dir/all
 executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_introspection.test.dir/all
-executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_monitor.test.dir/all
 executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_smach_actionlib.test.dir/all
+executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/all: executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest_test_monitor.test.dir/all
 	$(MAKE) -f executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/build.make executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/depend
 	$(MAKE) -f executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/build.make executive_smach/smach_ros/CMakeFiles/run_tests_smach_ros_rostest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -3807,24 +3844,24 @@ rosserial/rosserial_server/preinstall:
 # Target rules for target rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir
 
 # All Build rule for target.
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  76
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  77
 	@echo "Built target rosserial_server_serial_node"
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
 
@@ -3856,24 +3893,24 @@ clean: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/cl
 # Target rules for target rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir
 
 # All Build rule for target.
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/depend
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  77
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  78
 	@echo "Built target rosserial_server_socket_node"
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
 
@@ -3905,24 +3942,24 @@ clean: rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/cl
 # Target rules for target rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir
 
 # All Build rule for target.
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/depend
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  78
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  79
 	@echo "Built target rosserial_server_udp_socket_node"
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all
 
@@ -4120,9 +4157,9 @@ clean: rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test.dir/clean
 # Target rules for target rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir
 
 # All Build rule for target.
-rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all: rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_python_socket.test.dir/all
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all: rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_socket.test.dir/all
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all: rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_serial.test.dir/all
+rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all: rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_python_socket.test.dir/all
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/build.make rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/depend
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/build.make rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles 
@@ -4284,7 +4321,7 @@ rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/all: gt
 rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/all: rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/build.make rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/depend
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/build.make rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  79
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  80
 	@echo "Built target rosserial_test_publish_subscribe"
 .PHONY : rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/all
 
@@ -4312,24 +4349,24 @@ clean: rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/
 # Target rules for target rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir
 
 # All Build rule for target.
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_py.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: executive_smach/smach_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/build.make rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/depend
 	$(MAKE) -f rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/build.make rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  80
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles  81
 	@echo "Built target rosserial_test_rosserial_lib"
 .PHONY : rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all
 

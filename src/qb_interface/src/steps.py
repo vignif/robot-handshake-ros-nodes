@@ -111,6 +111,7 @@ def main():
     rospy.sleep(1)
     pub.publish([0])
     tend = datetime.now()
+    
     print tend-tstart
     print "END"
         
@@ -151,7 +152,7 @@ class manage_cb:
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
         tosave = np.append(tosave, self.sentpos)
         dir="/home/francesco/ros_ws_handshake/openloop_saves/officials/"
-        name="st1_Daniele4"
+        name="st1_Gionata4"
        
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)

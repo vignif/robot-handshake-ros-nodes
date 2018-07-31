@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+qb_interface/CMakeFiles/Controller1.dir/rule:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/Controller1.dir/rule
+.PHONY : qb_interface/CMakeFiles/Controller1.dir/rule
+
+# Convenience name for target.
+Controller1: qb_interface/CMakeFiles/Controller1.dir/rule
+.PHONY : Controller1
+
+# fast build rule for target.
+Controller1/fast:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/build
+.PHONY : Controller1/fast
+
+# Convenience name for target.
 qb_interface/CMakeFiles/FSR_current_control.dir/rule:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSR_current_control.dir/rule
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/rule
@@ -527,6 +541,30 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/Controller1.o: src/Controller1.cpp.o
+.PHONY : src/Controller1.o
+
+# target to build an object file
+src/Controller1.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.o
+.PHONY : src/Controller1.cpp.o
+
+src/Controller1.i: src/Controller1.cpp.i
+.PHONY : src/Controller1.i
+
+# target to preprocess a source file
+src/Controller1.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.i
+.PHONY : src/Controller1.cpp.i
+
+src/Controller1.s: src/Controller1.cpp.s
+.PHONY : src/Controller1.s
+
+# target to generate assembly for a file
+src/Controller1.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.s
+.PHONY : src/Controller1.cpp.s
+
 src/FSR_current_control.o: src/FSR_current_control.cpp.o
 .PHONY : src/FSR_current_control.o
 
@@ -857,6 +895,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Controller1"
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"
@@ -891,6 +930,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... test"
+	@echo "... src/Controller1.o"
+	@echo "... src/Controller1.i"
+	@echo "... src/Controller1.s"
 	@echo "... src/FSR_current_control.o"
 	@echo "... src/FSR_current_control.i"
 	@echo "... src/FSR_current_control.s"

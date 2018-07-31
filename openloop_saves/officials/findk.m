@@ -9,7 +9,7 @@ current=zeros(13200,1);
 realpos=zeros(13200,1);
 sentpos=zeros(13200,1);
 
-for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco'}
+for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
 %for name = {'st1_Daniele'}
     clear A;
     sumA=zeros(0,2);

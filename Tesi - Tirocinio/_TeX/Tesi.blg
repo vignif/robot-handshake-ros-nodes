@@ -8,45 +8,45 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "art:rif.1"
 Warning--I didn't find a database entry for "book:rif.2"
 Warning--empty journal in mirrorgame
-You've used 4 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            527 strings with 5011 characters,
-and the built_in function-call counts, 2062 in all, are:
-= -- 193
-> -- 102
-< -- 3
-+ -- 41
-- -- 36
-* -- 149
-:= -- 309
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 30
+            534 strings with 5242 characters,
+and the built_in function-call counts, 2562 in all, are:
+= -- 236
+> -- 135
+< -- 4
++ -- 54
+- -- 48
+* -- 188
+:= -- 388
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 84
-empty$ -- 157
-format.name$ -- 36
-if$ -- 455
+cite$ -- 6
+duplicate$ -- 103
+empty$ -- 193
+format.name$ -- 48
+if$ -- 563
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 8
-pop$ -- 39
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 51
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 34
 quote$ -- 0
-skip$ -- 74
+skip$ -- 88
 stack$ -- 0
-substring$ -- 145
-swap$ -- 37
-text.length$ -- 3
+substring$ -- 165
+swap$ -- 44
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 20
 warning$ -- 1
-while$ -- 15
-width$ -- 5
-write$ -- 45
+while$ -- 19
+width$ -- 6
+write$ -- 56
 (There were 3 warnings)

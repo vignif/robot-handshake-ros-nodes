@@ -9,8 +9,8 @@ current=zeros(13200,1);
 realpos=zeros(13200,1);
 sentpos=zeros(13200,1);
 
-for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco'}
-%for name = {'st1_Daniele'}
+for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
+%for name = {'st1_Gionata'}
     clear A;
     sumA=zeros(0,2);
 
@@ -144,3 +144,17 @@ plot(y,'r')
 hold on;
 plot(sumofFSRsortedcutted(4000:end),'b')
 legend('Model','sum of FSR')
+
+y= @(x) 0.00014 * x.^2 -2.5 * x + 13000;
+model=[];
+for x=0:1:19000
+model = [ model ;x, ceil(y(x)) ];
+end 
+for i=1:find(model(:,2)==min(model(:,2)))
+model(i,2)=min(model(:,2));
+end
+
+figure
+plot(model(:,1),model(:,2));xlabel('qr'); ylabel('sumofFSR')
+
+csvwrite('model1.csv',model)
