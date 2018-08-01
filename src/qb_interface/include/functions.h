@@ -2,6 +2,14 @@
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
+#include <boost/tokenizer.hpp>
+#include <vector>
+#include <string>
+#include <algorithm>    // copy
+#include <iterator>
+using namespace std;
+using namespace boost;
+
 
 static float value=0;
 float Arr[6];
@@ -113,8 +121,12 @@ std_msgs::Float32 historyAvg(int current,int window){
 	return avg;
 }
 
+// loadmodel is a function that takes as input the name of the csv file
+// the file is expected to have two columns of integers
+// the function is returning a vector of vectors with the value of the file
 
-float scale_controller1(float sumofFSR, std::vector<float> model, int pos[], int minSensor, int maxSensor) {
+
+float scale_controller1(float sumofFSR, int model[][2] , int minSensor, int maxSensor) {
 	int limit = 19000; //hand limit closure input
 	int output;
 	for (int j = minSensor; j <= maxSensor; j++) {
@@ -122,8 +134,18 @@ float scale_controller1(float sumofFSR, std::vector<float> model, int pos[], int
 		sumofFSR += Arr[j];
 	}
 //load csv file and return value in which the sumofFSR index is found
+	// model[position][sumofFSR];
+	//model[0][] colonna posizione
+	//model[1][] colonna sumofFSR
+for(int i=sumofFSR;i<sumofFSR+4;i++){
 
-	output=model;
+if(i==model[i][1]){
+	output=model[i][0];
+break;
+}
+}
+	cout << output << endl;
+	//output=model;
 
 
 //	value = value * ;

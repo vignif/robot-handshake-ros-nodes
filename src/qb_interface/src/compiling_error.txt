@@ -1,4 +1,0 @@
-/home/francesco/ros_ws1/src/qb_interface/src/qbInterface.cpp:33:25: fatal error: qbInterface.h: No such file or directory
- #include "qbInterface.h"
-                         ^
-compilation terminated.

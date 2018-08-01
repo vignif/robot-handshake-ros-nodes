@@ -1,10 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "csv_parser.hpp"
 using namespace std;
 int main()
 {
-	ifstream in("model1.csv");
+/* barcelli	
+
+ifstream in("model1.csv");
 	vector<float> vv;
 	while(!in.eof())
 	{
@@ -19,5 +22,12 @@ int main()
 	for(int i=0;i<n;i++)
 		cout<<"v["<<i<<"]="<<v[i]<<endl;
 	in.close();
+*/
+	cout << "start csvparser" << endl;
+
+	csv_parser csv("model1.csv");
+	string value = csv.get_line(3);
+	cout << value << endl;
 	return 0;
 }
+
