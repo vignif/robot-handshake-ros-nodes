@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <ctime>
 
 using namespace std;
 
@@ -53,7 +54,7 @@ int main(int argc, char **argv)
 
 
 		value = scale_controller1(sumofFSR, m, 0 , 5);
-//		state.closure.push_back((int)value); //round the closure value to the closest integer
+		state.closure.push_back((int)value); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);
 		usleep(10000);  //dynamic usleeps takes microseconds in input

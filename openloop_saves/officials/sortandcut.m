@@ -150,11 +150,23 @@ model=[];
 for x=0:1:19000
 model = [ model ;x, ceil(y(x)) ];
 end 
+model1=model;
 for i=1:find(model(:,2)==min(model(:,2)))
 model(i,2)=min(model(:,2));
+model1(i,2)=i-min(model(:,2));
+
 end
 
+figure 
+plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
 figure
-plot(model(:,1),model(:,2));xlabel('qr'); ylabel('sumofFSR')
+plot(model(:,1),model(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
+
+for i=1:find(model(:,2)==min(model(:,2)))
+end
+
+
+figure
+plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
 
 csvwrite('model1.csv',model)

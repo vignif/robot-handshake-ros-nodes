@@ -7,6 +7,9 @@
 #include <string>
 #include <algorithm>    // copy
 #include <iterator>
+#include <ctime>
+#include <stdlib.h>
+
 using namespace std;
 using namespace boost;
 
@@ -133,24 +136,34 @@ float scale_controller1(float sumofFSR, int model[][2] , int minSensor, int maxS
 		//printf("%f, ", Arr[j]);
 		sumofFSR += Arr[j];
 	}
+
 //load csv file and return value in which the sumofFSR index is found
 	// model[position][sumofFSR];
-	//model[0][] colonna posizione
-	//model[1][] colonna sumofFSR
-for(int i=sumofFSR;i<sumofFSR+4;i++){
-
-if(i==model[i][1]){
-	output=model[i][0];
-break;
+	//model[][0] colonna posizione
+	//model[][1] colonna sumofFSR
+	  clock_t begin = clock();
+//
+for (int i=0;i<19000;i++){
+	  if(abs(sumofFSR-model[i][1])<=2 ){
+	cout << "FSRonline: " << sumofFSR << "  FSRfromModel: " << model[i][1] << endl;
+		  output=model[i][0];
+		  break;
+	  }else if(sumofFSR <1840){
+		  output=9000;
+	  }else if(sumofFSR >16040){
+		  output=limit;
+	  }
+//	if(model[i][1] < sumofFSR+3 && model[i][1] > sumofFSR){
+//		output=model[i][0];
+//	}
 }
-}
-	cout << output << endl;
-	//output=model;
-
-
-//	value = value * ;
-	//printf("\n");
-	if (output > limit) {
+//	  cout <<"look for unknown value"<< model[19001][0] << endl;
+//	output =model[(int)sumofFSR][1];
+clock_t end = clock();
+  double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+cout <<"elapsed sec: "<< elapsed_secs << endl;
+//	output=val;
+	if (output >= limit) {
 		output = limit;
 	}
 	return output;
