@@ -1112,6 +1112,19 @@ _qb_interface_generate_messages_check_deps_handRef/fast:
 .PHONY : _qb_interface_generate_messages_check_deps_handRef/fast
 
 #=============================================================================
+# Target rules for targets named ctrl_function
+
+# Build rule for target.
+ctrl_function: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ctrl_function
+.PHONY : ctrl_function
+
+# fast build rule for target.
+ctrl_function/fast:
+	$(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/build
+.PHONY : ctrl_function/fast
+
+#=============================================================================
 # Target rules for targets named hand_detect_closure
 
 # Build rule for target.
@@ -2030,6 +2043,7 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handCurrent"
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
+	@echo "... ctrl_function"
 	@echo "... hand_detect_closure"
 	@echo "... qb_force_control"
 	@echo "... qb_interface"

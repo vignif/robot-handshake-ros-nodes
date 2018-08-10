@@ -9,6 +9,7 @@
 #include <iterator>
 #include <ctime>
 #include <stdlib.h>
+#include <math.h>
 
 using namespace std;
 using namespace boost;
@@ -167,5 +168,21 @@ cout <<"elapsed sec: "<< elapsed_secs << endl;
 		output = limit;
 	}
 	return output;
+}
+
+// function that takes online FSR and computes the reference closure
+
+int compute_f(float sumofFSR, int minS = 0, int maxS = 5){
+int q;
+	for (int j = minS; j <= maxS; j++) {
+			//printf("%f, ", Arr[j]);
+			sumofFSR += Arr[j];
+		}
+	//int q0=11000;
+	q= 0.000068 * sumofFSR*sumofFSR + 1.5 * sumofFSR + 8000 ;
+
+//q= q0 + (int) log(sumofFSR+1);
+
+	return q;
 }
 
