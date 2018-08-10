@@ -38,8 +38,10 @@ The reference position is a value which should be defined, this robotic hand is 
 
 \section{The Sensors}
 The core of the closed loop control is to have a feedback in the whole system which is proportional to the force applied during the handshake from the human. 
-The sensors used in this work are Force Sensitive Resistors 
-Measuring the force applied from the human to the Pisa/IIT SoftHand and decoupling it from the one applied from the Pisa/IIT SoftHand to the human is delicated task and the hint comes from \cite{espen}, where an extensive study in handshake has been done and the physical interaction during the handshake has been exploited.
+The sensors used in this work are Force Sensitive Resistors measuring the force applied from the human to the Pisa/IIT SoftHand, in order to decouple this force from the one applied from the Pisa/IIT SoftHand to the human hand, an extensive study[\cite{espen}] in handshake has been done and the physical interaction during the handshake has been setted up accordingly.
+These mentioned sensors are the more natural choice for handshake experiments since the response time to the system is negligible with respect to the dynamics of the handshake event.
+
+ 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{Figure/fsr.png}
@@ -65,8 +67,9 @@ Measuring the force applied from the human to the Pisa/IIT SoftHand and decoupli
 
 \section{}
 \chapter{Software setup}
+The experiments described needs a software capable of exchanging informations between robots, without the interaction of a human, therefore the Robot Operative System has been chosen in order to manage the informations between the devices involved in these experiments.  
 \section{Ros}
-
+The Robot Operative System (ROS) is a set of frameworks and libraries useful for robot software development. The logic of this software is really intuitive, it lets the developers to represent a device as node inside a graph. Each device is therefore a node inside this graph, and all the communications are going through a main node, also called master node, which takes care about forwarding the informations between nodes.
 
 \chapter*{Conclusion}
 This project applies learning \cite{art:rif.1} techniques to MNIST handwritten dataset. As we can see in the previous confusion matrix the accuracy of the final work is $97.6\%$. The overall idea is to train \emph{autoenc1},  \emph{autoenc2} and \emph{softmax1} once per time and to crop the nets in order to have coherents dimension between network interconnections. At the end of \cite{book:rif.2}this process we stack all the partial neural network together and the deep neural network come to life. \\The satisfaction behind this project can be experimented by running the file "MNIST\textunderscore drawsim.m" which is a matlab function that allows the user to draw a digit and returns the correct digit value 97,6 times over 100.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  6 AUG 2018 18:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  10 AUG 2018 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,29 +1088,29 @@ Chapter 3.
 File: Figure/PID.png Graphic file (type png)
  <use Figure/PID.png>
 Package pdftex.def Info: Figure/PID.png used on input line 34.
-(pdftex.def)             Requested size: 330.05324pt x 117.26804pt.
+(pdftex.def)             Requested size: 247.5415pt x 87.95235pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figure/fsr.png, id=115, 1030.85126pt x 406.51875pt>
-File: Figure/fsr.png Graphic file (type png)
- <use Figure/fsr.png>
-Package pdftex.def Info: Figure/fsr.png used on input line 45.
-(pdftex.def)             Requested size: 412.56499pt x 162.69145pt.
-
 [6
 
-] <Figure/qbhand1.jpg, id=124, 4175.6pt x 3131.7pt>
+] <Figure/fsr.png, id=122, 1030.85126pt x 406.51875pt>
+File: Figure/fsr.png Graphic file (type png)
+ <use Figure/fsr.png>
+Package pdftex.def Info: Figure/fsr.png used on input line 47.
+(pdftex.def)             Requested size: 412.56499pt x 162.69145pt.
+
+<Figure/qbhand1.jpg, id=124, 4175.6pt x 3131.7pt>
 File: Figure/qbhand1.jpg Graphic file (type jpg)
  <use Figure/qbhand1.jpg>
-Package pdftex.def Info: Figure/qbhand1.jpg used on input line 55.
+Package pdftex.def Info: Figure/qbhand1.jpg used on input line 57.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
 
 <Figure/qbhand2.jpg, id=125, 4175.6pt x 3131.7pt>
 File: Figure/qbhand2.jpg Graphic file (type jpg)
  <use Figure/qbhand2.jpg>
-Package pdftex.def Info: Figure/qbhand2.jpg used on input line 60.
+Package pdftex.def Info: Figure/qbhand2.jpg used on input line 62.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
 
 [7 <./Figure/PID.png> <./Figure/fsr.png>] [8 <./Figure/qbhand1.jpg> <./Figure/q
@@ -1120,10 +1120,10 @@ Chapter 4.
 
 ]
 
-LaTeX Warning: Citation `art:rif.1' on page 10 undefined on input line 72.
+LaTeX Warning: Citation `art:rif.1' on page 10 undefined on input line 75.
 
 
-LaTeX Warning: Citation `book:rif.2' on page 10 undefined on input line 72.
+LaTeX Warning: Citation `book:rif.2' on page 10 undefined on input line 75.
 
 ) [10
 
@@ -1168,7 +1168,7 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Tesi.pdf (12 pages, 2690547 bytes).
+Output written on Tesi.pdf (12 pages, 2691328 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams
