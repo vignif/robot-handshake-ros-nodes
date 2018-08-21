@@ -1,9 +1,9 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}The state of the Art}{4}{chapter.1}
-\contentsline {chapter}{\numberline {2}The Idea}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Hardware setup}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}The Pisa/IIT SoftHand}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Sensors}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}}{8}{section.3.3}
-\contentsline {chapter}{\numberline {4}Software setup}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ros}{9}{section.4.1}
+\contentsline {chapter}{\numberline {1}The state of the Art}{6}{chapter.1}
+\contentsline {chapter}{\numberline {2}The Idea}{7}{chapter.2}
+\contentsline {chapter}{\numberline {3}Hardware setup}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Pisa/IIT SoftHand}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}The Sensors}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}}{10}{section.3.3}
+\contentsline {chapter}{\numberline {4}Software setup}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ros}{11}{section.4.1}

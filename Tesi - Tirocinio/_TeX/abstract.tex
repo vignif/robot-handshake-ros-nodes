@@ -1,0 +1,19 @@
+
+% If you wish to include an abstract, uncomment the lines below
+%Abstract text
+\chapter*{Abstract}
+\begin{center}
+
+\textbf{Closed loop approach to Human-Robot Handshake}
+\end{center}
+\vspace{60px}
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+%%\section{Environment}
+The following Master's Thesis wants to exploit the Human-Robot interaction when it comes to the handshake event. The handshake event between human beings is a well known task, it is able to transmit participants feelings as a mixture of physical features like: strength of the handshake, velocity approach, duration of the handshake, oscillation frequency of the wrist, etc..
+The target of this work is to set up an environment in order to test different closed loop controllers for the handshake event.
+The environment includes: The Pisa/IIT SoftHand, four FSR 400 sensor plugged to an Arduino Uno, all the communication are managed by Robotic Operating System (ROS).
+The FSR sensors are varying the voltage of the attached pins proportionally with the applied force, the work is splitted in two main experimental parts: the calibration and the tests. The calibration part is an open loop system in which the Pisa/IIT SoftHand is executing pseudorandom closures and the FSR are recording what the human is doing. The hypothesis is to model the human response to the handshake as a spring, once this part is completed different models are fitted to the data and are embedded, for the tests, into the closed loop controller which is varying the closure position of the Pisa/IIT SoftHand with respect to the online readings of the sensors. 
+\\
+

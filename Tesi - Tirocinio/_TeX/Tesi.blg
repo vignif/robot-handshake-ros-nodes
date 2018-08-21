@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Tesi.aux
 A level-1 auxiliary file: frontespizio.aux
+A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: chap1.aux
 The style file: plain.bst
 Database file #1: biblio.bib
@@ -10,7 +11,7 @@ Warning--I didn't find a database entry for "book:rif.2"
 Warning--empty journal in mirrorgame
 You've used 6 entries,
             2118 wiz_defined-function locations,
-            539 strings with 5510 characters,
+            540 strings with 5522 characters,
 and the built_in function-call counts, 3260 in all, are:
 = -- 299
 > -- 183

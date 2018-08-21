@@ -47,7 +47,7 @@ x  neuron missingl/.style={
 %\usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, amsfonts}
 
-\usepackage[pdfpagemode={UseOutlines},colorlinks=true,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage}]{hyperref}
+\usepackage[pdfpagemode={UseOutlines},colorlinks=false,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage} ,hidelinks]{hyperref}
 
 \usepackage[english]{babel}
 %\usepackage{microtype}
@@ -74,7 +74,6 @@ x  neuron missingl/.style={
 %{\markright{\sc{\thesection.\ #1}}}
 
 \usepackage{comment}
- 
 %\usepackage[
 %backend=biber,
 %style=alphabetic,
@@ -93,7 +92,7 @@ x  neuron missingl/.style={
 %\include{tesi-cgt-frn}
 \include{frontespizio}
 \tableofcontents
-
+\include{abstract}
 %\listoffigures
 %\listoftables
  
@@ -103,21 +102,4 @@ x  neuron missingl/.style={
 \bibliography{biblio}
 \bibliographystyle{plain}
 
-%\begin{thebibliography}{9}
-%\bibitem{latexcompanion} 
-%Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
-%\textit{The \LaTeX\ Companion}. 
-%Addison-Wesley, Reading, Massachusetts, 1993.
-% 
-%\bibitem{einstein} 
-%Albert Einstein. 
-%\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
-%[\textit{On the electrodynamics of moving bodies}]. 
-%Annalen der Physik, 322(10):891–921, 1905.
-% 
-%\bibitem{knuthwebsite} 
-%Knuth: Computers and Typesetting,
-%\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
-%\end{thebibliography}
-%
 \end{document}

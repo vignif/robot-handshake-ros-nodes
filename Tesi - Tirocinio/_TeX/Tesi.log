@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  10 AUG 2018 11:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  21 AUG 2018 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,7 +808,7 @@ Now handling font encoding PD1 ...
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
 Package hyperref Info: Option `linktocpage' set `true' on input line 4319.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4319
 .
@@ -834,7 +834,7 @@ Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
 Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6315.
 Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
@@ -898,25 +898,25 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write4
 
-Excluding comment 'comment') (./Tesi.aux (./frontespizio.aux) (./chap1.aux))
+Excluding comment 'comment') (./Tesi.aux (./frontespizio.aux) (./abstract.aux)
+(./chap1.aux))
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count135
 \scratchdimen=\dimen180
@@ -981,7 +981,7 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 90.
+Package hyperref Info: Link coloring OFF on input line 89.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -990,9 +990,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 90.
-LaTeX Info: Redefining \pageref on input line 90.
-LaTeX Info: Redefining \nameref on input line 90.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
 
 (./Tesi.out) (./Tesi.out)
 \@outlinefile=\write5
@@ -1068,23 +1068,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+) [3
+
+
+] [4]
 \openout2 = `chap1.aux'.
 
- (./chap1.tex
-[3
+ (./chap1.tex [5
+
 
 
 ]
 Chapter 1.
-[4
+[6
 
 ]
 Chapter 2.
-[5
+[7
 
 ]
 Chapter 3.
-<Figure/PID.png, id=112, 974.64125pt x 346.29375pt>
+<Figure/PID.png, id=123, 974.64125pt x 346.29375pt>
 File: Figure/PID.png Graphic file (type png)
  <use Figure/PID.png>
 Package pdftex.def Info: Figure/PID.png used on input line 34.
@@ -1093,41 +1104,41 @@ Package pdftex.def Info: Figure/PID.png used on input line 34.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6
+[8
 
-] <Figure/fsr.png, id=122, 1030.85126pt x 406.51875pt>
+] <Figure/fsr.png, id=133, 1030.85126pt x 406.51875pt>
 File: Figure/fsr.png Graphic file (type png)
  <use Figure/fsr.png>
 Package pdftex.def Info: Figure/fsr.png used on input line 47.
 (pdftex.def)             Requested size: 412.56499pt x 162.69145pt.
 
-<Figure/qbhand1.jpg, id=124, 4175.6pt x 3131.7pt>
+<Figure/qbhand1.jpg, id=135, 4175.6pt x 3131.7pt>
 File: Figure/qbhand1.jpg Graphic file (type jpg)
  <use Figure/qbhand1.jpg>
 Package pdftex.def Info: Figure/qbhand1.jpg used on input line 57.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
 
-<Figure/qbhand2.jpg, id=125, 4175.6pt x 3131.7pt>
+<Figure/qbhand2.jpg, id=136, 4175.6pt x 3131.7pt>
 File: Figure/qbhand2.jpg Graphic file (type jpg)
  <use Figure/qbhand2.jpg>
 Package pdftex.def Info: Figure/qbhand2.jpg used on input line 62.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
 
-[7 <./Figure/PID.png> <./Figure/fsr.png>] [8 <./Figure/qbhand1.jpg> <./Figure/q
-bhand2.jpg>]
+[9 <./Figure/PID.png> <./Figure/fsr.png>] [10 <./Figure/qbhand1.jpg> <./Figure/
+qbhand2.jpg>]
 Chapter 4.
-[9
+[11
 
 ]
 
-LaTeX Warning: Citation `art:rif.1' on page 10 undefined on input line 75.
+LaTeX Warning: Citation `art:rif.1' on page 12 undefined on input line 75.
 
 
-LaTeX Warning: Citation `book:rif.2' on page 10 undefined on input line 75.
+LaTeX Warning: Citation `book:rif.2' on page 12 undefined on input line 75.
 
-) [10
+) [12
 
-] (./Tesi.bbl [11
+] (./Tesi.bbl [13
 
 
 ]
@@ -1137,12 +1148,12 @@ ira Tsaneva-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
- (./Tesi.aux (./frontespizio.aux) (./chap1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+ (./Tesi.aux (./frontespizio.aux) (./abstract.aux) (./chap1.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 70F7E1AB436C30252C9EE400FD2BFCAB;439.
 
@@ -1152,13 +1163,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 18333 strings out of 493304
- 350867 string characters out of 6139871
- 458178 words of memory out of 5000000
- 21340 multiletter control sequences out of 15000+600000
+ 18342 strings out of 493304
+ 350961 string characters out of 6139871
+ 458531 words of memory out of 5000000
+ 21339 multiletter control sequences out of 15000+600000
  12063 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,9n,61p,781b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1168,10 +1179,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Tesi.pdf (12 pages, 2691328 bytes).
+Output written on Tesi.pdf (14 pages, 2693308 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
