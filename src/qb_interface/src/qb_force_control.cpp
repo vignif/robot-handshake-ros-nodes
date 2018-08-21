@@ -32,7 +32,7 @@ qb_force::qb_force(){
 
         // IF an error is find
         if (tmp_hand == NULL){
-            cout << "[ERORR] Unable to allocate space for cube structure." << endl;
+            cout << "[ERROR] Unable to allocate space for cube structure." << endl;
             return;
         }
 
@@ -48,12 +48,13 @@ qb_force::qb_force(){
     if (!hand_chain_.empty()){
         hand_sub = node_->subscribe("/qb_class/hand_ref", 1, &qb_force::handRefCallback, this);
         hand_pub = node_->advertise<qb_interface::handPos>("/qb_class/hand_measurement", 1);
-      //  hand_pub_current = node_->advertise<std_msgs::Int32>("/hand_current", 1);
+//        hand_pub_current = node_->advertise<std_msgs::Int32>("/hand_current", 1);
 
 
     }
 }
 
+//function that reads the topic /qb_class/hand_ref, which is the reference position sent to the hand
 
 void qb_force::handRefCallback(const qb_interface::handRef::ConstPtr& msg){
     pos_ref_ = msg->closure;
@@ -123,6 +124,7 @@ void qb_force::spinOnce(){
         state.closure.push_back((float) cur_.at(0));
         // Set Position of all devices
         float AAA;
+        //function move computes the physical movement of the hand
         move(AAA);
         state.closure.push_back(AAA);
         hand_pub.publish(state);
@@ -259,13 +261,17 @@ bool qb_force::deactivate() {
 float qb_force::calc_current(float set_pos,float cur_pos,float stiffness, float speed, float damping,float deadband){
     //THIS IS WHERE WE CALCULATE THE CURRENT
     float error=(set_pos-cur_pos);
+    //this if is always true since the deadband is 0
     if (fabs(error)>deadband)   return error*stiffness;
     else return 0;
 }
 void qb_force::move(float &debug_ref) {
 
     if (pos_ref_.size()>0) {
-        node_->param<double>("/stiffness", stiffness_, 0.1);
+    	//store a variable with the stiffness value
+    	//not set to rosparam
+
+    	node_->param<double>("/stiffness", stiffness_, 0.1);
         short int meas[2];
         float des_cur = calc_current(pos_ref_.at(0), pos_.at(0), stiffness_, speed_, damping_,0);
         meas[0] = (short) des_cur;

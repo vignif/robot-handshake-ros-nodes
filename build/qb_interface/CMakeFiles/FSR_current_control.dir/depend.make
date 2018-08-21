@@ -70,6 +70,7 @@ qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/std_msgs/Float32.h
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/std_msgs/Float32MultiArray.h
+qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/std_msgs/Int32.h
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/std_msgs/MultiArrayDimension.h
 qb_interface/CMakeFiles/FSR_current_control.dir/src/FSR_current_control.cpp.o: /opt/ros/indigo/include/std_msgs/MultiArrayLayout.h
 

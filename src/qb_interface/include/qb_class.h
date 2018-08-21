@@ -171,6 +171,7 @@ class qb_class{
 		ros::Publisher cube_pub;
 		ros::Publisher hand_pub;
 
+
 		ros::Publisher cube_curr_pub;
 		ros::Publisher hand_curr_pub;
 

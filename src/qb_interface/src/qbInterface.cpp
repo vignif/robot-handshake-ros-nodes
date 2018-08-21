@@ -390,7 +390,6 @@ bool qbInterface::getMeasAndCurr(short int* meas, short int* curr) {
 
     curr[0] = aux[0];
     curr[1] = aux[1];
-
     // Motor pos and axis direction
 
     meas[0] = aux[2] * axis_dir_;

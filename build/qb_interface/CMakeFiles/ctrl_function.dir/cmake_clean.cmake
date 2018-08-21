@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o"
+  "CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o"
   "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function.pdb"
   "/home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function"
 )

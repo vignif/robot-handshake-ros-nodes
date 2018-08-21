@@ -49,37 +49,37 @@ include qb_interface/CMakeFiles/ctrl_function.dir/progress.make
 # Include the compile flags for this target's objects.
 include qb_interface/CMakeFiles/ctrl_function.dir/flags.make
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o: qb_interface/CMakeFiles/ctrl_function.dir/flags.make
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/controller_function.cpp
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o: qb_interface/CMakeFiles/ctrl_function.dir/flags.make
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o: /home/francesco/ros_ws_handshake/src/qb_interface/src/ctrl_function.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/francesco/ros_ws_handshake/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/controller_function.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o"
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o -c /home/francesco/ros_ws_handshake/src/qb_interface/src/ctrl_function.cpp
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ctrl_function.dir/src/controller_function.cpp.i"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/controller_function.cpp > CMakeFiles/ctrl_function.dir/src/controller_function.cpp.i
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.i"
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/francesco/ros_ws_handshake/src/qb_interface/src/ctrl_function.cpp > CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.i
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ctrl_function.dir/src/controller_function.cpp.s"
-	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/controller_function.cpp -o CMakeFiles/ctrl_function.dir/src/controller_function.cpp.s
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.s"
+	cd /home/francesco/ros_ws_handshake/build/qb_interface && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/francesco/ros_ws_handshake/src/qb_interface/src/ctrl_function.cpp -o CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.s
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.requires:
-.PHONY : qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.requires
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.requires:
+.PHONY : qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.requires
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.provides: qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.requires
-	$(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.provides.build
-.PHONY : qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.provides
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.provides: qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.requires
+	$(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.provides.build
+.PHONY : qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.provides
 
-qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.provides.build: qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o
+qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.provides.build: qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o
 
 # Object files for target ctrl_function
 ctrl_function_OBJECTS = \
-"CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o"
+"CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o"
 
 # External object files for target ctrl_function
 ctrl_function_EXTERNAL_OBJECTS =
 
-/home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function: qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o
+/home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function: qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o
 /home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function: qb_interface/CMakeFiles/ctrl_function.dir/build.make
 /home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function: /opt/ros/indigo/lib/libroscpp.so
 /home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function: /usr/lib/x86_64-linux-gnu/libboost_signals.so
@@ -106,7 +106,7 @@ ctrl_function_EXTERNAL_OBJECTS =
 qb_interface/CMakeFiles/ctrl_function.dir/build: /home/francesco/ros_ws_handshake/devel/lib/qb_interface/ctrl_function
 .PHONY : qb_interface/CMakeFiles/ctrl_function.dir/build
 
-qb_interface/CMakeFiles/ctrl_function.dir/requires: qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o.requires
+qb_interface/CMakeFiles/ctrl_function.dir/requires: qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o.requires
 .PHONY : qb_interface/CMakeFiles/ctrl_function.dir/requires
 
 qb_interface/CMakeFiles/ctrl_function.dir/clean:

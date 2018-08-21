@@ -7,6 +7,7 @@
 #include <qb_interface/handPos.h>
 #include <vector>
 #include <qbHand.h>
+#include <std_msgs/Int32.h>
 
 #define ERR_TIMEOUT		5
 
@@ -24,6 +25,7 @@ protected:
     double step_time_,stiffness_;
     ros::Subscriber hand_sub;
     ros::Publisher hand_pub,debug_pub;
+//	ros::Publisher hand_pub_current;
     void handRefCallback(const qb_interface::handRef::ConstPtr&);
     std::vector<qbHand*> hand_chain_;
     std::vector<float> pos_,cur_,pos_ref_;

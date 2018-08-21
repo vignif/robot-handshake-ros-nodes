@@ -1125,6 +1125,19 @@ ctrl_function/fast:
 .PHONY : ctrl_function/fast
 
 #=============================================================================
+# Target rules for targets named ctrl_function_pw
+
+# Build rule for target.
+ctrl_function_pw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ctrl_function_pw
+.PHONY : ctrl_function_pw
+
+# fast build rule for target.
+ctrl_function_pw/fast:
+	$(MAKE) -f qb_interface/CMakeFiles/ctrl_function_pw.dir/build.make qb_interface/CMakeFiles/ctrl_function_pw.dir/build
+.PHONY : ctrl_function_pw/fast
+
+#=============================================================================
 # Target rules for targets named hand_detect_closure
 
 # Build rule for target.
@@ -2044,6 +2057,7 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
 	@echo "... ctrl_function"
+	@echo "... ctrl_function_pw"
 	@echo "... hand_detect_closure"
 	@echo "... qb_force_control"
 	@echo "... qb_interface"

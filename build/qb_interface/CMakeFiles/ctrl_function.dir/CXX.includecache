@@ -103,6 +103,8 @@ vector
 -
 qbHand.h
 -
+std_msgs/Int32.h
+-
 
 /home/francesco/ros_ws_handshake/src/qb_interface/include/qbmove_communications.h
 windows.h
@@ -114,7 +116,7 @@ commands.h
 stdint.h
 -
 
-/home/francesco/ros_ws_handshake/src/qb_interface/src/controller_function.cpp
+/home/francesco/ros_ws_handshake/src/qb_interface/src/ctrl_function.cpp
 qb_force_control.h
 -
 ros/ros.h
@@ -812,6 +814,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 std_msgs/MultiArrayLayout.h
+-
+
+/opt/ros/indigo/include/std_msgs/Int32.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/indigo/include/std_msgs/MultiArrayDimension.h

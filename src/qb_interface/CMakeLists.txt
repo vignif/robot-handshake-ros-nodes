@@ -216,8 +216,12 @@ target_link_libraries(FSR_current_control   ${catkin_LIBRARIES} )
 add_executable(Controller1 src/Controller1.cpp)
 target_link_libraries(Controller1   ${catkin_LIBRARIES} )
 
-add_executable(ctrl_function src/controller_function.cpp)
+add_executable(ctrl_function src/ctrl_function.cpp)
 target_link_libraries(ctrl_function   ${catkin_LIBRARIES} )
+
+
+add_executable(ctrl_function_pw src/ctrl_function_pw.cpp)
+target_link_libraries(ctrl_function_pw   ${catkin_LIBRARIES} )
 
 
 add_executable(qb_force_control src/main2.cpp src/qb_force_control.cpp src/qbCube.cpp src/qbHand.cpp src/qbInterface.cpp #/home/joao/code/qb_hand_stuff/qbAPI/src/qbmove_communications.cpp

@@ -26,13 +26,13 @@ public:
 	float current;
 	float smooth_current;
 	void cb_closure(const qb_interface::handRef::Ptr& msg){
-	closure=msg->closure[0];
+		closure=msg->closure[0];
 	}
 	void cb_current(const qb_interface::handPos::Ptr& msg){
-	current=msg->closure[2];
+		current=msg->closure[2];
 	}
 	void cb_smooth_current(const std_msgs::Float32::Ptr& msg){
-	smooth_current= (float)msg->data;
+		smooth_current= (float)msg->data;
 	}
 };
 
@@ -138,32 +138,32 @@ float scale_controller1(float sumofFSR, int model[][2] , int minSensor, int maxS
 		sumofFSR += Arr[j];
 	}
 
-//load csv file and return value in which the sumofFSR index is found
+	//load csv file and return value in which the sumofFSR index is found
 	// model[position][sumofFSR];
 	//model[][0] colonna posizione
 	//model[][1] colonna sumofFSR
-	  clock_t begin = clock();
-//
-for (int i=0;i<19000;i++){
-	  if(abs(sumofFSR-model[i][1])<=2 ){
-	cout << "FSRonline: " << sumofFSR << "  FSRfromModel: " << model[i][1] << endl;
-		  output=model[i][0];
-		  break;
-	  }else if(sumofFSR <1840){
-		  output=9000;
-	  }else if(sumofFSR >16040){
-		  output=limit;
-	  }
-//	if(model[i][1] < sumofFSR+3 && model[i][1] > sumofFSR){
-//		output=model[i][0];
-//	}
-}
-//	  cout <<"look for unknown value"<< model[19001][0] << endl;
-//	output =model[(int)sumofFSR][1];
-clock_t end = clock();
-  double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-cout <<"elapsed sec: "<< elapsed_secs << endl;
-//	output=val;
+	clock_t begin = clock();
+	//
+	for (int i=0;i<19000;i++){
+		if(abs(sumofFSR-model[i][1])<=2 ){
+			cout << "FSRonline: " << sumofFSR << "  FSRfromModel: " << model[i][1] << endl;
+			output=model[i][0];
+			break;
+		}else if(sumofFSR <1840){
+			output=9000;
+		}else if(sumofFSR >16040){
+			output=limit;
+		}
+		//	if(model[i][1] < sumofFSR+3 && model[i][1] > sumofFSR){
+		//		output=model[i][0];
+		//	}
+	}
+	//	  cout <<"look for unknown value"<< model[19001][0] << endl;
+	//	output =model[(int)sumofFSR][1];
+	clock_t end = clock();
+	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+	cout <<"elapsed sec: "<< elapsed_secs << endl;
+	//	output=val;
 	if (output >= limit) {
 		output = limit;
 	}
@@ -173,16 +173,38 @@ cout <<"elapsed sec: "<< elapsed_secs << endl;
 // function that takes online FSR and computes the reference closure
 
 int compute_f(float sumofFSR, int minS = 0, int maxS = 5){
-int q;
+	int q;
 	for (int j = minS; j <= maxS; j++) {
-			//printf("%f, ", Arr[j]);
-			sumofFSR += Arr[j];
-		}
+		//printf("%f, ", Arr[j]);
+		sumofFSR += Arr[j];
+	}
 	//int q0=11000;
 	q= 0.000068 * sumofFSR*sumofFSR + 1.5 * sumofFSR + 8000 ;
-
-//q= q0 + (int) log(sumofFSR+1);
-
+	//q= q0 + (int) log(sumofFSR+1);
 	return q;
 }
+
+
+int compute_f_piecewise(float sumofFSR, int minS = 0, int maxS = 5){
+	int q;
+	for (int j = minS; j <= maxS; j++) {
+		//printf("%f, ", Arr[j]);
+		sumofFSR += Arr[j];
+	}
+	float x= sumofFSR;
+	//int q0=11000;
+
+	float min_FSR=1000;
+	float min_q=6000;
+	if(x<min_FSR){
+		q=(int) min_q/min_FSR*x;
+	}else{
+		//q= - 0.000068 * x*x + 1.5 * x + 8000;
+		q= -11/100000*x*x + 121/50 * x + 3690;
+	}
+	if(q>=19000) q= 19000;
+	return q;
+}
+
+
 

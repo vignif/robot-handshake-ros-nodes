@@ -332,6 +332,20 @@ ctrl_function/fast:
 .PHONY : ctrl_function/fast
 
 # Convenience name for target.
+qb_interface/CMakeFiles/ctrl_function_pw.dir/rule:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/ctrl_function_pw.dir/rule
+.PHONY : qb_interface/CMakeFiles/ctrl_function_pw.dir/rule
+
+# Convenience name for target.
+ctrl_function_pw: qb_interface/CMakeFiles/ctrl_function_pw.dir/rule
+.PHONY : ctrl_function_pw
+
+# fast build rule for target.
+ctrl_function_pw/fast:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function_pw.dir/build.make qb_interface/CMakeFiles/ctrl_function_pw.dir/build
+.PHONY : ctrl_function_pw/fast
+
+# Convenience name for target.
 qb_interface/CMakeFiles/hand_detect_closure.dir/rule:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/hand_detect_closure.dir/rule
 .PHONY : qb_interface/CMakeFiles/hand_detect_closure.dir/rule
@@ -675,29 +689,53 @@ src/Test_res_current.cpp.s:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/src/Test_res_current.cpp.s
 .PHONY : src/Test_res_current.cpp.s
 
-src/controller_function.o: src/controller_function.cpp.o
-.PHONY : src/controller_function.o
+src/ctrl_function.o: src/ctrl_function.cpp.o
+.PHONY : src/ctrl_function.o
 
 # target to build an object file
-src/controller_function.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.o
-.PHONY : src/controller_function.cpp.o
+src/ctrl_function.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.o
+.PHONY : src/ctrl_function.cpp.o
 
-src/controller_function.i: src/controller_function.cpp.i
-.PHONY : src/controller_function.i
+src/ctrl_function.i: src/ctrl_function.cpp.i
+.PHONY : src/ctrl_function.i
 
 # target to preprocess a source file
-src/controller_function.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.i
-.PHONY : src/controller_function.cpp.i
+src/ctrl_function.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.i
+.PHONY : src/ctrl_function.cpp.i
 
-src/controller_function.s: src/controller_function.cpp.s
-.PHONY : src/controller_function.s
+src/ctrl_function.s: src/ctrl_function.cpp.s
+.PHONY : src/ctrl_function.s
 
 # target to generate assembly for a file
-src/controller_function.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/controller_function.cpp.s
-.PHONY : src/controller_function.cpp.s
+src/ctrl_function.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function.dir/build.make qb_interface/CMakeFiles/ctrl_function.dir/src/ctrl_function.cpp.s
+.PHONY : src/ctrl_function.cpp.s
+
+src/ctrl_function_pw.o: src/ctrl_function_pw.cpp.o
+.PHONY : src/ctrl_function_pw.o
+
+# target to build an object file
+src/ctrl_function_pw.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function_pw.dir/build.make qb_interface/CMakeFiles/ctrl_function_pw.dir/src/ctrl_function_pw.cpp.o
+.PHONY : src/ctrl_function_pw.cpp.o
+
+src/ctrl_function_pw.i: src/ctrl_function_pw.cpp.i
+.PHONY : src/ctrl_function_pw.i
+
+# target to preprocess a source file
+src/ctrl_function_pw.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function_pw.dir/build.make qb_interface/CMakeFiles/ctrl_function_pw.dir/src/ctrl_function_pw.cpp.i
+.PHONY : src/ctrl_function_pw.cpp.i
+
+src/ctrl_function_pw.s: src/ctrl_function_pw.cpp.s
+.PHONY : src/ctrl_function_pw.s
+
+# target to generate assembly for a file
+src/ctrl_function_pw.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_function_pw.dir/build.make qb_interface/CMakeFiles/ctrl_function_pw.dir/src/ctrl_function_pw.cpp.s
+.PHONY : src/ctrl_function_pw.cpp.s
 
 src/hand_detect_closure.o: src/hand_detect_closure.cpp.o
 .PHONY : src/hand_detect_closure.o
@@ -946,6 +984,7 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
 	@echo "... ctrl_function"
+	@echo "... ctrl_function_pw"
 	@echo "... edit_cache"
 	@echo "... hand_detect_closure"
 	@echo "... install"
@@ -984,9 +1023,12 @@ help:
 	@echo "... src/Test_res_current.o"
 	@echo "... src/Test_res_current.i"
 	@echo "... src/Test_res_current.s"
-	@echo "... src/controller_function.o"
-	@echo "... src/controller_function.i"
-	@echo "... src/controller_function.s"
+	@echo "... src/ctrl_function.o"
+	@echo "... src/ctrl_function.i"
+	@echo "... src/ctrl_function.s"
+	@echo "... src/ctrl_function_pw.o"
+	@echo "... src/ctrl_function_pw.i"
+	@echo "... src/ctrl_function_pw.s"
 	@echo "... src/hand_detect_closure.o"
 	@echo "... src/hand_detect_closure.i"
 	@echo "... src/hand_detect_closure.s"

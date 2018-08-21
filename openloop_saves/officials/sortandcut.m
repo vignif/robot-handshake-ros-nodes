@@ -101,7 +101,7 @@ scatter(qr,qr-q); title('tracking error'); xlabel('qr'); ylabel('qr-q')
 data=sortedmat;
 
 % a value is set in order to not consider the transients
-skip_first=100;
+skip_first=200;
 
 % function to cut the transient
 data_cut=cut_transient(data, skip_first);
@@ -118,8 +118,8 @@ scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted trans
 
 sumofFSRsortedcutted= data_cut(:,1)+data_cut(:,2)+data_cut(:,3)+data_cut(:,4);
 figure
-scatter(data_cut(:,7),sumofFSRsortedcutted); title(sprintf('sorted and cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
-
+% scatter(data_cut(:,7),sumofFSRsortedcutted); title(sprintf('sorted and cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
+scatter(sumofFSRsortedcutted,data_cut(:,7)); title(sprintf('sorted and cutted transient: %d / 300',skip_first)); ylabel('qr'); xlabel('sumofFSR')
 data_cutted_sorted = data_cut;
 % The error between reference and the output position can be modeled from
 % the input of FSR sensors only in the range when the error is high
@@ -145,28 +145,39 @@ hold on;
 plot(sumofFSRsortedcutted(4000:end),'b')
 legend('Model','sum of FSR')
 
-y= @(x) 0.00014 * x.^2 -2.5 * x + 13000;
+y= @(x) -11/100000 * x.^2 +121/50 * x + 3690;
 model=[];
 for x=0:1:19000
 model = [ model ;x, ceil(y(x)) ];
 end 
+mins_q=find(model(:,2)==min(model(:,2)));
+min_FSR=min(model(:,2));
+avgmin_q=mean(mins_q);
 model1=model;
+for i=1:avgmin_q
+model(i,2)=i/avgmin_q*min_FSR;
+end
+
+figure
+plot(model(:,1),model(:,2));xlabel('sumofFSR modeles'); ylabel('qr')
+
+
 for i=1:find(model(:,2)==min(model(:,2)))
 model(i,2)=min(model(:,2));
 model1(i,2)=i-min(model(:,2));
 
 end
 
-figure 
-plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
+% figure 
+% plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
 figure
 plot(model(:,1),model(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
 
-for i=1:find(model(:,2)==min(model(:,2)))
-end
-
-
-figure
-plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
+% for i=1:find(model(:,2)==min(model(:,2)))
+% end
+% 
+% 
+% figure
+% plot(model1(:,1),model1(:,2));xlabel('qr'); ylabel('sumofFSR modeled')
 
 csvwrite('model1.csv',model)
