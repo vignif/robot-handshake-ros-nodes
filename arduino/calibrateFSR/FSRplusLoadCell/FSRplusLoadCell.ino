@@ -1,4 +1,8 @@
 /******************************************************************************
+ Arduino with 6 FSR plugged to the ANALOG inputs AND load cell plugged to Digital
+  in order to sync the topics to ROS in order to save a file to understand the 
+  relation between fsrvalues and force(N) from load cell
+  
   FSR_qb_interface.ino
   starting from:
   Example sketch for SparkFun's force sensitive resistors
@@ -24,20 +28,30 @@ Francesco Vigni @ SIRSLab
 july 8, 2018
  
 ******************************************************************************/
-
+#include <HX711.h>
 #include <ros.h>
+#include <std_msgs/Float32.h>
+#include <std_msgs/Float32MultiArray.h>
+
+#define DOUT 3
+#define CLK 2
+
+HX711 scale(DOUT,CLK);
 /*
 #include <qb_interface/handRef.h> //includi custom message in modo
 //che arduino invii direttamente a ros il valore closure.
 //path per includere libreria ~/Arduino/libraries/Rosserial_Arduino_Library/src/
 */
-#include <std_msgs/Float32MultiArray.h>
 
 ros::NodeHandle nh;
 const int queue_size=0; //infinit queue can overload arduino memory if the not dequeued properly
 //create ros publisher named 'sensors_FSR'
 std_msgs::Float32MultiArray sensors;
+std_msgs::Float32 force;
+
 ros::Publisher chatter("sensors_FSR", &sensors, queue_size);
+ros::Publisher chatter1("dummipalm", &force, queue_size);
+long calibration_val=0;
 
 //publisher for closure
 /*
@@ -87,15 +101,22 @@ void setup()
   
   nh.initNode();
   nh.advertise(chatter);
-//  nh.advertise(send_closure);  
+  nh.advertise(chatter1);
+
+//calibrate dummypalm
+  for (int i=0;i<100;i++)
+    calibration_val+=scale.read();
+  calibration_val=calibration_val/100;
+
+//sensors alloc space
   sensors.data_length=NumberOfSensors;
-  //allocate memory for the array
   sensors.data = (float *)malloc(sizeof(float)*NumberOfSensors);
 }
 
 void loop()
 {
-  
+  long read_val=scale.read();
+
  //for loop over sensors, and compute force from analog reading with function ComputeForce
 for(int i =0; i<NumberOfSensors; i++){
   fsrADC[i]=analogRead(FSR_PIN[i]); // fill array of fsrADC from analogReads
@@ -105,9 +126,16 @@ for(int i =0; i<NumberOfSensors; i++){
   sensors.data[i]=0; // if the threshold is not satistied set the value to zero
   }
   }
-
+if((read_val-calibration_val) >0)
+    {
+      Serial.println((read_val-calibration_val)/11180);
+      force.data=(read_val-calibration_val)/11180;    
+      // To get force in N, divide by factor 11180
+    }
 //Start publish routine
 chatter.publish( &sensors ); //i'm publishing the sensors pointer to array
+chatter1.publish( &force ); //i'm publishing the sensors pointer to array
+
 nh.spinOnce();
 delayMicroseconds(1000);
 //END publish routine
