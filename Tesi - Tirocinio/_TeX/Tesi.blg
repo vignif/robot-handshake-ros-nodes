@@ -8,46 +8,47 @@ The style file: plain.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "art:rif.1"
 Warning--I didn't find a database entry for "book:rif.2"
+Warning--empty year in fsrdatasheet
 Warning--empty journal in mirrorgame
-You've used 6 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            540 strings with 5522 characters,
-and the built_in function-call counts, 3260 in all, are:
-= -- 299
-> -- 183
-< -- 5
-+ -- 73
-- -- 66
-* -- 244
-:= -- 493
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 51
+            551 strings with 5763 characters,
+and the built_in function-call counts, 3864 in all, are:
+= -- 352
+> -- 203
+< -- 6
++ -- 81
+- -- 72
+* -- 276
+:= -- 585
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 128
-empty$ -- 237
-format.name$ -- 66
-if$ -- 714
+cite$ -- 10
+duplicate$ -- 161
+empty$ -- 300
+format.name$ -- 72
+if$ -- 851
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 33
-num.names$ -- 12
-pop$ -- 66
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 84
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 52
 quote$ -- 0
-skip$ -- 111
+skip$ -- 132
 stack$ -- 0
-substring$ -- 206
-swap$ -- 57
-text.length$ -- 5
+substring$ -- 228
+swap$ -- 66
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 1
-while$ -- 23
-width$ -- 7
-write$ -- 67
-(There were 3 warnings)
+type$ -- 32
+warning$ -- 2
+while$ -- 29
+width$ -- 9
+write$ -- 87
+(There were 4 warnings)

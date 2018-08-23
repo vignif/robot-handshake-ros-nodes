@@ -1,7 +1,8 @@
 \chapter*{Introduction}
-The following work wants to explore the phases of the handshake between a human and a robot, reaching a consensus in the human-machine interaction. The handshake event can be divided in two steps: the approaching and handshaking. The consensus is a parameter that allow the human to evaluate a handshake mixing aspects like: duration of the event, dynamics, force exchanged.
-The handshake is the most common human-human interaction and is extensively used worldwide in events like: greetings, introduction routine between human beings and agreements. 
-This work focuses only on the latter handshake step, with the purpose of evaluating different models for the closed loop controller. 
+The handshake event, commonly used, is a natural human interaction and is extensively used worldwide in events like: greetings, introduction routine between human beings and agreements. 
+The scientific approach to handshake between a human and a robot, therefore, must intrinsically deal with low levels of human interaction and some assumption must be done in order to focus on the task.
+The handshake event can be divided in two steps: the approaching and handshaking. This work is focused on the haptic sense involved during the handshake, knowing the the approaching is mainly executed using non haptic senses(f.i. vision).\\ The consensus is a parameter that allow the human to evaluate a handshake mixing aspects like: duration of the event, dynamics, force exchanged.
+An important part of this work is to test different controllers with the purpose of evaluating the consensus using closed loop controllers. 
   
 %Many research teams all over the world are focused on the human-robot physical interaction, this opens the topic to an interesting scientific discussion.  
 
@@ -9,50 +10,26 @@ This work focuses only on the latter handshake step, with the purpose of evaluat
 \chapter{The state of the Art}
 Develop a robot capable of performing a smooth human-like handshake is still a highly interested topic in the scientific literature.
 A natural handshake between two humans is a very complex task to replicate, this work just focuses on the interaction force between the artificial hand and the human hand.
-The consensus is a complex task to encode inside a robot, the human will easily distinguish the event with respect to another human or to a robot. A human will take into consideration the skin feedbacks like: the temperature, the humidity and the softness. These are all characteristics that are still not embedded into the hardware available in the market. The aspect taken in consideration in this work is the grasping force exchanged in the handshake. 
-Robots, nowadays, are highly involved in industries where mostly they have to execute repetitive tasks. These kind of robots, when it comes to grasping objects, commonly uses multi purposes grippers\cite{multipurposegripper}. The grasping force exchanged in the human-Robot handshake event is a complex value to identify, therefore this work is estimating the grasping force from values which can be clearly identified. 
+The consensus is a complex task to encode inside a robot, the human will easily distinguish the event with respect to another human or to a robot. A human will take into consideration the skin feedbacks like: the temperature, the humidity and the softness. These are some characteristics that are still not embedded into the hardware available in the market. The aspect taken in consideration in this work is the grasping force exchanged in the handshake. 
+Robots, nowadays, are highly involved in industries where mostly they have to execute repetitive tasks. These kind of robots, when deals in grasping objects, commonly uses multi purposes grippers\cite{multipurposegripper}, therefore, an accurate choice has been done on the hardware to use in this work. 
+%The grasping force exchanged in the human-robot handshake event is a complex value to identify, this work is estimating the grasping force from values which can be clearly identified. 
 
 
 \cite{facialexpressions}
-\cite{espen}
 \cite{mirrorgame}
 \cite{papageorgiou}
 
 \chapter{The Idea}
-The idea is to create a closed loop controller for the human-robot handshake event, using Pisa/IIT SoftHand produced for research purposes at Universit\'a degli studi di Pisa and upgrading it with four independent FSR sensors which uses an Arduino uno in order to communicate the data.
+The idea is to create a closed loop controller for the human-robot handshake event, using Pisa/IIT SoftHand produced for research purposes at Universit\`a degli studi di Pisa and upgrading it with four independent FSR sensors which uses an Arduino uno in order to communicate the data.
 The FSR sensors are located on the robotic hand so there are no wearing device on the human hand during the execution of the experiments.
-This choice leads the work to be focused on the theoretical part of the handshake event, and potentially reach robust results. We are focusing on a general human-robot handshake, knowing that the interaction can vary with participants, f.i. the participant's hand size is affecting the firsts contact points or nominal strength to apply in the handshake can be affected by prior expectations, it is more meaningful then, to study individual differences once the generic case has been studied.
-The chosen robotic hand (Pisa/IIT SoftHand) has 19 degrees of freedom and its main characteristic a single dc motor that is pulling a tendon which is embedded in each phalanx. This physical approach results in an under actuated robotic hand which can be controlled only by the dc motor. 
+This choice leads the work to be focused on the theoretical part of the handshake event, and potentially reach robust results. We are focusing on a general human-robot handshake, knowing that the interaction can vary with participants, f.i. the participant's hand size is affecting the firsts contact points or nominal strength to apply in the handshake can be affected by prior expectations. It is more meaningful then, to study individual differences once the generic case has been studied.
+The chosen robotic hand (Pisa/IIT SoftHand) has 19 degrees of freedom and its main characteristic a single dc motor that is pulling a tendon which is embedded in each finger. This physical approach results in an under actuated robotic hand which can be controlled only by the dc motor and can easily adapt to different configurations without modifying the reference position. 
 
 \chapter{Hardware setup}
-\section{The Pisa/IIT SoftHand}
-The Pisa/IIT SoftHand is a simple, robust and effective hand designed for grasping and soft manipulation presented in \cite{catalanopisa}, the hardware is provided with a controller developed by the same group which implements a PID [fig. \ref{Fig:PID}] on the motor position. This enables the researchers to control the Pisa/IIT SoftHand with a reference position, without dealing with the current control of the motor.\\
-The proportional coefficient can be set up as preferred since its read from ROS as a \textit{rosparam}, this parameter is thought to range between 0 and 1.0. Setting the parameter to 1.0 is minimizing the error value $e(t)$  between the setpoint $r(t)$ and the output $y(t)$.
-The reference position is a value which should be defined, this robotic hand is under actuated, therefore there is no 1:1 correspondence between the physical position movement of the fingers and the movement of the dc motor. Having a single motor to control makes the robotic hand really easy to control but introduce uncertainty on the position of each finger. A tendon is running through all the fingers and is pulled by the dc motor, therefore, the only available information is the overall movement of the Pisa/IIT SoftHand. 
+The hardware must be physically merged in order to reach the goal of a closed loop controller for a handshake. From early approaches as \cite{espen} with the \textit{sensorized palm} the idea was to approximate the human palm, the part of the hand which is in mostly interested during a handshake.
+The figure \ref{fig:sensorsONhand} shows the position in which the sensors are placed, in particular the n. 1, 2, 3 are placed according studies in \cite{espen}, the sensor n. 4 is placed in order to help the human-thumb force applied during the grasp.
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{Figure/PID.png}
-\caption{Block Diagram PID controller in a feedback loop}
-\label{Fig:PID}
-\end{figure}
-
-\section{The Sensors}
-The core of the closed loop control is to have a feedback in the whole system which is proportional to the force applied during the handshake from the human. 
-The sensors used in this work are Force Sensitive Resistors measuring the force applied from the human to the Pisa/IIT SoftHand, in order to decouple this force from the one applied from the Pisa/IIT SoftHand to the human hand, an extensive study[\cite{espen}] in handshake has been done and the physical interaction during the handshake has been setted up accordingly.
-These mentioned sensors are the more natural choice for handshake experiments since the response time to the system is negligible with respect to the dynamics of the handshake event.
-
- 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{Figure/fsr.png}
-\caption{FSR Voltage Divider}
-\label{Fig:FSRcircuit}
-\end{figure}
-
-
- The physical position of the FSR sensors is shown in the figure \ref{fig:sensors}
-\begin{figure}[!tbp]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Figure/qbhand1.jpg}
@@ -62,9 +39,61 @@ These mentioned sensors are the more natural choice for handshake experiments si
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{Figure/qbhand2.jpg}
   \end{minipage}
-  \label{fig:sensors}
+  \label{fig:sensorsONhand}
   \caption{FSR sensors position}
 \end{figure}
+
+\section{The Pisa/IIT SoftHand}
+The Pisa/IIT SoftHand is a simple, robust and effective hand designed for grasping and soft manipulation presented in \cite{catalanopisa}, the hardware is provided with a controller developed by the same group which implements a proportional controller [fig. \ref{Fig:Pr}] on the motor position. This enables the researchers to control the Pisa/IIT SoftHand with a reference position, without dealing with the current control of the motor.\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Figure/softhand.png}
+\caption{Exploited view of the modules of Pisa/IIT SoftHand}
+\label{Fig:Softhand}
+\end{figure}\\
+The proportional coefficient can be set up as preferred since its encode in ROS as a \textit{rosparam}, this parameter is thought to range between 0 and 1.0. Setting the parameter to 1.0 is minimizing the error value $e(t)$  between the setpoint $r(t)$ and the output $y(t)$.
+
+The successful idea in the design of Pisa/IIT SoftHand can be found in the flexibility of the joints and the wide range of usage.
+
+The reference position $r(t)$ has no 1:1 correspondence with the single physical position of each finger. Having a single motor to control makes the robotic hand really easy to control but introduce uncertainty on the position of each finger. A tendon is running through all the fingers and is pulled by the internal dc motor, therefore, the only available information is the overall tick-position of the Pisa/IIT SoftHand. The controller used $C(s)$ is a simple constant controller with value ranges from 0 to 1. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{Figure/feedbackP.png}
+\caption{Block Diagram Proportional controller in a feedback loop}
+\label{Fig:Pr}
+\end{figure}
+
+
+\section{The Sensors}
+The core of the closed loop control is to have a feedback in the whole system which is proportional to the force applied during the handshake from the human. 
+The sensors used in this work are Force Sensitive Resistors measuring the force applied from the human to the Pisa/IIT SoftHand, in order to decouple this force from the one applied from the Pisa/IIT SoftHand to the human hand, an extensive study[\cite{espen}] in handshake has been used and the physical interaction during the handshake has been setted up accordingly.
+FSR sensors are devices that allow to measure static and/or dynamic forces applied on the sensing area, through the variation of its electric resistance. The main advantage of these devices is the low cost per-unit, little space required for installation (thickness under 1.25mm) and the force sensitivity range up to 100N.
+As robust polymer thick film devices, the FSR, exhibit a decrease in resistance with increase in force applied to the surface. By theory is considered that when a force is applied the resistance changes approximately linear in a logarithmic plot \cite{fsrdatasheet}.
+A simple force to voltage conversion is physically implemented as suggested the manifacturer, in fig. \ref{Fig:FSRcircuit} is shown a snippet of the above mentioned data sheet. 
+These mentioned sensors are the more natural choice for handshake experiments since the response time to the system is negligible with respect to the dynamics of the handshake event. A calibration method must be used in order to have robust results.
+
+\subsection{Calibration of FSRs}
+The calibration procedure is really important for the target of this work, since it can allow to compare future works and to provide consistent results. 
+The first voltage-to-force values from the fsr comes from a manufacturer sketch which is returning force with measure units in grams.
+
+
+As shown in \cite{calibFSR}, load cells can be used as ground truth to calibrate force sensitive resistors to provide informations in Newtons. 
+Using a sensorized palm developed in \cite{espen}, which embeds a load cell and placing the fsr sensors accordingly to the main direction of the force on this sensorized palm; values from both devices are compared.
+Mathematical regression tools has been used in order to find a model that explain the values from the fsr sensors compared to the force of the load cell.
+
+An exact calibration of the fsr sensors is not the target of this work, therefore a
+
+
+ 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{Figure/fsr.png}
+\caption{FSR Voltage Divider}
+\label{Fig:FSRcircuit}
+\end{figure}
+
+
 
 \section{}
 \chapter{Software setup}

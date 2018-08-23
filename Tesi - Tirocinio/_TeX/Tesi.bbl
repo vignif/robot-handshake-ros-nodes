@@ -13,6 +13,17 @@ M.~Choi, D.~Lee, H.~Park, Y.~Kim, G.~Jang, Y.~Shin, J.~Park, M.~Baeg, and
 \newblock In {\em 2017 56th Annual Conference of the Society of Instrument and
   Control Engineers of Japan (SICE)}, pages 1421--1424, Sept 2017.
 
+\bibitem{calibFSR}
+J.~A. Flórez and A.~Velásquez.
+\newblock Calibration of force sensing resistors (fsr) for static and dynamic
+  applications.
+\newblock In {\em 2010 IEEE ANDESCON}, pages 1--6, Sept 2010.
+
+\bibitem{fsrdatasheet}
+Interlink~Electronics Inc.
+\newblock Pn: 34-00015 model 402 short tail.
+\newblock In {\em FSR 402 Data Sheet}.
+
 \bibitem{espen}
 E.~Knoop, M.~Bächer, V.~Wall, R.~Deimel, O.~Brock, and P.~Beardsley.
 \newblock Handshakiness: Benchmarking for human-robot hand interactions.
