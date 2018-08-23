@@ -3,158 +3,158 @@
 
 
 qb_force::qb_force(){
-    int br;
-    std::string port;
-    std::string aux;
-    std::vector<int> ID_hand;
+	int br;
+	std::string port;
+	std::string aux;
+	std::vector<int> ID_hand;
 
-    node_ = new ros::NodeHandle("qb_interface_node_");
-    node_->param<double>("/step_time", step_time_, 0.002);
-    node_->param<std::string>("/port", port, "/dev/ttyUSB0");
-    node_->param<int>("/baudrate", br, 2000000);
-    node_->searchParam("/IDhands", aux);
-    node_->getParam(aux, ID_hand);
-    qb_comm_ = NULL;
-    if (!open(port.c_str(), br)){
-        qb_comm_ = NULL;
+	node_ = new ros::NodeHandle("qb_interface_node_");
+	node_->param<double>("/step_time", step_time_, 0.002);
+	node_->param<std::string>("/port", port, "/dev/ttyUSB0");
+	node_->param<int>("/baudrate", br, 2000000);
+	node_->searchParam("/IDhands", aux);
+	node_->getParam(aux, ID_hand);
+	qb_comm_ = NULL;
+	if (!open(port.c_str(), br)){
+		qb_comm_ = NULL;
 
-        cout << "[ERROR] USB " << port << " was not open correctly." << endl;
-        return;
-    }
+		cout << "[ERROR] USB " << port << " was not open correctly." << endl;
+		return;
+	}
 
-    qbHand* tmp_hand;
+	qbHand* tmp_hand;
 
-    // Allocate object qbCube, one for each cube in cubeBuf
+	// Allocate object qbCube, one for each cube in cubeBuf
 
-    for (int i = ID_hand.size(); i--;) {
+	for (int i = ID_hand.size(); i--;) {
 
-        tmp_hand = new qbHand(qb_comm_, ID_hand[i]);
+		tmp_hand = new qbHand(qb_comm_, ID_hand[i]);
 
-        // IF an error is find
-        if (tmp_hand == NULL){
-            cout << "[ERROR] Unable to allocate space for cube structure." << endl;
-            return;
-        }
+		// IF an error is find
+		if (tmp_hand == NULL){
+			cout << "[ERROR] Unable to allocate space for cube structure." << endl;
+			return;
+		}
 
-        hand_chain_.push_back(tmp_hand);
-    }
+		hand_chain_.push_back(tmp_hand);
+	}
 
-    // Activate
-    if (!activate())
-        cout << "[ERROR] Some qbDevice are not correctly activated." << endl;
+	// Activate
+	if (!activate())
+		cout << "[ERROR] Some qbDevice are not correctly activated." << endl;
 
-    // Initialize publisher and subscriber
+	// Initialize publisher and subscriber
 
-    if (!hand_chain_.empty()){
-        hand_sub = node_->subscribe("/qb_class/hand_ref", 1, &qb_force::handRefCallback, this);
-        hand_pub = node_->advertise<qb_interface::handPos>("/qb_class/hand_measurement", 1);
-//        hand_pub_current = node_->advertise<std_msgs::Int32>("/hand_current", 1);
+	if (!hand_chain_.empty()){
+		hand_sub = node_->subscribe("/qb_class/hand_ref", 1, &qb_force::handRefCallback, this);
+		hand_pub = node_->advertise<qb_interface::handPos>("/qb_class/hand_measurement", 1);
+		//        hand_pub_current = node_->advertise<std_msgs::Int32>("/hand_current", 1);
 
 
-    }
+	}
 }
 
 //function that reads the topic /qb_class/hand_ref, which is the reference position sent to the hand
 
 void qb_force::handRefCallback(const qb_interface::handRef::ConstPtr& msg){
-    pos_ref_ = msg->closure;
+	pos_ref_ = msg->closure;
 }
 
 qb_force::~qb_force(){
 
 
-    // Deactivate
-    if (!deactivate())
-        cout << "[ERROR] Some qbDevices was not correctly deactivated." << endl;
+	// Deactivate
+	if (!deactivate())
+		cout << "[ERROR] Some qbDevices was not correctly deactivated." << endl;
 
-    // Close port
-    close();
+	// Close port
+	close();
 
-    qb_comm_ = NULL;
+	qb_comm_ = NULL;
 
 }
 
 
 void qb_force::spin(){
-    // 1/step_time is the rate in Hz
-    ros::Rate loop_rate(1.0 / step_time_);
-    while(ros::ok()) {
-        spinOnce();
-        ros::spinOnce();
-        loop_rate.sleep();
-    }
+	// 1/step_time is the rate in Hz
+	ros::Rate loop_rate(1.0 / step_time_);
+	while(ros::ok()) {
+		spinOnce();
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
 }
 
 bool qb_force::readMeasCurrent() {
-    short int p_meas[3]={0,0,0};
-    short int p_current[3]={0,0,0};
-    bool ret;
+	short int p_meas[3]={0,0,0};
+	short int p_current[3]={0,0,0};
+	bool ret;
 
 
-    for(int i=0;i<hand_chain_.size();i++){
-        ret=hand_chain_[i]->getMeas(p_meas) && hand_chain_[i]->getCurrents(p_current);
+	for(int i=0;i<hand_chain_.size();i++){
+		ret=hand_chain_[i]->getMeas(p_meas) && hand_chain_[i]->getCurrents(p_current);
 
-        ROS_DEBUG_STREAM("\np_meas:" << p_meas[0] << "."<<p_meas[1]<<"."<<p_meas[2]<<"\np_current:" << p_current[0] << "."<<p_current[1]<<"."<<p_current[2]<<"\n");
+		ROS_DEBUG_STREAM("\np_meas:" << p_meas[0] << "."<<p_meas[1]<<"."<<p_meas[2]<<"\np_current:" << p_current[0] << "."<<p_current[1]<<"."<<p_current[2]<<"\n");
 
-        if (p_meas[0]!=0) {
-            pos_.clear();
-            pos_.push_back((float) p_meas[0]);
+		if (p_meas[0]!=0) {
+			pos_.clear();
+			pos_.push_back((float) p_meas[0]);
 
-        }
-        if (p_current[0]!=0) {
-            cur_.clear();
-            cur_.push_back((float) p_current[0]);
-        }
-        //cout << ret ;
-    }
-    return ret;
+		}
+		if (p_current[0]!=0) {
+			cur_.clear();
+			cur_.push_back((float) p_current[0]);
+		}
+		//cout << ret ;
+	}
+	return ret;
 }
 void qb_force::spinOnce(){
 
-    if (qb_comm_ == NULL){
-        cout << "[ERROR] Connection error in spin() function." << endl;
-        return;
-    }
+	if (qb_comm_ == NULL){
+		cout << "[ERROR] Connection error in spin() function." << endl;
+		return;
+	}
 
-    // Read positions and Currents of all devices
-    readMeasCurrent();
-    qb_interface::handPos state;
-    if (pos_.size()>0 && cur_.size()>0) {
-        state.closure.push_back((float) pos_.at(0));
-        state.closure.push_back((float) cur_.at(0));
-        // Set Position of all devices
-        float AAA;
-        //function move computes the physical movement of the hand
-        move(AAA);
-        state.closure.push_back(AAA);
-        hand_pub.publish(state);
-    }
+	// Read positions and Currents of all devices
+	readMeasCurrent();
+	qb_interface::handPos state;
+	if (pos_.size()>0 && cur_.size()>0) {
+		state.closure.push_back((float) pos_.at(0)); //real position sensed from the qbhand
+		state.closure.push_back((float) cur_.at(0)); //current absorbed
+		// Set Position of all devices
+		float AAA;
+		//function move computes the physical movement of the hand
+		move(AAA);
+		state.closure.push_back(AAA);
+		hand_pub.publish(state);
+	}
 }
 
 bool qb_force::open(const char* port, const int br) {
 
-    // Check connection state
-    if (qb_comm_ != NULL)
-        return false;
+	// Check connection state
+	if (qb_comm_ != NULL)
+		return false;
 
-    qb_comm_ = new comm_settings;
+	qb_comm_ = new comm_settings;
 
-    // Call open communication function
+	// Call open communication function
 
-    if (br >= 2000000)
-        openRS485(qb_comm_, port, B2000000);
-    else
-        openRS485(qb_comm_, port, B460800);
+	if (br >= 2000000)
+		openRS485(qb_comm_, port, B2000000);
+	else
+		openRS485(qb_comm_, port, B460800);
 
-    if (qb_comm_->file_handle == INVALID_HANDLE_VALUE)
-        return false;
+	if (qb_comm_->file_handle == INVALID_HANDLE_VALUE)
+		return false;
 
-    // Set all hands communication
+	// Set all hands communication
 
-    for (int i = hand_chain_.size(); i--;)
-        hand_chain_[i]->cube_comm_ = qb_comm_;
+	for (int i = hand_chain_.size(); i--;)
+		hand_chain_[i]->cube_comm_ = qb_comm_;
 
-    return true;
+	return true;
 }
 
 //-----------------------------------------------------
@@ -170,55 +170,55 @@ bool qb_force::open(const char* port, const int br) {
 /       true  on success
 /       false on failure
 /
-*/
+ */
 
 bool qb_force::close() {
 
-    // Check connection status
+	// Check connection status
 
-    if (qb_comm_ == NULL)
-        return false;
+	if (qb_comm_ == NULL)
+		return false;
 
-    short int meas[2];
-    meas[0]=00;
-    meas[1]=00;
-    hand_chain_[0]->setInputs(meas);
-    // Call ccommunication function
+	short int meas[2];
+	meas[0]=00;
+	meas[1]=00;
+	hand_chain_[0]->setInputs(meas);
+	// Call ccommunication function
 
-    closeRS485(qb_comm_);
+	closeRS485(qb_comm_);
 
-    delete qb_comm_;
+	delete qb_comm_;
 
-    qb_comm_ = NULL;
+	qb_comm_ = NULL;
 
-    // Set all hands communication
+	// Set all hands communication
 
-    for (int i = hand_chain_.size(); i--;)
-        hand_chain_[i]->cube_comm_ = qb_comm_;
+	for (int i = hand_chain_.size(); i--;)
+		hand_chain_[i]->cube_comm_ = qb_comm_;
 
-    return true;
+	return true;
 }
 
 bool qb_force::activate() {
 
-    bool status = true;
+	bool status = true;
 
-    // Check connection status
-    if (qb_comm_ == NULL)
-        return false;
+	// Check connection status
+	if (qb_comm_ == NULL)
+		return false;
 
-    int err_count = 0;
+	int err_count = 0;
 
-    for (int i = hand_chain_.size(); i--;){
+	for (int i = hand_chain_.size(); i--;){
 
-        while(!(hand_chain_[i]->activate()) && (++err_count < ERR_TIMEOUT));
+		while(!(hand_chain_[i]->activate()) && (++err_count < ERR_TIMEOUT));
 
-        if (err_count == ERR_TIMEOUT)
-            status = false;
-        err_count = 0;
-    }
+		if (err_count == ERR_TIMEOUT)
+			status = false;
+		err_count = 0;
+	}
 
-    return status;
+	return status;
 }
 
 //-----------------------------------------------------
@@ -234,52 +234,61 @@ bool qb_force::activate() {
 /       true  on success
 /       false on failure
 /
-*/
+ */
 
 bool qb_force::deactivate() {
 
-    bool status = true;
+	bool status = true;
 
-    // Check connection status
-    if (qb_comm_ == NULL)
-        return false;
+	// Check connection status
+	if (qb_comm_ == NULL)
+		return false;
 
-    int err_count = 0;
+	int err_count = 0;
 
-    for (int i = hand_chain_.size(); i--;){
+	for (int i = hand_chain_.size(); i--;){
 
-        while(!(hand_chain_[i]->deactivate()) && (++err_count < ERR_TIMEOUT));
+		while(!(hand_chain_[i]->deactivate()) && (++err_count < ERR_TIMEOUT));
 
-        if (err_count == ERR_TIMEOUT)
-            status = false;
-        err_count = 0;
-    }
+		if (err_count == ERR_TIMEOUT)
+			status = false;
+		err_count = 0;
+	}
 
-    return status;
+	return status;
 }
 
 float qb_force::calc_current(float set_pos,float cur_pos,float stiffness, float speed, float damping,float deadband){
-    //THIS IS WHERE WE CALCULATE THE CURRENT
-    float error=(set_pos-cur_pos);
-    //this if is always true since the deadband is 0
-    if (fabs(error)>deadband)   return error*stiffness;
-    else return 0;
+	//THIS IS WHERE WE CALCULATE THE CURRENT
+	//proportional controller
+	float error=(set_pos-cur_pos);
+	//this if is always true since the deadband is 0
+	if (fabs(error)>deadband)   return error*stiffness;
+	else return 0;
 }
 void qb_force::move(float &debug_ref) {
+	int ref_limit=19000;
+	if (pos_ref_.size()>0) {
+		//store a variable with the stiffness value
+		//not set to rosparam
 
-    if (pos_ref_.size()>0) {
-    	//store a variable with the stiffness value
-    	//not set to rosparam
+		node_->param<double>("/stiffness", stiffness_, 0.1);
+		short int meas[2];
 
-    	node_->param<double>("/stiffness", stiffness_, 0.1);
-        short int meas[2];
-        float des_cur = calc_current(pos_ref_.at(0), pos_.at(0), stiffness_, speed_, damping_,0);
-        meas[0] = (short) des_cur;
-        meas[1] = (short) des_cur;
-        hand_chain_[0]->setInputs(meas);
-        debug_ref=des_cur;
-    }
-/*
+		//pos_ref_.at(0) has been modified in order to avoid SoftHand to close for values higher than 19000
+		if(pos_ref_.at(0)<ref_limit){
+			float des_cur = calc_current(pos_ref_.at(0), pos_.at(0), stiffness_, speed_, damping_,0);
+			meas[0] = (short) des_cur;
+			meas[1] = (short) des_cur;
+			hand_chain_[0]->setInputs(meas);
+			debug_ref=des_cur;
+		}else{
+			debug_ref=ref_limit;
+			ROS_WARN_STREAM("\n ref_limit = "<<ref_limit<<", send a lower value!\n");
+			//value of closure is too high > 19000
+		}
+	}
+	/*
 
     // Check if new position are received
     if ((p_1_.size() != 0) && (p_2_.size() != 0)){
@@ -348,7 +357,7 @@ void qb_force::move(float &debug_ref) {
             }
         }
     }
-    */
+	 */
 
 
 }

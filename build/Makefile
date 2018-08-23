@@ -956,19 +956,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named Controller1
-
-# Build rule for target.
-Controller1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Controller1
-.PHONY : Controller1
-
-# fast build rule for target.
-Controller1/fast:
-	$(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/build
-.PHONY : Controller1/fast
-
-#=============================================================================
 # Target rules for targets named FSR_current_control
 
 # Build rule for target.
@@ -1110,6 +1097,32 @@ _qb_interface_generate_messages_check_deps_handRef: cmake_check_build_system
 _qb_interface_generate_messages_check_deps_handRef/fast:
 	$(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_handRef/fast
+
+#=============================================================================
+# Target rules for targets named calibrateFSR
+
+# Build rule for target.
+calibrateFSR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calibrateFSR
+.PHONY : calibrateFSR
+
+# fast build rule for target.
+calibrateFSR/fast:
+	$(MAKE) -f qb_interface/CMakeFiles/calibrateFSR.dir/build.make qb_interface/CMakeFiles/calibrateFSR.dir/build
+.PHONY : calibrateFSR/fast
+
+#=============================================================================
+# Target rules for targets named ctrl_file
+
+# Build rule for target.
+ctrl_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ctrl_file
+.PHONY : ctrl_file
+
+# fast build rule for target.
+ctrl_file/fast:
+	$(MAKE) -f qb_interface/CMakeFiles/ctrl_file.dir/build.make qb_interface/CMakeFiles/ctrl_file.dir/build
+.PHONY : ctrl_file/fast
 
 #=============================================================================
 # Target rules for targets named ctrl_function
@@ -2044,7 +2057,6 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... Controller1"
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"
@@ -2056,6 +2068,8 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handCurrent"
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
+	@echo "... calibrateFSR"
+	@echo "... ctrl_file"
 	@echo "... ctrl_function"
 	@echo "... ctrl_function_pw"
 	@echo "... hand_detect_closure"

@@ -77,7 +77,7 @@ float ComputeForce(int fsrADC){
       force = (fsrG - 0.00075) / 0.00000032639;
     else
       force =  fsrG / 0.000000642857;
-    return force;
+    return (force/166.6896-9.7041/166.6896);
     }
 
 void setup()
@@ -100,7 +100,7 @@ void loop()
 for(int i =0; i<NumberOfSensors; i++){
   fsrADC[i]=analogRead(FSR_PIN[i]); // fill array of fsrADC from analogReads
   if(fsrADC[i]>threshold){ //check if threshold is satisfied
-  sensors.data[i]=ComputeForce(fsrADC[i])/1000*9.81; //compute force from analog read with function ComputeForce
+  sensors.data[i]=ComputeForce(fsrADC[i]); //compute force from analog read with function ComputeForce
   }else{
   sensors.data[i]=0; // if the threshold is not satistied set the value to zero
   }

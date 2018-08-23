@@ -1,3 +1,18 @@
+/*
+ * ctrl_file.cpp
+ *
+ *  Created on: Aug 15, 2018
+ *      Author: Francesco Vigni
+ *
+ * ctrl_file.cpp takes the values from FSR sensors (calibrated for N)
+ * and publish a topic according to a second order model obtained from experiments
+ * this model is loaded from a comma-separated file named 'model.csv' where
+ * the first column represent the closure position q and the second column
+ * the sum of the FSR readings.
+ * the function is called scale_controller1 in functions.h
+ *
+ */
+
 #include <qb_force_control.h>
 #include "ros/ros.h"
 #include <std_msgs/Float32MultiArray.h>
@@ -43,19 +58,13 @@ int main(int argc, char **argv)
 		for(int i=0;i<nn;i++)
 			cout<<m[i][0]<<" "<<m[i][1]<<endl;
 
-
-//non arriva a questa riga. segmentation fault core dumped prima
-//cout << model[1][5] <<endl;
 	while (ros::ok())
 	{
 		float sumofFSR=0;
 		ros::spinOnce();
 		state.closure.clear();
-
-
 		value = scale_controller1(sumofFSR, m, 0 , 5);
 		state.closure.push_back((int)value); //round the closure value to the closest integer
-		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);
 		usleep(10000);  //dynamic usleeps takes microseconds in input
 	}

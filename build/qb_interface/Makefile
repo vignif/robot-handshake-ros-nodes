@@ -150,20 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-qb_interface/CMakeFiles/Controller1.dir/rule:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/Controller1.dir/rule
-.PHONY : qb_interface/CMakeFiles/Controller1.dir/rule
-
-# Convenience name for target.
-Controller1: qb_interface/CMakeFiles/Controller1.dir/rule
-.PHONY : Controller1
-
-# fast build rule for target.
-Controller1/fast:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/build
-.PHONY : Controller1/fast
-
-# Convenience name for target.
 qb_interface/CMakeFiles/FSR_current_control.dir/rule:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/FSR_current_control.dir/rule
 .PHONY : qb_interface/CMakeFiles/FSR_current_control.dir/rule
@@ -316,6 +302,34 @@ _qb_interface_generate_messages_check_deps_handRef: qb_interface/CMakeFiles/_qb_
 _qb_interface_generate_messages_check_deps_handRef/fast:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build.make qb_interface/CMakeFiles/_qb_interface_generate_messages_check_deps_handRef.dir/build
 .PHONY : _qb_interface_generate_messages_check_deps_handRef/fast
+
+# Convenience name for target.
+qb_interface/CMakeFiles/calibrateFSR.dir/rule:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/calibrateFSR.dir/rule
+.PHONY : qb_interface/CMakeFiles/calibrateFSR.dir/rule
+
+# Convenience name for target.
+calibrateFSR: qb_interface/CMakeFiles/calibrateFSR.dir/rule
+.PHONY : calibrateFSR
+
+# fast build rule for target.
+calibrateFSR/fast:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/calibrateFSR.dir/build.make qb_interface/CMakeFiles/calibrateFSR.dir/build
+.PHONY : calibrateFSR/fast
+
+# Convenience name for target.
+qb_interface/CMakeFiles/ctrl_file.dir/rule:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f CMakeFiles/Makefile2 qb_interface/CMakeFiles/ctrl_file.dir/rule
+.PHONY : qb_interface/CMakeFiles/ctrl_file.dir/rule
+
+# Convenience name for target.
+ctrl_file: qb_interface/CMakeFiles/ctrl_file.dir/rule
+.PHONY : ctrl_file
+
+# fast build rule for target.
+ctrl_file/fast:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_file.dir/build.make qb_interface/CMakeFiles/ctrl_file.dir/build
+.PHONY : ctrl_file/fast
 
 # Convenience name for target.
 qb_interface/CMakeFiles/ctrl_function.dir/rule:
@@ -569,30 +583,6 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make qb_interface/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-src/Controller1.o: src/Controller1.cpp.o
-.PHONY : src/Controller1.o
-
-# target to build an object file
-src/Controller1.cpp.o:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.o
-.PHONY : src/Controller1.cpp.o
-
-src/Controller1.i: src/Controller1.cpp.i
-.PHONY : src/Controller1.i
-
-# target to preprocess a source file
-src/Controller1.cpp.i:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.i
-.PHONY : src/Controller1.cpp.i
-
-src/Controller1.s: src/Controller1.cpp.s
-.PHONY : src/Controller1.s
-
-# target to generate assembly for a file
-src/Controller1.cpp.s:
-	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Controller1.dir/build.make qb_interface/CMakeFiles/Controller1.dir/src/Controller1.cpp.s
-.PHONY : src/Controller1.cpp.s
-
 src/FSR_current_control.o: src/FSR_current_control.cpp.o
 .PHONY : src/FSR_current_control.o
 
@@ -688,6 +678,54 @@ src/Test_res_current.s: src/Test_res_current.cpp.s
 src/Test_res_current.cpp.s:
 	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/Test_res_current.dir/build.make qb_interface/CMakeFiles/Test_res_current.dir/src/Test_res_current.cpp.s
 .PHONY : src/Test_res_current.cpp.s
+
+src/calibratefsr.o: src/calibratefsr.cpp.o
+.PHONY : src/calibratefsr.o
+
+# target to build an object file
+src/calibratefsr.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/calibrateFSR.dir/build.make qb_interface/CMakeFiles/calibrateFSR.dir/src/calibratefsr.cpp.o
+.PHONY : src/calibratefsr.cpp.o
+
+src/calibratefsr.i: src/calibratefsr.cpp.i
+.PHONY : src/calibratefsr.i
+
+# target to preprocess a source file
+src/calibratefsr.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/calibrateFSR.dir/build.make qb_interface/CMakeFiles/calibrateFSR.dir/src/calibratefsr.cpp.i
+.PHONY : src/calibratefsr.cpp.i
+
+src/calibratefsr.s: src/calibratefsr.cpp.s
+.PHONY : src/calibratefsr.s
+
+# target to generate assembly for a file
+src/calibratefsr.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/calibrateFSR.dir/build.make qb_interface/CMakeFiles/calibrateFSR.dir/src/calibratefsr.cpp.s
+.PHONY : src/calibratefsr.cpp.s
+
+src/ctrl_file.o: src/ctrl_file.cpp.o
+.PHONY : src/ctrl_file.o
+
+# target to build an object file
+src/ctrl_file.cpp.o:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_file.dir/build.make qb_interface/CMakeFiles/ctrl_file.dir/src/ctrl_file.cpp.o
+.PHONY : src/ctrl_file.cpp.o
+
+src/ctrl_file.i: src/ctrl_file.cpp.i
+.PHONY : src/ctrl_file.i
+
+# target to preprocess a source file
+src/ctrl_file.cpp.i:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_file.dir/build.make qb_interface/CMakeFiles/ctrl_file.dir/src/ctrl_file.cpp.i
+.PHONY : src/ctrl_file.cpp.i
+
+src/ctrl_file.s: src/ctrl_file.cpp.s
+.PHONY : src/ctrl_file.s
+
+# target to generate assembly for a file
+src/ctrl_file.cpp.s:
+	cd /home/francesco/ros_ws_handshake/build && $(MAKE) -f qb_interface/CMakeFiles/ctrl_file.dir/build.make qb_interface/CMakeFiles/ctrl_file.dir/src/ctrl_file.cpp.s
+.PHONY : src/ctrl_file.cpp.s
 
 src/ctrl_function.o: src/ctrl_function.cpp.o
 .PHONY : src/ctrl_function.o
@@ -971,7 +1009,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Controller1"
 	@echo "... FSR_current_control"
 	@echo "... FSRtoClosure"
 	@echo "... OpenClose"
@@ -983,6 +1020,8 @@ help:
 	@echo "... _qb_interface_generate_messages_check_deps_handCurrent"
 	@echo "... _qb_interface_generate_messages_check_deps_handPos"
 	@echo "... _qb_interface_generate_messages_check_deps_handRef"
+	@echo "... calibrateFSR"
+	@echo "... ctrl_file"
 	@echo "... ctrl_function"
 	@echo "... ctrl_function_pw"
 	@echo "... edit_cache"
@@ -1008,9 +1047,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... src/Controller1.o"
-	@echo "... src/Controller1.i"
-	@echo "... src/Controller1.s"
 	@echo "... src/FSR_current_control.o"
 	@echo "... src/FSR_current_control.i"
 	@echo "... src/FSR_current_control.s"
@@ -1023,6 +1059,12 @@ help:
 	@echo "... src/Test_res_current.o"
 	@echo "... src/Test_res_current.i"
 	@echo "... src/Test_res_current.s"
+	@echo "... src/calibratefsr.o"
+	@echo "... src/calibratefsr.i"
+	@echo "... src/calibratefsr.s"
+	@echo "... src/ctrl_file.o"
+	@echo "... src/ctrl_file.i"
+	@echo "... src/ctrl_file.s"
 	@echo "... src/ctrl_function.o"
 	@echo "... src/ctrl_function.i"
 	@echo "... src/ctrl_function.s"

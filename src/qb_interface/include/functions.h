@@ -1,3 +1,15 @@
+/*
+ * ctrl_function.cpp
+ *
+ *  Created on: Jul 21, 2018
+ *      Author: Francesco Vigni
+ *
+ * functions.h is a header file containing most common used function in the project
+ * it embeds a class 'callbacks' that embeds the ros subscription to topics.
+ *
+ *
+ */
+
 #include <std_msgs/Float32.h>
 #include <fstream>
 #include <iostream>
@@ -25,6 +37,7 @@ public:
 	float closure;
 	float current;
 	float smooth_current;
+	float dummipalm_force;
 	void cb_closure(const qb_interface::handRef::Ptr& msg){
 		closure=msg->closure[0];
 	}
@@ -34,19 +47,25 @@ public:
 	void cb_smooth_current(const std_msgs::Float32::Ptr& msg){
 		smooth_current= (float)msg->data;
 	}
+	void cb_dummipalm(const std_msgs::Float32::ConstPtr& msg){
+		dummipalm_force = msg->data;
+	}
 };
 
 // read FSR sensor value from arduino and store them in a vector
 void arrayCallback_sensors(const std_msgs::Float32MultiArray::ConstPtr& array)
 {
+	std::setprecision(3);
 	int i = 0;
 	// print all the remaining numbers
 	for(std::vector<float>::const_iterator it = array->data.begin(); it != array->data.end(); ++it)
 	{
 		Arr[i] = *it;
+		Arr[i] = (int) (Arr[i] * 1000.0)/1000.0;
 		i++;
 	}
 }
+
 
 //minSensor =0
 //maxSensor =5
@@ -175,12 +194,11 @@ float scale_controller1(float sumofFSR, int model[][2] , int minSensor, int maxS
 int compute_f(float sumofFSR, int minS = 0, int maxS = 5){
 	int q;
 	for (int j = minS; j <= maxS; j++) {
-		//printf("%f, ", Arr[j]);
 		sumofFSR += Arr[j];
 	}
-	//int q0=11000;
-	q= 0.000068 * sumofFSR*sumofFSR + 1.5 * sumofFSR + 8000 ;
-	//q= q0 + (int) log(sumofFSR+1);
+	//sumofFSR=sumofFSR/120*11000;
+
+	q= 0.5714 * sumofFSR*sumofFSR + 137.5 * sumofFSR + 8000 ;
 	return q;
 }
 

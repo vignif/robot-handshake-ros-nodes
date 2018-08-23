@@ -14,15 +14,22 @@ int main(int argc, char **argv)
 	qb_interface::handPos state;
 
 	ROS_INFO("FSRtoClosure node started");
+
+	//scaling_value =600 if fsr sensors are calibrated with N
+	//scaling_value = 4 if fsr sensors are not calibrated with N
+	int scaling_value=600;
+	ros::param::set("/stiffness",1.0);
+
 	while (ros::ok())
 	{
 		float value=0;
 		ros::spinOnce();
 		state.closure.clear();
+		value = scale_closure(value, scaling_value, 0 , 4);
+		//round the closure value to the closest integer
+		//since the topic reads integers
+		state.closure.push_back((int)value);
 
-		value = scale_closure(value, 4, 0 , 4);
-		state.closure.push_back((int)value); //round the closure value to the closest integer
-		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);
 		usleep(10000);  //dynamic usleeps takes microseconds in input
 	}

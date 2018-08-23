@@ -1,3 +1,17 @@
+/*
+ * ctrl_function.cpp
+ *
+ *  Created on: Aug 21, 2018
+ *      Author: Francesco Vigni
+ *
+ * ctrl_function.cpp takes the values from FSR sensors (calibrated for N)
+ * and publish a topic according to a second order model obtained from experiments
+ * this model is computed in compute_f in file functions.h
+ *
+ *
+ *
+ */
+
 #include <qb_force_control.h>
 #include "ros/ros.h"
 #include <std_msgs/Float32MultiArray.h>
@@ -20,11 +34,6 @@ int main(int argc, char **argv)
 
 	ROS_INFO("Controller by function node started");
 
-// get data from file
-
-
-//non arriva a questa riga. segmentation fault core dumped prima
-//cout << model[1][5] <<endl;
 	while (ros::ok())
 	{
 		float sumofFSR=0;
@@ -35,6 +44,6 @@ int main(int argc, char **argv)
 		state.closure.push_back(q); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);
-		usleep(10000);  //dynamic usleeps takes microseconds in input
+		usleep(1000);  //dynamic usleeps takes microseconds in input
 	}
 }
