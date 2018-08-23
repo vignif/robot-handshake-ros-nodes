@@ -100,7 +100,7 @@ void loop()
 for(int i =0; i<NumberOfSensors; i++){
   fsrADC[i]=analogRead(FSR_PIN[i]); // fill array of fsrADC from analogReads
   if(fsrADC[i]>threshold){ //check if threshold is satisfied
-  sensors.data[i]=ComputeForce(fsrADC[i]); //compute force from analog read with function ComputeForce
+  sensors.data[i]=ComputeForce(fsrADC[i])/1000*9.81; //compute force from analog read with function ComputeForce
   }else{
   sensors.data[i]=0; // if the threshold is not satistied set the value to zero
   }

@@ -32,6 +32,7 @@ july 8, 2018
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Float32MultiArray.h>
+#include <math.h>
 
 #define DOUT 3
 #define CLK 2
@@ -91,7 +92,7 @@ float ComputeForce(int fsrADC){
       force = (fsrG - 0.00075) / 0.00000032639;
     else
       force =  fsrG / 0.000000642857;
-    return force;
+    return ( force/166.7-9.15/166.7);
     }
 
 void setup()
@@ -124,19 +125,21 @@ for(int i =0; i<NumberOfSensors; i++){
   sensors.data[i]=ComputeForce(fsrADC[i]); //compute force from analog read with function ComputeForce
   }else{
   sensors.data[i]=0; // if the threshold is not satistied set the value to zero
-  }
+  }   
   }
 if((read_val-calibration_val) >0)
     {
-      Serial.println((read_val-calibration_val)/11180);
-      force.data=(read_val-calibration_val)/11180;    
+      //Serial.println((read_val-calibration_val)/11180);
+      force.data=(read_val-calibration_val)/11180;
+      
+     // force.data=-2.051*(force.data*force.data)+269*force.data+867.7;
       // To get force in N, divide by factor 11180
     }
 //Start publish routine
 chatter.publish( &sensors ); //i'm publishing the sensors pointer to array
-chatter1.publish( &force ); //i'm publishing the sensors pointer to array
+chatter1.publish( &force ); //i'm publishing the pointer to force
 
 nh.spinOnce();
-delayMicroseconds(1000);
+delayMicroseconds(100);
 //END publish routine
 }
