@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  23 AUG 2018 18:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  24 AUG 2018 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -898,37 +898,46 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write4
 
-Excluding comment 'comment') (./Tesi.aux (./frontespizio.aux) (./abstract.aux)
-(./chap1.aux))
+Excluding comment 'comment')
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen180
+\WF@size=\dimen181
+\c@WF@wrappedlines=\count135
+\WF@box=\box58
+\WF@everypar=\toks33
+Package: wrapfig 2003/01/31  v 3.6
+) (./Tesi.aux
+(./frontespizio.aux) (./abstract.aux) (./chap1.aux))
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
-\scratchdimen=\dimen180
-\scratchbox=\box58
-\nofMPsegments=\count136
-\nofMParguments=\count137
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count138
-\MPscratchDim=\dimen181
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count136
+\scratchdimen=\dimen182
+\scratchbox=\box59
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen183
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -980,19 +989,19 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 90.
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring OFF on input line 91.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count141
+\c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 90.
-LaTeX Info: Redefining \pageref on input line 90.
-LaTeX Info: Redefining \nameref on input line 90.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (./Tesi.out) (./Tesi.out)
 \@outlinefile=\write5
@@ -1034,7 +1043,7 @@ LaTeX Info: Redefining \nameref on input line 90.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<Figure/LOGO_UNISI.pdf, id=43, 623.75833pt x 639.06552pt>
+<Figure/LOGO_UNISI.pdf, id=75, 623.75833pt x 639.06552pt>
 File: Figure/LOGO_UNISI.pdf Graphic file (type pdf)
 
 <use Figure/LOGO_UNISI.pdf>
@@ -1051,15 +1060,23 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figure/LOGO_UNISI.pdf>])
  (./Tesi.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+)
 \tf@toc=\write6
 \openout6 = `Tesi.toc'.
 
@@ -1089,61 +1106,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 Chapter 1.
 [5
 
-]
+] [6]
 Chapter 2.
-[6
 
-]
-Chapter 3.
-<Figure/qbhand1.jpg, id=121, 4175.6pt x 3131.7pt>
-File: Figure/qbhand1.jpg Graphic file (type jpg)
- <use Figure/qbhand1.jpg>
-Package pdftex.def Info: Figure/qbhand1.jpg used on input line 35.
-(pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
-<Figure/qbhand2.jpg, id=122, 4175.6pt x 3131.7pt>
-File: Figure/qbhand2.jpg Graphic file (type jpg)
- <use Figure/qbhand2.jpg>
-Package pdftex.def Info: Figure/qbhand2.jpg used on input line 40.
-(pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
+ []
 
-<Figure/softhand.png, id=125, 909.3975pt x 771.88374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+<Figure/qbhand1.png, id=163, 4095.3pt x 2561.57pt>
+File: Figure/qbhand1.png Graphic file (type png)
+ <use Figure/qbhand1.png>
+Package pdftex.def Info: Figure/qbhand1.png used on input line 35.
+(pdftex.def)             Requested size: 165.02347pt x 103.18799pt.
+
+<Figure/qbhand2.png, id=165, 4095.3pt x 2561.57pt>
+File: Figure/qbhand2.png Graphic file (type png)
+ <use Figure/qbhand2.png>
+Package pdftex.def Info: Figure/qbhand2.png used on input line 40.
+(pdftex.def)             Requested size: 165.02347pt x 103.18799pt.
+
+<Figure/softhand.png, id=168, 909.3975pt x 771.88374pt>
 File: Figure/softhand.png Graphic file (type png)
 
 <use Figure/softhand.png>
 Package pdftex.def Info: Figure/softhand.png used on input line 50.
-(pdftex.def)             Requested size: 206.28249pt x 175.0797pt.
+(pdftex.def)             Requested size: 247.5415pt x 210.10742pt.
  [7
 
- <./Figure/qbhand1.jpg> <./Figure/qbhand2.jpg>]
+ <./Figure/qbhand1.png> <./Figure/qbhand2.png>]
 [8 <./Figure/softhand.png>]
-<Figure/feedbackP.png, id=142, 232.2276pt x 97.8054pt>
+<Figure/feedbackP.png, id=187, 232.2276pt x 97.8054pt>
 File: Figure/feedbackP.png Graphic file (type png)
 
 <use Figure/feedbackP.png>
 Package pdftex.def Info: Figure/feedbackP.png used on input line 62.
 (pdftex.def)             Requested size: 123.77075pt x 52.12613pt.
- [9 <./Figure/feedbackP.png (PNG copy)>]
-<Figure/fsr.png, id=154, 1030.85126pt x 406.51875pt>
+
+<Figure/fsrsingle1.jpg, id=188, 602.25pt x 602.25pt>
+File: Figure/fsrsingle1.jpg Graphic file (type jpg)
+
+<use Figure/fsrsingle1.jpg>
+Package pdftex.def Info: Figure/fsrsingle1.jpg used on input line 72.
+(pdftex.def)             Requested size: 103.14124pt x 103.13469pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
+<Figure/fsr.png, id=193, 1030.85126pt x 406.51875pt>
 File: Figure/fsr.png Graphic file (type png)
  <use Figure/fsr.png>
-Package pdftex.def Info: Figure/fsr.png used on input line 91.
-(pdftex.def)             Requested size: 165.02347pt x 65.07533pt.
+Package pdftex.def Info: Figure/fsr.png used on input line 85.
+(pdftex.def)             Requested size: 247.5415pt x 97.6161pt.
 
-[10 <./Figure/fsr.png>]
+[9 <./Figure/feedbackP.png (PNG copy)> <./Figure/fsrsingle1.jpg>] [10 <./Figure
+/fsr.png>] <Figure/dummipalm.png, id=211, 541.02126pt x 469.755pt>
+File: Figure/dummipalm.png Graphic file (type png)
+
+<use Figure/dummipalm.png>
+Package pdftex.def Info: Figure/dummipalm.png used on input line 103.
+(pdftex.def)             Requested size: 165.02347pt x 143.28581pt.
+
+<Figure/dummipalmfsr.png, id=212, 541.02126pt x 469.755pt>
+File: Figure/dummipalmfsr.png Graphic file (type png)
+
+<use Figure/dummipalmfsr.png>
+Package pdftex.def Info: Figure/dummipalmfsr.png used on input line 109.
+(pdftex.def)             Requested size: 165.02347pt x 143.28581pt.
+
+Underfull \hbox (badness 2065) in paragraph at lines 110--110
+[]\OT1/cmr/m/n/12 Figure 2.7: []Sensorized palm
+ []
+
+[11 <./Figure/dummipalm.png> <./Figure/dummipalmfsr.png>]
+Chapter 3.
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 125.
+[12
+
+] [13]
 Chapter 4.
-[11
+[14
+
+]
+Chapter 5.
+[15
+
+]
+Chapter 6.
+[16
 
 ]
 
-LaTeX Warning: Citation `art:rif.1' on page 12 undefined on input line 105.
+LaTeX Warning: Citation `art:rif.1' on page 17 undefined on input line 137.
 
 
-LaTeX Warning: Citation `book:rif.2' on page 12 undefined on input line 105.
+LaTeX Warning: Citation `book:rif.2' on page 17 undefined on input line 137.
 
-) [12
+) [17
 
-] (./Tesi.bbl [13
+] (./Tesi.bbl [18
 
 
 ]
@@ -1153,14 +1220,14 @@ ira Tsaneva-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
  (./Tesi.aux (./frontespizio.aux) (./abstract.aux) (./chap1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
-(rerunfilecheck)             Checksum: FB481FB3C4292D5783D5D46FA531BFB4;517.
+(rerunfilecheck)             Checksum: 6A031AA181F9D36BD8406484B5E46899;1059.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1168,26 +1235,28 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 18357 strings out of 493304
- 351231 string characters out of 6139871
- 457682 words of memory out of 5000000
- 21349 multiletter control sequences out of 15000+600000
- 12063 words of font info for 44 fonts, out of 8000000 for 9000
+ 18484 strings out of 493304
+ 353061 string characters out of 6139871
+ 461028 words of memory out of 5000000
+ 21449 multiletter control sequences out of 15000+600000
+ 12318 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,8n,61p,781b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Tesi.pdf (14 pages, 3004071 bytes).
+ 56i,8n,61p,945b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb>
+Output written on Tesi.pdf (19 pages, 10066395 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

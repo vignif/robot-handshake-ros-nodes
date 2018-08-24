@@ -11,7 +11,7 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 %%\section{Environment}
-The following work is focusing in the Human-Robot interaction, specifically in the physical interaction of a handshake. The handshake event between human beings is a well known task, it is able to transmit participants feelings as a mixture of physical features like: strength of the handshake, velocity approach, duration of the handshake, oscillation frequency of the wrist.
+The following work is focusing in the Human-Robot interaction, specifically in the dynamics of a handshake. The handshake event between human beings is a well known task, it is able to transmit participants feelings as a mixture of physical features like: strength of the handshake, velocity approach, duration of the handshake, oscillation frequency of the wrist.
 The target of this work is to set up an environment in order to test different closed loop controllers for the handshake event.
 The environment is built using Robotic Operating System (ROS), which is managing messages among: a Pisa/IIT SoftHand, four FSR 400 sensors managed by an Arduino Uno and the auxiliary nodes.
 The work is splitted in two main experimental parts: calibration and tests. The calibration part is built as an open loop system in which we're interested in understanding the participants grasping force with respect to Pisa/IIT SoftHand's force. The hypothesis is to model the human response to the handshake as a dynamical system. Different dynamical models can explain the data retrieved and are tested with closed loop controllers.

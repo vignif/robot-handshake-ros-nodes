@@ -1,9 +1,17 @@
 \BOOKMARK [0][-]{chapter.1}{1 The state of the Art}{}% 1
-\BOOKMARK [0][-]{chapter.2}{2 The Idea}{}% 2
-\BOOKMARK [0][-]{chapter.3}{3 Hardware setup}{}% 3
-\BOOKMARK [1][-]{section.3.1}{3.1 The Pisa/IIT SoftHand}{chapter.3}% 4
-\BOOKMARK [1][-]{section.3.2}{3.2 The Sensors}{chapter.3}% 5
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Calibration of FSRs}{section.3.2}% 6
-\BOOKMARK [1][-]{section.3.3}{3.3 }{chapter.3}% 7
-\BOOKMARK [0][-]{chapter.4}{4 Software setup}{}% 8
-\BOOKMARK [1][-]{section.4.1}{4.1 Ros}{chapter.4}% 9
+\BOOKMARK [1][-]{section.1.1}{1.1 The Idea}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{2 Hardware setup}{}% 3
+\BOOKMARK [1][-]{section.2.1}{2.1 The Pisa/IIT SoftHand}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{2.2 The Sensors}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Calibration of FSRs}{section.2.2}% 6
+\BOOKMARK [0][-]{chapter.3}{3 Software setup}{}% 7
+\BOOKMARK [1][-]{section.3.1}{3.1 Ros}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{3.2 Nodes}{chapter.3}% 9
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Pisa\134IIT SoftHand node}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 FSRs node}{section.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Auxiliary nodes}{section.3.2}% 12
+\BOOKMARK [0][-]{chapter.4}{4 Open Loop Experiments}{}% 13
+\BOOKMARK [1][-]{section.4.1}{4.1 Step input}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{4.2 Pseudorandom input}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{5 Closed Loop controllers}{}% 16
+\BOOKMARK [0][-]{chapter.6}{6 Results}{}% 17
