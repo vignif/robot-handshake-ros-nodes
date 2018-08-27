@@ -7,11 +7,13 @@
 \BOOKMARK [0][-]{chapter.3}{3 Software setup}{}% 7
 \BOOKMARK [1][-]{section.3.1}{3.1 Ros}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.2}{3.2 Nodes}{chapter.3}% 9
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Pisa\134IIT SoftHand node}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Pisa/IIT SoftHand node}{section.3.2}% 10
 \BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 FSRs node}{section.3.2}% 11
 \BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Auxiliary nodes}{section.3.2}% 12
 \BOOKMARK [0][-]{chapter.4}{4 Open Loop Experiments}{}% 13
 \BOOKMARK [1][-]{section.4.1}{4.1 Step input}{chapter.4}% 14
 \BOOKMARK [1][-]{section.4.2}{4.2 Pseudorandom input}{chapter.4}% 15
 \BOOKMARK [0][-]{chapter.5}{5 Closed Loop controllers}{}% 16
-\BOOKMARK [0][-]{chapter.6}{6 Results}{}% 17
+\BOOKMARK [1][-]{section.5.1}{5.1 Empirical Proportional controller}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{5.2 Human-calibrated controller}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{6 Results}{}% 19
