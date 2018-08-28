@@ -202,6 +202,16 @@ int compute_f(float sumofFSR, int minS = 0, int maxS = 5){
 	return q;
 }
 
+int compute_f_with_q0(float sumofFSR, int q0, int minS = 0, int maxS = 5){
+	int q;
+	for (int j = minS; j <= maxS; j++) {
+		sumofFSR += Arr[j];
+	}
+	//sumofFSR=sumofFSR/120*11000;
+
+	q= 0.5714 * sumofFSR*sumofFSR + 137.5 * sumofFSR + q0 ;
+	return q;
+}
 
 int compute_f_piecewise(float sumofFSR, int minS = 0, int maxS = 5){
 	int q;

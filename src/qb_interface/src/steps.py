@@ -74,14 +74,14 @@ def main():
     Mg=manage_cb()
     
     # 22 different values
-    steps=range(6000,17000,250)
-    
-    #initial seed to make a pseudorandom shuffle
-    SEED = 448 
-    random.seed(SEED)
-    random.shuffle(steps)
- ##for one step experiment uncomment the next row
-#     steps=[9000, 9000, 15000, 15000]
+#     steps=range(6000,17000,250)
+#     
+#     #initial seed to make a pseudorandom shuffle
+#     SEED = 448 
+#     random.seed(SEED)
+#     random.shuffle(steps)
+#for one step experiment uncomment the next row
+    steps=[8000, 8000, 15000, 15000]
     rate=rospy.Rate(100) #100 Hz
     index=0
     ln=len(steps)
@@ -152,7 +152,7 @@ class manage_cb:
         tosave = np.append(tosave, np.around(self.realpos , decimals=2))
         tosave = np.append(tosave, self.sentpos)
         dir="/home/francesco/ros_ws_handshake/openloop_saves/officials/"
-        name="st1_Gionata4"
+        name="st1_step"
        
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)

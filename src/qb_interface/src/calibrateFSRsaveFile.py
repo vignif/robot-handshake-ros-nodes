@@ -79,7 +79,7 @@ class manage_cb:
         tosave = np.append(self.sumofFSR, self.dummiforce)
        
         dir="/home/francesco/ros_ws_handshake/calibrateFSR/"
-        name="FSRfromDummy_grams"
+        name="FSRfromDummy6"
        
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
