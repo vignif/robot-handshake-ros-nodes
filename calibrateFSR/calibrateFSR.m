@@ -1,12 +1,10 @@
 close all;
 clear all;
 
-
-
 FSR= zeros(1200, 1);
 force=zeros(1200, 1);
 avg=[];
-for name={'FSRfromDummy_grams'}
+for name={'FSRfromDummy_oneside1'}
     clear A;
     sumA=zeros(0,2);
 
@@ -20,31 +18,16 @@ for name={'FSRfromDummy_grams'}
    force = A(:,2);
 
 end
-fsr=fsr/1.422 - 19.47/1.422; %dummy_grams
-% fsr=fsr/166.6896 - 9.7041/166.6896; %%dummy_3
-    
+
+% remove negative values for fsr and force
+eps=0.01;
 for i=1:size(fsr,1)
-if force(i) < 0
-    force(i) = 0;
+if force(i) <= eps
+    force(i) = eps;
 end
-if fsr(i) < 0 
-fsr(i) =0;
+if fsr(i) <= eps
+fsr(i) =eps;
 end
 end
 
-
-% 
-% 
-% for i=1:max(force)
-%     temp = 0;
-%     c=0;
-%    index= find(force==i);
-%     for j=min(index):max(index)
-%         temp= temp+fsr(j);
-%         c=c+1;
-%         j;
-%     end
-%     avg(i)=temp/c;
-% end
-
-scatter(force,fsr); xlabel('Force (N)'); ylabel('sumofFSR'); title('Calibration of FSR from loadcell');
+scatter(fsr,force); ylabel('Force (N)'); xlabel('sumofFSR'); title('Calibration of FSR from loadcell');
