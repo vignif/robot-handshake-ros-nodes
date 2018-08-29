@@ -2,108 +2,118 @@
 % Scheletro di sorgente LaTeX per la scrittura 
 % di una tesi di laurea.
 % Per la grafica 
-\usepackage{graphicx}
+%%UNUSED PACKAGES START
 %\usepackage{forest}
 %\usepackage{subcaption}
 %\usepackage[]{mcode}
-\usepackage{tikz}
-\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
-\usetikzlibrary{arrows,automata}
-\usetikzlibrary{shapes,snakes}
-\usetikzlibrary{calc,arrows}
-\usetikzlibrary{scopes,matrix,positioning}
-\tikzset{%	
-  every neuron/.style={
-    circle,
-    draw,
-    minimum size=0.5cm
-  },
-  neuron missing/.style={
-    draw=none, 
-    scale=3,
-    text height=0.333cm,
-    execute at begin node=\color{black}$\vdots$
-  },
-x  neuron missingl/.style={
-    draw=none, 
-    scale=2,
-    text height=0.333cm,
-    execute at begin node=\color{black}$\vdots$
-  },
-}
-\usepackage[a4paper,top=3.5cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=5mm]{geometry}
+%\usepackage{tikz}
+%\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+%\usetikzlibrary{arrows,automata}
+%\usetikzlibrary{shapes,snakes}
+%\usetikzlibrary{calc,arrows}
+%\usetikzlibrary{scopes,matrix,positioning}
+%\tikzset{%	
+%  every neuron/.style={
+%    circle,
+%    draw,
+%    minimum size=0.5cm
+%  },
+%  neuron missing/.style={
+%    draw=none, 
+%    scale=3,
+%    text height=0.333cm,
+%    execute at begin node=\color{black}$\vdots$
+%  },
+%x  neuron missingl/.style={
+%    draw=none, 
+%    scale=2,
+%    text height=0.333cm,
+%    execute at begin node=\color{black}$\vdots$
+%  },
+%}
 %\usepackage{gensymb}
 %% Per aggiungere la bibliografia nella \tableofcontents
 %%\let\oldbib\bibliography
 %\renewcommand{\bibliography}{\cleardoublepage1
 %\addcontentsline{toc}{chapter}{\bibname}
-%\oldbib}
+%\oldbib}	
 %\usepackage[nottoc]{tocbibind}
 %\onehalfspacing
 
 %\usepackage{epigraph}
 
-\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
-\usepackage{amsmath, amssymb, amsfonts}
 
-\usepackage[pdfpagemode={UseOutlines},colorlinks=false,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage} ,hidelinks]{hyperref}
-
-\usepackage[english]{babel}
 %\usepackage{microtype}
-
 %\usepackage{enumitem} %personalizza liste puntate e numerate
 %\setlist{leftmargin=*,nolistsep}
 %\renewcommand\theenumi {\alph{enumi})}% lettere al posto di numeri
 %\renewcommand\labelenumi{\theenumi}% parentesi al posto di punti
-
-
-\usepackage{array}
 %\usepackage{eurosym}
 %\usepackage[figure]{hypcap} %link nel pdf alla figura e non alla didascalia
-\usepackage{graphicx}
-
-\usepackage{setspace}
 %\linespread{1.5}
+%%UNUSED PACKAGED END
+
+
+\usepackage{graphicx}
+\usepackage[a4paper,top=3.5cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=5mm]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[pdfpagemode={UseOutlines},colorlinks=false,linktocpage=true,citecolor=blue,bookmarksnumbered=true,bookmarksopenlevel={3},pdfstartview={Fit},pdfpagelayout={SinglePage} ,hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{setspace}
 \doublespacing
-%\usepackage{emptypage}
-
 \usepackage{fancyhdr}
-%\renewcommand{\chaptermark}[1]% 
-%%{\markboth{\sc{\thechapter.\ #1}}{}} 
-%\renewcommand{\sectionmark}[1]%
-%{\markright{\sc{\thesection.\ #1}}}
-
+\usepackage{todonotes}
 \usepackage{comment}
-\usepackage{wrapfig}
+
 \setlength{\abovecaptionskip}{15pt plus 3pt minus 2pt}
-%\usepackage[
-%backend=biber,
-%style=alphabetic,
-%sorting=ynt
-%]{biblatex}
 
-%\usepackage{biblatex}
-
-%\addbibresource{biblio.bib}
-%\bibliography{biblio.bib}
-
+%%abstract definition
+\makeatletter
+\if@titlepage
+  \newenvironment{abstract}{%
+      \titlepage
+      \null\vfil
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        \bfseries Abstract
+        \@endparpenalty\@M
+      \end{center}}%
+     {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{•}{•}{•}newenvironment{abstract}{%
+      \if@twocolumn
+        \section*{Abstract}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries Abstract\vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+\usepackage{wrapfig}
 
 \begin{document}
 
-
-%\include{tesi-cgt-frn}
-\include{frontespizio}
+\include{chapters/frontespizio}
 \tableofcontents
-\include{abstract}
-\include{introduction}
 %\listoffigures
 %\listoftables
+\include{chapters/abstract}
+\include{chapters/introduction}
+
  
 
-\include{chap1}
+\include{chapters/chap1}
 
-\bibliography{biblio}
+\bibliography{chapters/biblio}
 \bibliographystyle{plain}
 
 \end{document}
