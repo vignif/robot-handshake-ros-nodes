@@ -1,16 +1,37 @@
 close all;
 clear all;
-
-
-number_of_experiments=4;
+sz=13200;
+number_of_sensors=2;
+number_of_experiments=5;
 nam='';
-FSR= zeros(13200, 4);
-current=zeros(13200,1);
-realpos=zeros(13200,1);
-sentpos=zeros(13200,1);
+FSR= zeros(sz, number_of_sensors);
+current=zeros(sz,1);
+realpos=zeros(sz,1);
+sentpos=zeros(sz,1);
 
+idx_current = 5-(4-number_of_sensors);
+idx_realpos = 6-(4-number_of_sensors);
+idx_sentpos = 7-(4-number_of_sensors);
+%% define big hand and small hand
+big_hands={'st1_Gionata','st1_Francesco','st1_Marco','st1_Matteo'};
+small_hands={'st1_Enrico','st1_Giovanni','st1_Daniele'};
+
+%% define q0 per participant
+% 
+% data.name = {'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'};
+q0 = [10000,12000,10500,11000,11000,10000,10500];
+c=0;
 for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
-%for name = {'st1_Daniele'}
+c=c+1;
+data(c).name=name;
+data(c).q0=q0(c);
+end
+clear c;
+
+%% Main loading loop
+c=1;
+for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
+%for name = {'st1_Gionata'}
     clear A;
     sumA=zeros(0,2);
 
@@ -21,8 +42,8 @@ for i=0:number_of_experiments-1
    if size(sumA,1)<size(A,1)
        sumA=zeros(size(A));
    end
-   
-   FSR = FSR + A(:,1:4);
+
+   FSR = FSR + A(:,1:number_of_sensors);
    %FSR=[FSR; A(:,1:4)];
    %curr=[curr; A(:,5)];
    current= current + A(:,5);
@@ -30,23 +51,45 @@ for i=0:number_of_experiments-1
    sentpos = sentpos + A(:,7);
 %   realpos=[realpos; A(:,6)];
  %  sentpos=[sentpos; A(:,7)];
+ %sentpos = sentpos-data(7).q0
 end
 % 
 FSR=FSR/(number_of_experiments+1);
-current = current / (number_of_experiments+1);
-realpos = realpos / (number_of_experiments+1);
-sentpos = sentpos / (number_of_experiments+1);
+current = current / (number_of_experiments);
+realpos = realpos / (number_of_experiments);
+sentpos = sentpos / (number_of_experiments);
 
+c=c+1;
 end
+
+%% apply model to scale fsr values to Newtons
+syms x
+p1=0.000000002863;
+p2=-0.00001851;
+p3=0.04863;
+model =@(x) p1*x.^3+p2*x.^2+p3*x;
+FSR=model(FSR);
+
+
+
+%%
 
 
 sz=size(A(:,1));
 t=[1:1:sz]';
-T=[t,t,t,t];
 A=ones(size(FSR(:,1),1),1);
-spacesens=[A, A*10, A*20, A*30];
+T=[];
+spacesens=[];
+for i=1:number_of_sensors
+T=[T,t];
+spacesens=[spacesens, A+100];
+end
 
-sumofFSR= FSR(:,1)+FSR(:,2) + FSR(:,3) +FSR(:,4); 
+
+
+sumofFSR=sum(FSR,2);
+
+% sumofFSR= FSR(:,1)+FSR(:,2) + FSR(:,3) +FSR(:,4); 
 m=0;
 for i=1 : size(FSR(1,:),2)
 
@@ -60,43 +103,19 @@ scaleFSR = m*1.2;
 
 ticks = [0 2000 4000 6000 8000 10000 12000 14000];
 tickslabels = [0 20 40 60 80 100 120 140];
-
-
 plot3(T,spacesens,FSR)
 figure
-s1 = subplot(4,1,1);
-plot(FSR(:,1))
-title('sensor 1')
+
+for i=1:number_of_sensors
+s(i) = subplot(number_of_sensors,1,i);
+plot(FSR(:,i))
+title(['sensor ' num2str(i) ])
 ylabel('force (mN)')
 set(gca,'XTick',ticks)
 set(gca,'xticklabel',(tickslabels))
+end
 
-
-s2 = subplot(4,1,2);
-plot(FSR(:,2))
-title('sensor 2')
-xlabel('time (s)')
-ylabel('force (mN)')
-set(gca,'XTick',ticks)
-set(gca,'xticklabel',(tickslabels))
-
-
-s3 = subplot(4,1,3);
-plot(FSR(:,3))
-title('sensor 3')
-xlabel('time (s)')
-ylabel('force (mN)')
-set(gca,'XTick',ticks)
-set(gca,'xticklabel',(tickslabels))
-
-
-
-s4 = subplot(4,1,4);
-plot(FSR(:,4))
-title('sensor 4')
-xlabel('time (s)')
-ylabel('force (mN)')
-axis([s1 s2 s3 s4],[0 size(FSR(:,1),1) 0 scaleFSR])
+axis(s,[0 size(FSR(:,1),1) 0 scaleFSR])
 set(gca,'XTick',ticks)
 set(gca,'xticklabel',(tickslabels))
 
@@ -140,12 +159,12 @@ set(gca,'xticklabel',(tickslabels))
 
 %% SORT ARRAY
 data=[FSR, current, realpos, sentpos];
-[~,idx] = sort(data(:,7)); % sort just the selected column
+[~,idx] = sort(data(:,idx_sentpos)); % sort just the selected column
 sortedmat = data(idx,:);   % sort the whole matrix using the sort indices
 
-x=sortedmat(:,7); %sentpos
-x=sortedmat(:,6); %realpos
-sumofFSRsorted= sortedmat(:,1)+sortedmat(:,2) + sortedmat(:,3) +sortedmat(:,4); 
+x=sortedmat(:,idx_sentpos); %sentpos
+x=sortedmat(:,idx_realpos); %realpos
+sumofFSRsorted=sum(sortedmat(:,1:number_of_sensors),2);
 
 F=sumofFSRsorted;
 k=F./x;
@@ -177,48 +196,26 @@ legend('k values reordered','Location','north')
 % realpos_st=data_steady(:,6);
 % sentpos_st=data_steady(:,7);
 
-
 data=sortedmat;
 figure
-skip_first=0;
+%% Plot data transient cutted 
+count=1;
+for skip_first=0:20:100
 data_cut=cut_transient(data, skip_first);
 % skip_first=100;
-subplot(3,2,1)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+subplot(3,2,count)
+scatter(data_cut(:,idx_sentpos), data_cut(:,idx_sentpos)-data_cut(:,idx_realpos)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
+count=count+1;
+end
 
-skip_first=20;
-data_cut=cut_transient(data, skip_first);
-% skip_first=100;
-subplot(3,2,2)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-
-skip_first=40;
-data_cut=cut_transient(data, skip_first);
-% skip_first=100;
-subplot(3,2,3)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-
-skip_first=60;
-data_cut=cut_transient(data, skip_first);
-% skip_first=100;
-subplot(3,2,4)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-
-skip_first=80;
-data_cut=cut_transient(data, skip_first);
-% skip_first=100;
-subplot(3,2,5)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-
-skip_first=100;
-data_cut=cut_transient(data, skip_first);
-% skip_first=100;
-subplot(3,2,6)
-scatter(data_cut(:,7), data_cut(:,7)-data_cut(:,6)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('qr-q')
-sumofFSRcutted= data_cut(:,1)+data_cut(:,2)+data_cut(:,3)+data_cut(:,4);
+sumofFSRcutted= sum(data_cut(:,1:number_of_sensors),2);
+force=sumofFSRcutted;
+q=data_cut(:,idx_sentpos);
+close all;
 figure
-scatter(data_cut(:,7),sumofFSRcutted); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
-
+%% FIT model to the following plot Force VS q
+scatter(q,sumofFSRcutted); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
+cftool(force,q)
 % The error between reference and the output position can be modeled from
 % the input of FSR sensors only in the range when the error is high
 % (>14000) aproximaly. in this way we can have a model of the force
@@ -231,12 +228,12 @@ scatter(data_cut(:,7),sumofFSRcutted); title(sprintf('cutted transient: %d / 300
 % t3 - does this model makes sense?
 % t4 - use the model for the closed loop controller
 % t5 - evaluate the model with different participants
-
-dataid=iddata(sumofFSRcutted, data_cut(:,7)-data_cut(:,6),0.01);
-mm = tfest(dataid,5,2);
-T=[0:0.01:0.01*size(data_cut(:,1))-0.01];
-y=lsim(mm,data_cut(:,7),T);
-plot(y,'r')
-hold on;
-plot(sumofFSRcutted,'b')
-legend('Model','sum of FSR')
+% figure
+% dataid=iddata(sumofFSRcutted, data_cut(:,idx_sentpos)-data_cut(:,idx_realpos),0.01);
+% mm = tfest(dataid,5,2);
+% T=[0:0.01:0.01*size(data_cut(:,1))-0.01];
+% y=lsim(mm,data_cut(:,idx_sentpos),T);
+% plot(y,'r')
+% hold on;
+% plot(sumofFSRcutted,'b')
+% legend('Model','sum of FSR')
