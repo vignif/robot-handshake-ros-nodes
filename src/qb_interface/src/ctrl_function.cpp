@@ -34,17 +34,22 @@ int main(int argc, char **argv)
 	         */
 	        return 1;
 	    }
-	int q0;
+	int q0;float p[3];
 	if(*argv[1]=='1'){
-		q0=11000;
+		q0=12000;
+		p[0]=-0.01124; p[1]=2.061; p[2]=4.864; p[3]=-4210;
 	}else if(*argv[1]=='2'){
-		q0=10000;
+//		PROBLEM HERE
+		q0=11000;
+		p[0]=0.475775; p[1]=-34.546; p[2]=297.2; p[3]=-5854.5;
 	}else if(*argv[1]=='3'){
-		q0=9000;
+		q0=10500;
+		p[0]=0.007035; p[1]=-0.1305; p[2]=55.82; p[3]=-2169.5;
 	}else if(*argv[1]=='4'){
-		q0=8000;
-	}else if(*argv[1]=='5'){
-		q0=7000;
+		q0=10000;
+		p[0]=0.019435; p[1]=-3.7; p[2]=276.15; p[3]=-3824;
+//	}else if(*argv[1]=='5'){
+//		q0=7000;
 
 		}else {
 	        std::cerr << error << std::endl;
@@ -59,7 +64,7 @@ int main(int argc, char **argv)
 	ros::Publisher pub = n.advertise<qb_interface::handRef>("/qb_class/hand_ref", 100);
 	qb_interface::handPos state;
 	ROS_INFO("Controller by function node started");
-
+	ros::param::set("/stiffness",1.0);
 
 	while (ros::ok())
 	{
@@ -67,7 +72,8 @@ int main(int argc, char **argv)
 		ros::spinOnce();
 		state.closure.clear();
 //		q=compute_f(sumofFSR);
-		q=compute_f_with_q0(sumofFSR,q0);
+		q=compute_f_with_q0(sumofFSR,q0,p);
+//		q=compute_f_francesco(sumofFSR);
 		state.closure.push_back(q); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);

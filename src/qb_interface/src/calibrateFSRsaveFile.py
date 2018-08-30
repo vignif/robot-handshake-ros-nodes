@@ -34,7 +34,7 @@ def main():
     
     print "Start saving CalibrationFile"
     
-    for a in range(0,1200,1):
+    for a in range(0,4800,1):
         Mg.show()
         ## write a row in the file at each iteration
         Mg.save() 
@@ -79,7 +79,7 @@ class manage_cb:
         tosave = np.append(self.sumofFSR, self.dummiforce)
        
         dir="/home/francesco/ros_ws_handshake/calibrateFSR/"
-        name="FSRfromDummy6"
+        name="FSRfromDummy_oneside1"
        
         with open(dir + name + ".csv" , 'a') as f:
             writer = csv.writer(f)
