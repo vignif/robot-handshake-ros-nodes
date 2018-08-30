@@ -1,2 +1,0 @@
-set(qb_interface_MESSAGE_FILES "/home/francesco/ros_ws_handshake/src/qb_interface/msg/handRef.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeRef.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeEq_Preset.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/cubePos.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/handPos.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/cubeCurrent.msg;/home/francesco/ros_ws_handshake/src/qb_interface/msg/handCurrent.msg")
-set(qb_interface_SERVICE_FILES "")

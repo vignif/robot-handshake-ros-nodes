@@ -1,8 +1,0 @@
-prefix=/home/francesco/ros_ws_handshake/devel
-
-Name: smach
-Description: Description of smach
-Version: 2.0.1
-Cflags: 
-Libs: -L/home/francesco/ros_ws_handshake/devel/lib 
-Requires: 

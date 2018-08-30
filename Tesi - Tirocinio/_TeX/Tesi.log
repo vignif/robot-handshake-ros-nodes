@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  29 AUG 2018 18:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  30 AUG 2018 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,41 +1098,40 @@ Underfull \hbox (badness 2065) in paragraph at lines 119--119
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 <./Figure/fsrsingle1.png>]
-<Figure/fsrtodummy.png, id=251, 884.906pt x 575.751pt>
+<Figure/fsrtodummy.png, id=250, 884.906pt x 575.751pt>
 File: Figure/fsrtodummy.png Graphic file (type png)
 
 <use Figure/fsrtodummy.png>
-Package pdftex.def Info: Figure/fsrtodummy.png used on input line 147.
-(pdftex.def)             Requested size: 330.05324pt x 214.74644pt.
- [9 <./Figure/dummipalm.png> <./Figure/dummipalmside.png>] [10 <./Figure/fsrtod
-ummy.png (PNG copy)>]
+Package pdftex.def Info: Figure/fsrtodummy.png used on input line 148.
+(pdftex.def)             Requested size: 288.79422pt x 187.89874pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./Figure/dummipalm.png> <./Figure/dummipalmside.png>] [10 <./Figure/fsrtodu
+mmy.png (PNG copy)>]
 Chapter 3.
 [11
 
 ] [12] [13]
 Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
 [14
 
-] <Figure/stand.png, id=293, 3151.775pt x 2240.37pt>
+] <Figure/stand.png, id=294, 3151.775pt x 2240.37pt>
 File: Figure/stand.png Graphic file (type png)
  <use Figure/stand.png>
-Package pdftex.def Info: Figure/stand.png used on input line 226.
+Package pdftex.def Info: Figure/stand.png used on input line 229.
 (pdftex.def)             Requested size: 247.5415pt x 175.95148pt.
 
 [15] [16 <./Figure/stand.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 258.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 261.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
 Package epstopdf Info: Source file: <Figure/step.eps>
 (epstopdf)                    date: 2018-08-29 14:10:58
 (epstopdf)                    size: 28297 bytes
@@ -1141,33 +1140,33 @@ Package epstopdf Info: Source file: <Figure/step.eps>
 (epstopdf)                    size: 13635 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figure/step-eps-converted-
 to.pdf Figure/step.eps>
-(epstopdf)             \includegraphics on input line 283.
+(epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figure/step-eps-converted-to.pdf, id=307, 614.295pt x 533.995pt>
+<Figure/step-eps-converted-to.pdf, id=308, 614.295pt x 533.995pt>
 File: Figure/step-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figure/step-eps-converted-to.pdf>
 Package pdftex.def Info: Figure/step-eps-converted-to.pdf used on input line 28
-3.
+6.
 (pdftex.def)             Requested size: 412.56499pt x 358.63849pt.
  [17]
 
-LaTeX Warning: Reference `Fig:step' on page 18 undefined on input line 291.
+LaTeX Warning: Reference `Fig:step' on page 18 undefined on input line 294.
 
 [18 <./Figure/step-eps-converted-to.pdf>] [19]
 <Figure/pseudorandom_q.png, id=331, 449.68pt x 337.26pt>
 File: Figure/pseudorandom_q.png Graphic file (type png)
 
 <use Figure/pseudorandom_q.png>
-Package pdftex.def Info: Figure/pseudorandom_q.png used on input line 310.
+Package pdftex.def Info: Figure/pseudorandom_q.png used on input line 313.
 (pdftex.def)             Requested size: 412.56499pt x 309.43898pt.
 
 <Figure/pseudoforce.png, id=334, 449.68pt x 337.26pt>
 File: Figure/pseudoforce.png Graphic file (type png)
 
 <use Figure/pseudoforce.png>
-Package pdftex.def Info: Figure/pseudoforce.png used on input line 320.
+Package pdftex.def Info: Figure/pseudoforce.png used on input line 323.
 (pdftex.def)             Requested size: 412.56499pt x 309.43898pt.
 
 
@@ -1213,13 +1212,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 16281 strings out of 493304
- 280258 string characters out of 6139871
- 366055 words of memory out of 5000000
- 19280 multiletter control sequences out of 15000+600000
+ 16282 strings out of 493304
+ 280274 string characters out of 6139871
+ 366104 words of memory out of 5000000
+ 19281 multiletter control sequences out of 15000+600000
  12362 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,8n,57p,783b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,8n,57p,813b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -1232,7 +1231,7 @@ public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on Tesi.pdf (30 pages, 12564160 bytes).
+Output written on Tesi.pdf (30 pages, 12565571 bytes).
 PDF statistics:
  429 PDF objects out of 1000 (max. 8388607)
  345 compressed objects within 4 object streams

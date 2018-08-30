@@ -126,30 +126,32 @@ The experiment consist in apply a grasp to the device including not exclusively,
 
 The experiment is executed with a participant applying different forces on the above mentioned device, and recording the output from the FSR sensors and from the load cell of the \textit{sensorized palm}.
 The plot in Fig. \ref{Fig:FSRcalibratedModel}, shows the data obtain from this experiment.
-Taking $N=2$ as the number of FSR sensors installed on the Pisa/IIT SoftHand, $FSR_{i}$ as the value of the non calibrated $i-th$ sensor, the grasping force is estimated as \ref{EQ:sumofFSR}.
+Taking $N=2$ as the number of FSR sensors installed on the Pisa/IIT SoftHand, $F_{fsr,i}$ as the measure of the generic $i-th$ sensor, \textcolor{magenta}{the non calibrated grasping force is estimated as} %\ref{EQ:sumofFSR}.
 
 \begin{equation}
-x = \Sigma_{i=1}^{N} FSR_{i} 
+\hat{F}_{fsr} = \sum_{i=1}^{N} F_{fsr,i}
 \label{EQ:sumofFSR}
 \end{equation}
 
 A toolbox for data fitting from Matlab has been used in order to find the best fitting equation, that includes the origin, according to the Least Mean Square Error to the raw data, which analytically is:
 
 \begin{equation}
-F_{h} = 2.863 \cdot 10^{-9}\cdot x^3 - 1.851 \cdot 10^{-5} \cdot x^2 + 0.04863 \cdot x 
+F_{fsr} = 2.863 \cdot 10^{-9}\cdot \hat{F}_{fsr}^3 - 1.851 \cdot 10^{-5} \cdot \hat{F}_{fsr}^2 + 0.04863 \cdot \hat{F}_{fsr} 
+\label{EQ:fsrdummyfit}
 \end{equation}
-where $x$ is the value taken as the sum of the FSRs sensors, in this experiment two FSRs has been used.
-The variable $y$ is the value from the \textit{sensorized palm}, returning Newtons, used to find the best model to map the FSRs values.
+where $\hat{F}_{fsr}$ is the value taken as the sum of the FSRs sensors, in this experiment two FSRs has been used.
+The variable $F_{fsr}$ is returning Newtons and best explain the FSRs values with respect to the values of the \textit{sensorized palm}.
 
  
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{Figure/fsrtodummy.png}
+\includegraphics[width=0.7\textwidth]{Figure/fsrtodummy.png}
 \caption{FSRs vs. Load Cell data}
 \label{Fig:FSRcalibratedModel}
 \end{figure}
 
-Obviously, more advanced models can be fitted in order to have FSR sensors returning Newtons with a higher precision, but for the specific task required in this work is not necessary to increase the degree of the model. The handshake event is involving grasping forces in the range of the above-mentioned calibration so the force-plots in the next chapters will be intended to be Newton scaled. 
+Obviously, more advanced models can be fitted in order to have FSR sensors returning Newtons with a higher precision, but for the specific task required in this work is considered sufficient the fitted equation in \ref{EQ:StepSignal}. The handshake event is involving grasping forces in a limited range of forces, the fitted equation exists for $ \hat{F}_{fsr} \in \mathbb{R}$, physical limitation of the hardware (max absorbed current) are ensuring the upper bound of the force. Till this point nothing has been done on the Pisa/IIT SoftHand, the available information is that FSR sensors are returning values in Newton and has been calibrated according to a load cell sensor, therefore forces in the following chapters will be intended to be Newton scaled. 
+%The data collected in this experiment contains several outliers from the fitted equation, this behaviour is due to the 
 
 \chapter{Software setup}
 The described experiments can be implemented using a software capable of exchanging informations between robots, without the interaction of a human. A tool named Robot Operative System has been chosen in order to manage the informations between the devices involved in these experiments.  
@@ -160,17 +162,17 @@ The main concepts in the ROS graph are ROS Nodes, Master, Parameter server, Mess
 Topics, Services, and Bags. 
 %Each concept in the graph is contributed to this graphin different ways.
 Each message in ROS is transported using named buses called topics. When a node sends a message through a topic, then it can be asserted that the node is publishing a topic. When a node receives a message through a topic,
-then we can say that the node is subscribing to a topic but the production of information and consumption of it are decoupled. Each topic has a unique name, and any node can access this topic and send data through it as long as they have the right message type. The type of a message can be chosen among the standard primitive types (integer, floating point, Boolean, and so on) or custom message types can be defined.
+then we can say that the node is subscribing to a topic but the production of information and consumption of it are decoupled. Each topic has a unique name, and any node can access this topic and send data through it as long as they have the right message type. The type of a message can be chosen among the standard primitive types (integer, floating point, Boolean, and so on) or custom message types can be defined. Custom field structure of messages are useful in order to send multiple message type over the same channel (topic).
 %The ROS graph is oriented since the messages between nodes are edges of the graph passing the information from the node who is publishing to the one subscribed to it.
 
 \section{Nodes}
 The main aim of ROS nodes is to build simple processes, this makes debug easier and simplify the structure of a project. Each ROS node is written using ROS client libraries such as roscpp and rospy, in short a ROS node can be written as a C++ source file or as a python executable program. 
 
 \subsection{Pisa/IIT SoftHand node}
-Pisa/ITT SoftHand is provided with a variety of ROS packages, in particular, ROS node \textit{qb\textunderscore force\textunderscore interface} is the node managing the proportional controller on the position of the Pisa/IIT SoftHand. This node is publishing a topic named: /qb\textunderscore class/hand\textunderscore measurement which embeds a custom field structure named: qb\textunderscore interface/handPos. Custom field structure of messages are useful in order to send multiple message type over the same channel (topic).
+Pisa/ITT SoftHand is provided with a variety of ROS packages, in particular, ROS node \textit{qb\textunderscore force\textunderscore interface} is the node managing the proportional controller on the position of the Pisa/IIT SoftHand. This node is publishing a topic named: /qb\textunderscore class/hand\textunderscore measurement which embeds a custom field structure named: qb\textunderscore interface/handPos. This custom type message embeds inside a package three float values with the meaning respectively of: sensed current position $q_{output}$, absorbed current, error between $q_{output}$ and $q_{ref}$.
 
 \subsection{FSRs node}
-The FSRs are connected to a bare PCB, each one following the circuit diagram in Fig. \ref{Fig:FSRcircuit}; This allows the source code flashed on the Arduino to: read the voltage difference at FSRs terminals,publish the information to ROS.
+The FSRs are connected to a bare PCB, each one following the circuit diagram in Fig. \ref{Fig:FSRcircuit}; This allows the source code flashed on the Arduino to: read the voltage difference at FSRs terminals, publish the information to ROS.
 % apply the linear model for force measurements and publish the information to ROS.
 A specific protocol called \textit{rosserial} is used in order to implement a ROS node with Arduino Uno.
 
@@ -188,14 +190,15 @@ Several auxiliary nodes have been created in order to manage:
 Again, ROS provide the concept of node which is extremely useful for splitting work in smaller and more manageable units.
 
 \chapter{Open Loop Experiments}
-The open loop experiments aim to verify the hypothesis that the human response to a robot handshake can be modelled as a dynamical model. In these experiments human participants are intended to be a natural calibration system for the robot grasping force $F_r$. The hypothesis on participant's grasping force is shown in \ref{EQ:forceSteady}, participants are asked to apply the force that they are perceiving during the experiments.\\
+The open loop experiments aim to verify the hypothesis that the human response to a robot handshake can be modelled as a dynamical model. In these experiments human participants are intended to be a natural calibration system for the robot grasping force $F_r$. The hypothesis on participant's grasping force is shown in \ref{EQ:forceSteady}, participants are asked to apply the force that they are perceiving during the experiments.
 \begin{equation}
 F_{h} = F_{r}
 \label{EQ:forceSteady}
 \end{equation}
 this introduces a limitation on the evaluation of the data, in fact the equation is assumed to hold only in quasi-static systems. A procedure to filter the transient from the data is applied in order to evaluate the relation $q$ vs. $F_h$ when steady states are reached.
 Force is exchanged during a handshake only after the reference position has reach the first contact point $q_0$, therefore for values of $q < q_0$ no force will be exchanged in the handshake. The constraints on $q$ introduced in \ref{sec:softhand} are valid through all this work since are hardware related.
-\textcolor{magenta}{talk about why the spring relation is choosed}
+The \textit{sensorized palm} is used in order to seek the force behaviour for values of the reference position $q > q_0$. The shells of the device are not deformable, due to the material used during the 3D printing. Increasing the reference position $q$ of the Pisa/IIT SoftHand squeezing the \textit{sensorized palm} showed a linear relationship between the difference $q-q_0$ and $F_r$, as	 
+%\textcolor{magenta}{talk about why the spring relation is choosed}
 
 \begin{equation}
 F_{r}(q)=\left\{\begin{matrix}
@@ -214,10 +217,11 @@ k_{r}(q-q_0) & $ for $ &q-q_0 \geq 0 \\
 %  \end{cases}
 %$$\\
 
-Where $F_r$ is the force during the handshake applied by the robot on the participant's hand, $q$ is the reference position sent to the device.
-During these experiment each reference position of the Pisa/IIT SoftHand is held for 3 seconds, the frequency rate of is set to 100Hz. \\
+Where $F_r$ is the force during the handshake applied by the robot on the \textit{sensorized palm}, $q$ is the reference position sent to the device.
+During these experiments each reference position of the Pisa/IIT SoftHand is held for 3 seconds, the frequency rate of is set to 100Hz. \\
 A file standard has been created in order to compare different experiments. The file is a '.csv' file with columns [FSR1, FSR2, Current, Real Position, Reference Position]. All the plots below are obtained as processing files with the previous structure. Each experiment starts with reference position set to 0 and finish with the reference position set to 0. \\
-The experiments are in open loop so in order to avoid injuries an emergency function has been created, if the participant starts feeling pain the key 'x' on the keyboard must be pressed. The Pisa/IIT SoftHand will take as reference position 0 (fully open) and the whole program will be stopped.
+\section{Safety}\label{sec:safety}
+The experiments are in open loop so in order to avoid injuries an emergency function has been created, if the participant starts feeling pain the key '\textbf{x}' on the keyboard must be pressed. The Pisa/IIT SoftHand will take as reference position 0 (fully open) and the whole program will be stopped.
 In case of emergency the file will be saved and the last data can be used to understand the configuration just before the trigger event.\\
 The experiments are done with the Pisa/IIT SoftHand in a horizontal position (palm facing down) Fig. \ref{Fig:palmdown}. In this way the weight of the Pisa/IIT SoftHand will not affect the FSR readings. 
 
@@ -229,7 +233,7 @@ The experiments are done with the Pisa/IIT SoftHand in a horizontal position (pa
 \end{figure}
 
 \section*{Participants}\label{sec:participants}
-The participants to the experiments have been selected in an heterogeneous fashion from male to female with ages in (24-35 year old). Although the hand sizes available for the experiments are considered sufficient, over bounding the ranges of the previous age set can provide interesting results.
+The participants to the experiments have been selected in an heterogeneous fashion from male to female with ages in (24-35 years old). Although the hand sizes available for the experiments are considered sufficient, over bounding the ranges of the previous age set can provide interesting results.
 This experimental part is looking for the existing of the relation above mentioned \ref{EQ:genericForce}, therefore it is providing the methodology approach to this problem.
 Each participant is repeating each experiment five times, this provide useful information and allow to average the outcomes of the same participant.
 
@@ -259,7 +263,7 @@ The parameters chosen for the experiment in order to go from a reference positio
 \item $q_1 = 15000$
 \item $t_0 = 3s$
 \end{itemize}
-the experiment lasts in total 6 seconds. A correlation between the reference position of the Pisa/IIT SoftHand and the values recorded from the FSRs is expected. The participants are applying a force ($F_{h}$) which is assumed to be proportional to the one applied from the robot to their hand during the handshake.
+the experiment lasts in total 6 seconds. A correlation between the reference position of the Pisa/IIT SoftHand and the values recorded from the FSRs is expected. The participants are applying a force ($F_{h}$) which is assumed to be proportional to the one applied from the robot to their hand during the handshake \ref{EQ:forceSteady}.
 The same experiment has been executed with multiple participants, in order to increase the amount of data available for the model estimation. The values of reference position in this experiment $q_{0}$ and $q_{1}$, are fixed during multiple trials, therefore the participants are able to predict that at $t=t_0$ a higher reference signal is sent. Although, this behaviour has been considered not consistent to fit, in post processing, a model to the data, it can provide a first sight the relation $q$ vs. $F_h$.
 %
 %\textcolor{magenta}{insert unfiltered plot of q vs force}
@@ -282,7 +286,7 @@ The same experiment has been executed with multiple participants, in order to in
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{Figure/step.eps}
   \caption{Step experiment in time}
-  \label{fig:step}
+  \label{Fig:step}
 \end{figure}
 
 \textcolor{magenta}{insert step experiment plots force vs q}

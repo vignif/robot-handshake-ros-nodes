@@ -1,2 +1,0 @@
-executive_smach/executive_smach:executive_smach/smach:executive_smach/smach_msgs:executive_smach/smach_ros:qb_interface:rosserial/rosserial:rosserial/rosserial_arduino:rosserial/rosserial_client:rosserial/rosserial_embeddedlinux:rosserial/rosserial_mbed:rosserial/rosserial_msgs:rosserial/rosserial_python:rosserial/rosserial_server:rosserial/rosserial_test:rosserial/rosserial_tivac:rosserial/rosserial_windows:rosserial/rosserial_xbee
--DCATKIN_DEVEL_PREFIX=/home/francesco/ros_ws_handshake/devel -DCMAKE_INSTALL_PREFIX=/home/francesco/ros_ws_handshake/install -G Unix Makefiles

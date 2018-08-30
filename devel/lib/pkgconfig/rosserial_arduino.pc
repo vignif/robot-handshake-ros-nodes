@@ -1,8 +1,0 @@
-prefix=/home/francesco/ros_ws_handshake/devel
-
-Name: rosserial_arduino
-Description: Description of rosserial_arduino
-Version: 0.7.7
-Cflags: -I/home/francesco/ros_ws_handshake/devel/include
-Libs: -L/home/francesco/ros_ws_handshake/devel/lib 
-Requires: message_runtime
