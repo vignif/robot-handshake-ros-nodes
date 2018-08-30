@@ -19,9 +19,12 @@ small_hands={'st1_Enrico','st1_Giovanni','st1_Daniele'};
 %% define q0 per participant
 % 
 % data.name = {'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'};
-q0 = [10000,12000,10500,11000,11000,10000,10500];
+q0 = [10000,12000,10500,11000,11000,10500];
+names = {'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Gionata'};
+names= {'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni'};
+n_partecipants = size(names,2);
 c=0;
-for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
+for name=names
 c=c+1;
 data(c).name=name;
 data(c).q0=q0(c);
@@ -30,37 +33,40 @@ clear c;
 
 %% Main loading loop
 c=1;
-for name={'st1_Francesco','st1_Enrico','st1_Matteo','st1_Giovanni','st1_Daniele','st1_Marco','st1_Gionata'}
+for name=names
 %for name = {'st1_Gionata'}
     clear A;
     sumA=zeros(0,2);
 
-for i=0:number_of_experiments-1
+for i=1:number_of_experiments
    formatSpec='%s%d.csv';
-   filename=sprintf(formatSpec,name{1},i);
+   filename=sprintf(formatSpec,name{1},i-1);
    A=csvread(filename);
    if size(sumA,1)<size(A,1)
        sumA=zeros(size(A));
    end
 
    FSR = FSR + A(:,1:number_of_sensors);
-   %FSR=[FSR; A(:,1:4)];
-   %curr=[curr; A(:,5)];
    current= current + A(:,5);
    realpos = realpos + A(:,6);
    sentpos = sentpos + A(:,7);
 %   realpos=[realpos; A(:,6)];
  %  sentpos=[sentpos; A(:,7)];
- %sentpos = sentpos-data(7).q0
+ %sentpos = sentpos-data(c).q0;
 end
-% 
-FSR=FSR/(number_of_experiments+1);
+
+c=c+1;
+end
+
+FSR=FSR/(number_of_experiments);
 current = current / (number_of_experiments);
 realpos = realpos / (number_of_experiments);
 sentpos = sentpos / (number_of_experiments);
 
-c=c+1;
-end
+FSR=FSR/(n_partecipants);
+current = current / (n_partecipants);
+realpos = realpos / (n_partecipants);
+sentpos = sentpos / (n_partecipants);
 
 %% apply model to scale fsr values to Newtons
 syms x
@@ -211,11 +217,17 @@ end
 sumofFSRcutted= sum(data_cut(:,1:number_of_sensors),2);
 force=sumofFSRcutted;
 q=data_cut(:,idx_sentpos);
-close all;
+
 figure
 %% FIT model to the following plot Force VS q
 scatter(q,sumofFSRcutted); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
+
+%cut the zeros
+hold on 
+scatter(q(q>0),sumofFSRcutted(q>0)); title(sprintf('cutted transient: %d / 300',skip_first)); xlabel('qr'); ylabel('sumofFSR')
 cftool(force,q)
+
+% cftool(force(q>0),q(q>0))
 % The error between reference and the output position can be modeled from
 % the input of FSR sensors only in the range when the error is high
 % (>14000) aproximaly. in this way we can have a model of the force
