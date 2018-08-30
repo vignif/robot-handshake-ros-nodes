@@ -47,7 +47,7 @@ float value;
 */
 // Modify these values if needed
 //start
-const int NumberOfSensors =6; 
+const int NumberOfSensors =2; 
 const float threshold=3; // minimum pressure filtered
 //end
 
@@ -73,11 +73,13 @@ float ComputeForce(int fsrADC){
     
     float fsrG = 1.0 / fsrR; // Calculate conductance
     // Break parabolic curve down into two linear slopes:
-    if (fsrR <= 600)
-      force = (fsrG - 0.00075) / 0.00000032639;
-    else
-      force =  fsrG / 0.000000642857;
-    return (force/166.6896-9.7041/166.6896);
+    force =  fsrG / 0.00000048462;
+    float x=force;
+    float p1=0.000000002863;
+    float p2=-0.00001851;
+    float p3=0.04863;
+    float model =p1*x*x*x+p2*x*x+p3*x;
+    return model;
     }
 
 void setup()
