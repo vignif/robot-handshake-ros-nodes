@@ -56,6 +56,8 @@ int main(int argc, char **argv)
 
 		return 1;
 	}
+
+
 	cout << "initial position set to " << q0 <<endl;
 	int q;
 	ros::init(argc, argv, "ctrl_1");
@@ -66,30 +68,52 @@ int main(int argc, char **argv)
 	ROS_INFO("Controller by function node started");
 	ros::param::set("/stiffness",1.0);
 
+	// Saving file routine
+	callbacks cb;
+	ros::Subscriber sub1 = n.subscribe("/qb_class/hand_ref",100, &callbacks::cb_closure, &cb);
+	ros::Subscriber sub2 = n.subscribe("/qb_class/hand_measurement",100, &callbacks::cb_current, &cb);
+	ros::Subscriber sub3 = n.subscribe("sensors_FSR", 100, arrayCallback_sensors);
+
+	string dir = "/home/francesco/ros_ws_handshake/ctrl/1/";
+	string name = "experiment";
+	string filename = dir + name;
+	int idx=0;
+	string filetosave;
+	bool found = false;
+	for (int idx=0; idx<10; idx++){
+		if (!fexists(filename + std::to_string(idx) + ".csv"))
+		{
+			filetosave=filename + std::to_string(idx) + ".csv";
+			break;
+		}
+	}
+
+
+	std::ofstream outFile(filetosave);
+
 	while (ros::ok())
 	{
 		bool in_contact= check_contact();
-state.closure.clear();
+		state.closure.clear();
 		if(in_contact){
-			cout << "IN contact" << endl;
+			//			cout << "IN contact" << endl;
 			float sumofFSR=0;
 
 			//q=compute_f(sumofFSR);
 			q=compute_f_with_q0(sumofFSR,q0,p);
+			outFile << Arr[0] << ", " << Arr[1]<< ", "<< Arr[2] << ", " << cb.closure << ", "<< cb.current <<endl;
 			//q=compute_f_francesco(sumofFSR);
 			state.closure.push_back(q); //round the closure value to the closest integer
 			//n.setParam("/stiffness",0.9); //publish parameter to ros
 
 		}else{
-			cout << "NOT contact" << endl;
+			//			cout << "NOT contact" << endl;
 			state.closure.push_back((int) 0 );
 		}
 		pub.publish(state);
-
 		ros::spinOnce();
 		usleep(1000);  //dynamic usleeps takes microseconds in input
 
 	}
 }
-
 
