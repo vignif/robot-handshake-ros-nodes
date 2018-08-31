@@ -227,6 +227,14 @@ target_link_libraries(ctrl_function_pw   ${catkin_LIBRARIES} )
 add_executable(calibrateFSR src/calibratefsr.cpp)
 target_link_libraries(calibrateFSR   ${catkin_LIBRARIES} )
 
+
+add_executable(ctrl_1 src/ctrl_1.cpp)
+target_link_libraries(ctrl_1   ${catkin_LIBRARIES} )
+
+
+add_executable(ctrl_3 src/ctrl_3.cpp)
+target_link_libraries(ctrl_3   ${catkin_LIBRARIES} )
+
 add_executable(qb_force_control src/main2.cpp src/qb_force_control.cpp src/qbCube.cpp src/qbHand.cpp src/qbInterface.cpp #/home/joao/code/qb_hand_stuff/qbAPI/src/qbmove_communications.cpp
 		src/qbmove_communications.cpp
 		)
