@@ -207,20 +207,20 @@ int compute_f_francesco(float sumofFSR, int minS = 0, int maxS = 5){
 		sumofFSR += Arr[j];
 	}
 	//sumofFSR=sumofFSR/120*11000;
-//model from francesco + marco force regression
+	//model from francesco + marco force regression
 	q=0.005311*pow(sumofFSR,3)-1.631*pow(sumofFSR,2)+211.6*sumofFSR + 7874 ;
 	return q;
 }
 
-int compute_f_with_q0(float sumofFSR, int q0, float p[4], int minS = 0, int maxS = 5){
+int compute_f_with_q0(float sumofFSR, int q0, float p[4], int minS = 0, int maxS = 1){
 
 	int q;
 	for (int j = minS; j <= maxS; j++) {
 		sumofFSR += Arr[j];
 	}
 	//sumofFSR=sumofFSR/120*11000;
-q=p[0]*pow(sumofFSR,3)+p[1]*pow(sumofFSR,2)+p[2]*sumofFSR+p[3]+q0;
-//	q= 0.5714 * sumofFSR*sumofFSR + 137.5 * sumofFSR + q0 ;
+	q=p[0]*pow(sumofFSR,3)+p[1]*pow(sumofFSR,2)+p[2]*sumofFSR+p[3]+q0;
+	//	q= 0.5714 * sumofFSR*sumofFSR + 137.5 * sumofFSR + q0 ;
 	return q;
 }
 
@@ -245,5 +245,14 @@ int compute_f_piecewise(float sumofFSR, int minS = 0, int maxS = 5){
 	return q;
 }
 
+bool check_contact(){
+	float threshold =1.0;
+	//Arr[2] is the sensor placed closed the thumb that triggers the handshake
+	if (Arr[2] > threshold) {
+		return true;
+	}else{
+		return false;
+	}
+}
 
 
