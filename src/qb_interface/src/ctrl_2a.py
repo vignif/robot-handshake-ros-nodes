@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 ## 03_july_18
-# ctrl_2 implements the second controller for human-robot handshake
+# ctrl_2a implements the second controller for human-robot handshake
 # we want to seek for a consensus behaviour from human to robot
 # so the Pisa/IIT SoftHand is executing some fixed step signals
 # with different amplitudes and the human in squeezing the hand
@@ -90,7 +90,7 @@ def main():
 #     random.seed(SEED)
 #     random.shuffle(steps)
 #for one step experiment uncomment the next row
-    steps=[14000, 16000]
+    steps=[14000, 14000]
     rate=rospy.Rate(100) #100 Hz
     index=0
     ln=len(steps)
@@ -102,7 +102,7 @@ def main():
     # create path for saving file
     idx=0
     dir="/home/francesco/ros_ws_handshake/ctrl/2/"
-    name="experiment"    
+    name="a"    
     path=dir + name
     
     # check if file exists, if it exists save a new one with an increasing number
