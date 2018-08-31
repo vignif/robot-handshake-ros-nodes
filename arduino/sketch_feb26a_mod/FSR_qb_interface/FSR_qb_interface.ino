@@ -47,7 +47,7 @@ float value;
 */
 // Modify these values if needed
 //start
-const int NumberOfSensors =2; 
+const int NumberOfSensors =3; 
 const float threshold=3; // minimum pressure filtered
 //end
 
