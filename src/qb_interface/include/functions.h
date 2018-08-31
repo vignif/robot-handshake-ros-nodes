@@ -35,12 +35,16 @@ std::vector<int> history;
 class callbacks{
 public:
 	float closure;
+	float error;
 	float current;
 	float smooth_current;
 	float dummipalm_force;
 	void cb_closure(const qb_interface::handRef::Ptr& msg){
 		closure=msg->closure[0];
 	}
+	void cb_error(const qb_interface::handPos::Ptr& msg){
+		error=msg->closure[1];
+		}
 	void cb_current(const qb_interface::handPos::Ptr& msg){
 		current=msg->closure[2];
 	}
@@ -246,13 +250,16 @@ int compute_f_piecewise(float sumofFSR, int minS = 0, int maxS = 5){
 }
 
 bool check_contact(){
-	float threshold =1.0;
+	float threshold =0.5;
 	//Arr[2] is the sensor placed closed the thumb that triggers the handshake
-	if (Arr[2] > threshold) {
+	if (Arr[0]>threshold || Arr[1]>threshold || Arr[2] > threshold) {
 		return true;
 	}else{
 		return false;
 	}
 }
 
-
+bool fexists(const std::string& filename) {
+  std::ifstream ifile(filename.c_str());
+  return (bool)ifile;
+}
