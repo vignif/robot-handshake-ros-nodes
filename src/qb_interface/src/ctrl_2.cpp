@@ -1,12 +1,13 @@
 /*
- * ctrl_4.cpp
+ * ctrl_2.cpp
  *
  *  Created on: Aug 31, 2018
  *      Author: Francesco Vigni
  *
- * ctrl_4.cpp implements a closed loop controller for human-robot
- * handshake. The F_r is a mixing the C1 with a spring dynamic reaction
- * and C2 with a constant q. here we have the low value of C2
+ * ctrl_2.cpp implements a closed loop controller for human-robot
+ * handshake. The q-force relationship follows a law like : F= k(q0-q)
+ * a trigger is present on sensor id 3 in order to switch on and off the
+ * handshaking
  *
  */
 
@@ -33,6 +34,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 	int q0;float p[3];
+	int Constant_Q = 14000;
 
 	if(*argv[1]=='1'){
 		q0=8500;
@@ -59,9 +61,9 @@ int main(int argc, char **argv)
 	}
 	string id_participant = argv[2];
 
-	cout <<"Participant ID = "<< id_participant <<"\ninitial position set to " << q0 <<endl;
+	cout <<"Participant ID = "<< id_participant <<"\ninitial position set to " << 0.5*q0+0.5*Constant_Q <<endl;
 	int q;
-	ros::init(argc, argv, "ctrl_4");
+	ros::init(argc, argv, "ctrl_2");
 	ros::NodeHandle n;
 	ros::Rate loop_rate(1000); //Hz
 	ros::Subscriber sub = n.subscribe("sensors_FSR", 100, arrayCallback_sensors);
@@ -86,18 +88,17 @@ int main(int argc, char **argv)
 	outFile.open(save_file(name));
 
 	bool last_contact= false ;
+
+
 	while (ros::ok())
 	{
 		bool in_contact= check_contact();
 		state.closure.clear();
 		if(in_contact){
+			//in contact
+			q=0.5*compute_f_with_q0(q0,p)+0.5*Constant_Q;
 
-			//  in contact
-
-
-			q=compute_f_with_q0(q0,p);
 			outFile << Arr[0] << ", " << Arr[1]<< ", "<< Arr[2] << ", " << cb.closure << ", "<< cb.current <<endl;
-
 			state.closure.push_back(q); //round the closure value to the closest integer
 
 		}else{
@@ -124,7 +125,7 @@ string save_file(const string& name) {
 	/*save_file checks if a file exists in a specific folder
 	it true create a new file with a incremental number in the name
 	 */
-	string dir = "/home/francesco/ros_ws_handshake/ctrl/4/";
+	string dir = "/home/francesco/ros_ws_handshake/ctrl/2/";
 	string filename = dir + name;
 	int idx = 0;
 	string filetosave;

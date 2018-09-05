@@ -22,11 +22,9 @@
 
 using namespace std;
 string save_file(const string& name);
-static void show_usage(std::string name);
+
 int main(int argc, char **argv)
 {
-
-
 	if (argc < 3) {
 		// Tell the user how to run the program
 		show_usage(argv[0]);
@@ -96,9 +94,9 @@ int main(int argc, char **argv)
 		if(in_contact){
 
 			//  in contact
-			float sumofFSR=0;
 
-			q=compute_f_with_q0(sumofFSR,q0,p);
+
+			q=compute_f_with_q0(q0,p);
 			outFile << Arr[0] << ", " << Arr[1]<< ", "<< Arr[2] << ", " << cb.closure << ", "<< cb.current <<endl;
 
 			state.closure.push_back(q); //round the closure value to the closest integer
@@ -111,7 +109,7 @@ int main(int argc, char **argv)
 		}
 		pub.publish(state);
 		ros::spinOnce();
-//		usleep(1000);  //dynamic usleeps takes microseconds in input
+		//		usleep(1000);  //dynamic usleeps takes microseconds in input
 		loop_rate.sleep();
 		last_contact=in_contact;
 	}
@@ -139,12 +137,4 @@ string save_file(const string& name) {
 		}
 	}
 	return filetosave;
-}
-
-static void show_usage(std::string name){
-	std::cerr << "Usage:\n"
-			<< "ctrl_1 [handsize_code] [ID_participant]\n"
-			<< "Usage: Input the HandSize code\n"
-			<< "1(verybig hand)->5(verysmall hand)\n"
-			<< std::endl;
 }

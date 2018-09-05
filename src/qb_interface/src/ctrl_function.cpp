@@ -68,12 +68,11 @@ int main(int argc, char **argv)
 
 	while (ros::ok())
 	{
-		float sumofFSR=0;
 		ros::spinOnce();
 		state.closure.clear();
-//		q=compute_f(sumofFSR);
-		q=compute_f_with_q0(sumofFSR,q0,p);
-//		q=compute_f_francesco(sumofFSR);
+//		q=compute_f();
+		q=compute_f_with_q0(q0,p);
+//		q=compute_f_francesco();
 		state.closure.push_back(q); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
 		pub.publish(state);

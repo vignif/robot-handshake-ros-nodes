@@ -1,12 +1,12 @@
 /*
- * ctrl_4.cpp
+ * ctrl_5.cpp
  *
  *  Created on: Aug 31, 2018
  *      Author: Francesco Vigni
  *
- * ctrl_4.cpp implements a closed loop controller for human-robot
+ * ctrl_5.cpp implements a closed loop controller for human-robot
  * handshake. The F_r is a mixing the C1 with a spring dynamic reaction
- * and C2 with a constant q. here we have the low value of C2
+ * and C2 with a constant q. here we have the high value of C2
  *
  */
 
@@ -50,7 +50,6 @@ int main(int argc, char **argv)
 		q0=12000;
 		p[0]=0.007035; p[1]=-0.1305; p[2]=55.82; p[3]=0;
 
-
 		// AVG(q0) = 10100
 	}else {
 		show_usage(argv[0]);
@@ -61,7 +60,7 @@ int main(int argc, char **argv)
 
 	cout <<"Participant ID = "<< id_participant <<"\ninitial position set to " << q0 <<endl;
 	int q;
-	ros::init(argc, argv, "ctrl_4");
+	ros::init(argc, argv, "ctrl_1");
 	ros::NodeHandle n;
 	ros::Rate loop_rate(1000); //Hz
 	ros::Subscriber sub = n.subscribe("sensors_FSR", 100, arrayCallback_sensors);
@@ -124,7 +123,7 @@ string save_file(const string& name) {
 	/*save_file checks if a file exists in a specific folder
 	it true create a new file with a incremental number in the name
 	 */
-	string dir = "/home/francesco/ros_ws_handshake/ctrl/4/";
+	string dir = "/home/francesco/ros_ws_handshake/ctrl/5/";
 	string filename = dir + name;
 	int idx = 0;
 	string filetosave;
@@ -137,3 +136,7 @@ string save_file(const string& name) {
 	}
 	return filetosave;
 }
+
+
+
+

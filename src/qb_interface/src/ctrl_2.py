@@ -91,7 +91,7 @@ def main():
 #     random.shuffle(steps)
 #for one step experiment uncomment the next row
     steps=[14000, 14000]
-    rate=rospy.Rate(100) #100 Hz
+    rate=rospy.Rate(1000) #100 Hz
     index=0
     ln=len(steps)
     ln=float(ln)
@@ -102,14 +102,17 @@ def main():
     # create path for saving file
     idx=0
     dir="/home/francesco/ros_ws_handshake/ctrl/2/"
-    name="a"    
-    path=dir + name
+    
+    uid = "2" #USER ID
+    name="id_" + uid    
+    path=dir + name + "_n"
     
     # check if file exists, if it exists save a new one with an increasing number
     while os.path.exists(path + "%s.csv" % idx):
             idx += 1
             
     ## initially open the hand
+    print "Saving file: " + path + "%s" % idx + ".csv"
     print "Start the handshake" 
     pub.publish([0])
     rate.sleep()     

@@ -37,10 +37,9 @@ int main(int argc, char **argv)
 //cout << model[1][5] <<endl;
 	while (ros::ok())
 	{
-		float sumofFSR=0;
 		ros::spinOnce();
 		state.closure.clear();
-		q=compute_f_piecewise(sumofFSR);
+		q=compute_f_piecewise();
 
 		state.closure.push_back(q); //round the closure value to the closest integer
 		//n.setParam("/stiffness",0.9); //publish parameter to ros
