@@ -37,7 +37,8 @@ ros::NodeHandle nh;
 const int queue_size=0; //infinit queue can overload arduino memory if the not dequeued properly
 //create ros publisher named 'sensors_FSR'
 std_msgs::Float32MultiArray sensors;
-ros::Publisher chatter("sensors_FSR", &sensors, queue_size);
+ros::Publisher chatter("sensors_FSR_2_delay", &sensors, queue_size);
+
 
 //publisher for closure
 /*
@@ -103,11 +104,12 @@ for(int i =0; i<NumberOfSensors; i++){
   fsrADC[i]=analogRead(FSR_PIN[i]); // fill array of fsrADC from analogReads
   if(fsrADC[i]>threshold){ //check if threshold is satisfied
   sensors.data[i]=ComputeForce(fsrADC[i]); //compute force from analog read with function ComputeForce
+  
   }else{
   sensors.data[i]=0; // if the threshold is not satistied set the value to zero
   }
   }
-
+//delay
 //Start publish routine
 chatter.publish( &sensors ); //i'm publishing the sensors pointer to array
 nh.spinOnce();
