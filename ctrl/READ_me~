@@ -1,0 +1,19 @@
+READ ME
+for running experiments with the 5 different proposed controllers
+
+
+START
+assign to the participant an ID in an increasing fashion
+find q0 per each participant and map the handsize code (from 1 to 5) for running all the experiment
+
+q0	|	handsize code
+8500	|	1
+9000	|	2
+10000	|	3
+11000	|	4
+12000	|	5
+
+
+delay 
+rosparam set /delay 0,12
+
