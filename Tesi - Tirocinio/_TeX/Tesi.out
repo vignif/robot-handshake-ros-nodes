@@ -1,22 +1,28 @@
-\BOOKMARK [0][-]{chapter.1}{1 The state of the Art}{}% 1
-\BOOKMARK [1][-]{section.1.1}{1.1 The Idea}{chapter.1}% 2
-\BOOKMARK [0][-]{chapter.2}{2 Hardware setup}{}% 3
-\BOOKMARK [1][-]{section.2.1}{2.1 The Pisa/IIT SoftHand}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.2}{2.2 The Sensors}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Calibration of FSRs}{section.2.2}% 6
-\BOOKMARK [0][-]{chapter.3}{3 Software setup}{}% 7
-\BOOKMARK [1][-]{section.3.1}{3.1 Ros}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{3.2 Nodes}{chapter.3}% 9
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Pisa/IIT SoftHand node}{section.3.2}% 10
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 FSRs node}{section.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Auxiliary nodes}{section.3.2}% 12
-\BOOKMARK [0][-]{chapter.4}{4 Open Loop Experiments}{}% 13
-\BOOKMARK [1][-]{section.4.1}{4.1 Step input}{chapter.4}% 14
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Description}{section.4.1}% 15
-\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Transient filter}{section.4.1}% 16
-\BOOKMARK [1][-]{section.4.2}{4.2 Pseudorandom input}{chapter.4}% 17
-\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Description}{section.4.2}% 18
-\BOOKMARK [0][-]{chapter.5}{5 Closed Loop controllers}{}% 19
-\BOOKMARK [1][-]{section.5.1}{5.1 Empirical Proportional controller}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{5.2 Human-calibrated controller}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{6 Results}{}% 22
+\BOOKMARK [0][-]{chapter.1}{1 The Idea}{}% 1
+\BOOKMARK [0][-]{chapter.2}{2 Hardware setup}{}% 2
+\BOOKMARK [1][-]{section.2.1}{2.1 The Pisa/IIT SoftHand}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{2.2 The Sensors}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Calibration of FSRs}{section.2.2}% 5
+\BOOKMARK [0][-]{chapter.3}{3 Software setup}{}% 6
+\BOOKMARK [1][-]{section.3.1}{3.1 Ros}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{3.2 Nodes}{chapter.3}% 8
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Pisa/IIT SoftHand node}{section.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 FSRs node}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Auxiliary nodes}{section.3.2}% 11
+\BOOKMARK [0][-]{chapter.4}{4 Open Loop Experiments}{}% 12
+\BOOKMARK [1][-]{section.4.1}{4.1 Safety}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{4.2 Step input}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Description}{section.4.2}% 15
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Transient filter}{section.4.2}% 16
+\BOOKMARK [1][-]{section.4.3}{4.3 Pseudorandom input}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Description}{section.4.3}% 18
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Transient filter}{section.4.3}% 19
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Response time delay}{section.4.3}% 20
+\BOOKMARK [0][-]{chapter.5}{5 Proposed Controllers}{}% 21
+\BOOKMARK [1][-]{section.5.1}{5.1 Empirical Proportional controller}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{5.2 Robot follower \(C1\)}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{5.3 Human follower with low force\(C2\)}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.4}{5.4 Human follower with high force\(C3\)}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.5}{5.5 Combined C1 and C2 \(C4\)}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.6}{5.6 Combined C1 and C3 \(C5\)}{chapter.5}% 27
+\BOOKMARK [0][-]{chapter.6}{6 Results}{}% 28

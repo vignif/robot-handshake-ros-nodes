@@ -1,8 +1,44 @@
-\chapter*{Introduction}
-The handshake event, commonly used, is a natural human interaction and is extensively used worldwide in events like: greetings, introduction routine between human beings and agreements. 
-The scientific approach to handshake between a human and a robot, therefore, must intrinsically deal with low levels human interactions and some assumption must be done in order to focus on the task.
-The handshake event can be divided in two parts: the approaching and the handshaking. This work is focused on the haptic sense involved during the handshake, knowing that the approaching is mainly executed using non haptic senses(f.i. vision).\\ %The full routine of the handshake event can be summarized in a starting time, a duration. Assuming the human to be in a leading position both, the starting point and the duration of the handshake are decided by the human.
-A parameter involved in the handshake is the consensus; it allow the human to evaluate a handshake mixing aspects like: duration of the event, dynamics, force exchanged.
-An important part of this work is to test different controllers with the purpose of evaluating the consensus using closed loop controllers. 
-  
+%\chapter*{Introduction}
+%The handshake event, commonly used, is a natural human interaction and is extensively used worldwide in events like: greetings, introduction routine between human beings and agreements. 
+%The scientific approach to handshake between a human and a robot, therefore, must intrinsically deal with low levels human interactions and some assumption must be done in order to focus on the task.
+%The handshake event can be divided in two parts: the approaching and the handshaking. This work is focused on the haptic sense involved during the handshake, knowing that the approaching is mainly executed using non haptic senses (f.i. vision).\\ %The full routine of the handshake event can be summarized in a starting time, a duration. Assuming the human to be in a leading position both, the starting point and the duration of the handshake are decided by the human.
+%An interesting parameter involved in the handshake is the consensus; it allow the human to evaluate a handshake mixing aspects like: duration of the event, dynamics, force exchanged.
+%An important part of this work is to test different controllers with the purpose of evaluating the consensus using closed loop controllers. 
+%  
 %Many research teams all over the world are focused on the human-robot physical interaction, this opens the topic to an interesting scientific discussion.  
+\chapter*{Introduction}
+Developing a robot capable of performing a smooth human-like handshake is becoming a highly interested topic in the scientific literature.
+A natural handshake between two humans is a very complex task to replicate, this work just focuses on the interaction force between a robot hand and a human hand.
+In many parts of the world, the handshake is an important interaction task both for business and social context \cite{chaplin2000handshaking}, and an important behaviour to identify is the consensus in the event. It is reasonable to assume that in human-human handshake consensus is reached using not just the haptic sense for the task. Due to the nature of this behaviour it is complex to embed inside a robot, participants will easily distinguish the event with respect to another human or to a robot. It is assumed that humans will naturally take into account for evaluating a handshake not just the grip force but also the skin feedbacks, vision and prior expectations. However, there is little work in the literature studying human-human handshaking, and as such it is not yet possible to describe what constitutes a ‘good’ or a ‘bad’ handshake, or even describe a human-human handshake, in a quantitative manner.
+In Human Robot Interaction \cite{sheridan2016human}, the handshake is a really interesting task to focus on, typically leader and follower roles are clearly defined, master action is measured and elaborated to generate reference inputs for the slave controller. In handshake this prior allocation of roles is not defined, it is an inherently bidirectional action in which both sides actively contribute to the task by applying an active and a reactive action at the same time.
+%
+
+
+Authors in \cite{pedemonte2016design}  present the design and realisation of a haptic interface performing a robotic handshake, the device is aimed at developing a communication system that allows two people to shake hands while being in different locations. 
+
+Another device for the realisation of realistic human-robot handshake is presented in \cite{arns2017design}, in particular in this work a standard characteristic model of the human-palm compliance is developed, based on human hand anatomy and an empirical study.
+	
+The goal of these systems is to appear as a transparent haptic link between the two participants, so that the dynamics of their interaction is similar to in a direct physical handshake. This is different to the goal of this work, which is to realise a robotic autonomous setup able to emulate the human dynamics in handshaking tests.
+%
+A study in human-robot handshaking \cite{Tsalamlal2015}, investigates the effect on perceived affective properties as the arm stiffness, grasping force and robot facial expressions are changed. 
+%
+A handshake can be considered to include multiple phases. In the approach phase, both partners rely on vision in order to establish contact. Next, in the handshaking phase, each partner exerts a force by closing the hand and receives a force from the other partner. 
+For the case of a human-robot handshake, the robot will receive a force from the human $F_{h}$, and also exert a force $F_{r}$ on the human. Finally, the handshake is concluded by one partner releasing the grasp and the second partner following.
+%	
+A haptic virtual reality system which allows human to make physical handshakes with a virtual partner is presented in \cite{wang2011handshake}. Two approaches are proposed: in the first one robot controller employs an embedded curve and disregards human interaction, in the second one an interactive control is implemented; they verified that the second one is perceived more human-like. 
+In \cite{karniel2010turing} is proposes a Turing-like handshake test to compare a human-human handshake, realised through a haptic interface, with different virtual handshake models.
+Both \cite{wang2011handshake} and  \cite{karniel2010turing} focus on arm trajectory and disregard handshake force. 
+For grasping and manipulation tasks, there is a substantial number of studies looking at how the grip force is modulated \cite{johansson1992sensory,eliasson1995development,witney2004cutaneous}, these works show that cutaneous feedback is also used to avoid slip. 
+%
+This principle has also been applied to robotic grasping: authors in \cite{ajoudani2016reflex} propose a system for modulating the grasp strength in a reflexive manner to avoid object slippage.\\
+%
+%This is different to a handshaking interaction, and it is therefore not clear to what extent these dynamics will also be applicable for a handshake.
+
+%These are some characteristics that are still not embedded into the hardware available in the market.
+%The grasping force exchanged in the human-robot handshake event is a complex value to identify, this work is estimating the grasping force from values which can be clearly identified. 
+
+
+%The aspect taken in consideration in this work is the grasping force exchanged in the handshake therefore, an accurate choice has been done on the hardware to use in this work.
+The robot hand chosen for this work (Pisa/IIT SoftHand \cite{catalano2014adaptive) had been instrumented with force sensitive resistors in a position where \cite{knoop2017handshakiness} shown important contact pressure distribution.
+Although force sensitive resistors are really useful in this work thanks to their width, a calibration method is needed in order to obtain an estimation of the human grasping force. %The calibration exploit the idea in \cite{calibFSR}, by comparing force sensitive resistor measurement with a load cell.
+Position reference of Pisa/IIT SoftHand can be controlled, but for a more consistent analysis a measure of robot grasping force is needed. 

@@ -1,17 +1,35 @@
 \begin{thebibliography}{1}
 
-\bibitem{catalanopisa}
-M.~G. Catalano, G.~Grioli, A.~Serio, E.~Farnioli, C.~Piazza, and A.~Bicchi.
-\newblock Adaptive synergies for a humanoid robot hand.
-\newblock In {\em 2012 12th IEEE-RAS International Conference on Humanoid
-  Robots (Humanoids 2012)}, pages 7--14, Nov 2012.
+\bibitem{catalano2014adaptive}
+Manuel~G Catalano, Giorgio Grioli, Edoardo Farnioli, Alessandro Serio, Cristina
+  Piazza, and Antonio Bicchi.
+\newblock Adaptive synergies for the design and control of the pisa/iit
+  softhand.
+\newblock {\em The International Journal of Robotics Research}, 33(5):768--782,
+  2014.
 
-\bibitem{multipurposegripper}
-M.~Choi, D.~Lee, H.~Park, Y.~Kim, G.~Jang, Y.~Shin, J.~Park, M.~Baeg, and
-  J.~Bae.
-\newblock Development of multi-purpose universal gripper.
-\newblock In {\em 2017 56th Annual Conference of the Society of Instrument and
-  Control Engineers of Japan (SICE)}, pages 1421--1424, Sept 2017.
+\bibitem{johansson1992sensory}
+Roland~S Johansson and Kelly~J Cole.
+\newblock Sensory-motor coordination during grasping and manipulative actions.
+\newblock {\em Current opinion in neurobiology}, 2(6):815--823, 1992.
+
+\bibitem{eliasson1995development}
+AC~Eliasson, H~Forssberg, K~Ikuta, I~Apel, G~Westling, and R~Johansson.
+\newblock Development of human precision grip. v. anticipatory and triggered
+  grip actions during sudden loading.
+\newblock {\em Experimental brain research}, 106(3):425, 1995.
+
+\bibitem{knoop2017handshakiness}
+Espen Knoop, Moritz B{\"a}cher, Vincent Wall, Raphael Deimel, Oliver Brock, and
+  Paul Beardsley.
+\newblock Handshakiness: Benchmarking for human-robot hand interactions.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2017 IEEE/RSJ
+  International Conference on}, pages 4982--4989. IEEE, 2017.
+
+\bibitem{fsrdatasheet}
+Interlink~Electronics Inc.
+\newblock Pn: 34-00015 model 402 short tail.
+\newblock In {\em FSR 402 Data Sheet}.
 
 \bibitem{calibFSR}
 J.~A. Flórez and A.~Velásquez.
@@ -19,36 +37,9 @@ J.~A. Flórez and A.~Velásquez.
   applications.
 \newblock In {\em 2010 IEEE ANDESCON}, pages 1--6, Sept 2010.
 
-\bibitem{fsrdatasheet}
-Interlink~Electronics Inc.
-\newblock Pn: 34-00015 model 402 short tail.
-\newblock In {\em FSR 402 Data Sheet}.
-
-\bibitem{espen}
-E.~Knoop, M.~Bächer, V.~Wall, R.~Deimel, O.~Brock, and P.~Beardsley.
-\newblock Handshakiness: Benchmarking for human-robot hand interactions.
-\newblock In {\em 2017 IEEE/RSJ International Conference on Intelligent Robots
-  and Systems (IROS)}, pages 4982--4989, Sept 2017.
-
-\bibitem{papageorgiou}
-D.~Papageorgiou and Z.~Doulgeri.
-\newblock A kinematic controller for human-robot handshaking using internal
-  motion adaptation.
-\newblock In {\em 2015 IEEE International Conference on Robotics and Automation
-  (ICRA)}, pages 5622--5627, May 2015.
-
-\bibitem{facialexpressions}
-M.~Y. Tsalamlal, J.~C. Martin, M.~Ammi, A.~Tapus, and M.~A. Amorim.
-\newblock Affective handshake with a humanoid robot: How do participants
-  perceive and combine its facial and haptic expressions?
-\newblock In {\em 2015 International Conference on Affective Computing and
-  Intelligent Interaction (ACII)}, pages 334--340, Sept 2015.
-
-\bibitem{mirrorgame}
-Chao Zhai, Francesco Alderisio, Piotr Słowiński, Krasimira Tsaneva-Atanasova,
-  and Mario Di~Bernardo.
-\newblock Design of a virtual player for joint improvisation with humans in the
-  mirror game.
-\newblock 11:e0154361, 04 2016.
+\bibitem{lele1954reaction}
+PP~Lele, DC~Sinclair, and G~Weddell.
+\newblock The reaction time to touch.
+\newblock {\em The Journal of physiology}, 123(1):187--203, 1954.
 
 \end{thebibliography}
