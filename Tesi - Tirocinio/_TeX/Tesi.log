@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  17 SEP 2018 17:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.6.11)  17 SEP 2018 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,14 +807,12 @@ Excluding comment 'comment')
 \WF@everypar=\toks35
 Package: wrapfig 2003/01/31  v 3.6
 ) (./Tesi.aux
-(./chapters/frontespizio.aux) (./chapters/abstract.aux) (./chapters/idea.aux)
-(./chapters/hardware.aux) (./chapters/software.aux) (./chapters/openloopexp.aux
-) (./chapters/proposedcontrollers.aux
+(./chapters/frontespizio.aux) (./chapters/abstract.aux)
+(./chapters/introduction.aux) (./chapters/idea.aux) (./chapters/hardware.aux)
+(./chapters/software.aux) (./chapters/openloopexp.aux)
+(./chapters/proposedcontrollers.aux
 
 LaTeX Warning: Label `eq:qlimits' multiply defined.
-
-
-LaTeX Warning: Label `eq:C4' multiply defined.
 
 ) (./chapters/results.aux) (./chapters/conclusion.aux))
 \openout1 = `Tesi.aux'.
@@ -999,12 +997,10 @@ l.22  \end{abstract}
 
 
 ])
-\openout2 = `chapters/idea.aux'.
+\openout2 = `chapters/introduction.aux'.
 
- (./chapters/idea.tex
-Chapter 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+ (./chapters/introduction.texpdfTeX warning (ext4): destination with the same i
+dentifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.18 
@@ -1012,12 +1008,31 @@ l.18
 
 
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
-s been already used, duplicate ignored
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--36
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.118 \include{chapters/idea}
-                              [2]
+l.36 
+      [2])pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.117 \include{chapters/introduction}
+                                      [3]
+\openout2 = `chapters/idea.aux'.
+
+ (./chapters/idea.tex
+Chapter 1.
+[4
+
+
+
+]) [5]
 \openout2 = `chapters/hardware.aux'.
 
  (./chapters/hardware.tex
@@ -1032,50 +1047,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-<Figure/qbhand2-small.png, id=217, 803.0pt x 451.6875pt>
+<Figure/qbhand2-small.png, id=255, 803.0pt x 451.6875pt>
 File: Figure/qbhand2-small.png Graphic file (type png)
 
 <use Figure/qbhand2-small.png>
 Package pdftex.def Info: Figure/qbhand2-small.png used on input line 10.
 (pdftex.def)             Requested size: 185.65298pt x 104.43042pt.
 
-<Figure/qbhand1-small.png, id=219, 803.0pt x 534.99875pt>
+<Figure/qbhand1-small.png, id=257, 803.0pt x 534.99875pt>
 File: Figure/qbhand1-small.png Graphic file (type png)
 
 <use Figure/qbhand1-small.png>
 Package pdftex.def Info: Figure/qbhand1-small.png used on input line 14.
 (pdftex.def)             Requested size: 185.65298pt x 123.69203pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.23 
-      [3
+ [6
 
 
 
- <./Figure/qbhand2-small.png> <./Figure/qbhand1-small.png>]
-<Figure/softhand.png, id=232, 909.3975pt x 771.88374pt>
+ <./Figure/qbhand2-small.png> <./Figure/qbhand1-small.png>] <Figure/softhand.pn
+g, id=269, 909.3975pt x 771.88374pt>
 File: Figure/softhand.png Graphic file (type png)
 
 <use Figure/softhand.png>
 Package pdftex.def Info: Figure/softhand.png used on input line 32.
 (pdftex.def)             Requested size: 247.5415pt x 210.10742pt.
- [4 <./Figure/softhand.png>]
-<Figure/feedbackP.png, id=240, 232.2276pt x 97.8054pt>
+ [7 <./Figure/softhand.png>]
+<Figure/feedbackP.png, id=277, 232.2276pt x 97.8054pt>
 File: Figure/feedbackP.png Graphic file (type png)
 
 <use Figure/feedbackP.png>
 Package pdftex.def Info: Figure/feedbackP.png used on input line 57.
 (pdftex.def)             Requested size: 206.28249pt x 86.88086pt.
 
-<Figure/fsrsingle1.png, id=241, 602.25pt x 602.25pt>
+<Figure/fsrsingle1.png, id=278, 602.25pt x 602.25pt>
 File: Figure/fsrsingle1.png Graphic file (type png)
 
 <use Figure/fsrsingle1.png>
 Package pdftex.def Info: Figure/fsrsingle1.png used on input line 68.
 (pdftex.def)             Requested size: 103.14124pt x 103.13469pt.
- [5 <./Figure/feedbackP.png (PNG copy)>]
+ [8 <./Figure/feedbackP.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -1084,25 +1094,26 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
 
-<Figure/fsr.png, id=252, 1030.85126pt x 406.51875pt>
+<Figure/fsr.png, id=289, 1030.85126pt x 406.51875pt>
 File: Figure/fsr.png Graphic file (type png)
  <use Figure/fsr.png>
 Package pdftex.def Info: Figure/fsr.png used on input line 85.
 (pdftex.def)             Requested size: 330.05324pt x 130.15688pt.
 
-[6 <./Figure/fsrsingle1.png>]
+[9 <./Figure/fsrsingle1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 96--101
 
  []
 
-[7 <./Figure/fsr.png>] <Figure/dummipalm.png, id=275, 541.02126pt x 469.755pt>
+[10 <./Figure/fsr.png>]
+<Figure/dummipalm.png, id=313, 541.02126pt x 469.755pt>
 File: Figure/dummipalm.png Graphic file (type png)
 
 <use Figure/dummipalm.png>
 Package pdftex.def Info: Figure/dummipalm.png used on input line 114.
 (pdftex.def)             Requested size: 165.02347pt x 143.28581pt.
 
-<Figure/dummipalmside.png, id=276, 541.02126pt x 469.755pt>
+<Figure/dummipalmside.png, id=314, 541.02126pt x 469.755pt>
 File: Figure/dummipalmside.png Graphic file (type png)
 
 <use Figure/dummipalmside.png>
@@ -1113,28 +1124,28 @@ Underfull \hbox (badness 2065) in paragraph at lines 121--121
 []\OT1/cmr/m/n/12 Figure 2.7: []Sensorized palm
  []
 
-[8 <./Figure/dummipalm.png> <./Figure/dummipalmside.png>]
+[11 <./Figure/dummipalm.png> <./Figure/dummipalmside.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[9] <Figure/fsrtodummy.png, id=293, 872.058pt x 570.933pt>
+[12] <Figure/fsrtodummy.png, id=330, 872.058pt x 570.933pt>
 File: Figure/fsrtodummy.png Graphic file (type png)
 
 <use Figure/fsrtodummy.png>
 Package pdftex.def Info: Figure/fsrtodummy.png used on input line 189.
 (pdftex.def)             Requested size: 371.30597pt x 243.09196pt.
-) [10 <./Figure/fsrtodummy.png (PNG copy)>] [11]
+) [13 <./Figure/fsrtodummy.png (PNG copy)>] [14]
 \openout2 = `chapters/software.aux'.
 
 
 (./chapters/software.tex
 Chapter 3.
-[12
+[15
 
 
 
-] [13]) [14]
+] [16]) [17]
 \openout2 = `chapters/openloopexp.aux'.
 
  (./chapters/openloopexp.tex
@@ -1144,17 +1155,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-[15
+[18
 
 
 
-] <Figure/stand-small.png, id=334, 803.0pt x 571.13374pt>
+] <Figure/stand-small.png, id=371, 803.0pt x 571.13374pt>
 File: Figure/stand-small.png Graphic file (type png)
 
 <use Figure/stand-small.png>
 Package pdftex.def Info: Figure/stand-small.png used on input line 30.
 (pdftex.def)             Requested size: 247.5415pt x 176.06485pt.
- [16 <./Figure/stand-small.png>]
+ [19 <./Figure/stand-small.png>]
 Package epstopdf Info: Source file: <Figure/step.eps>
 (epstopdf)                    date: 2018-08-29 14:10:58
 (epstopdf)                    size: 28297 bytes
@@ -1166,33 +1177,33 @@ to.pdf Figure/step.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figure/step-eps-converted-to.pdf, id=343, 614.295pt x 533.995pt>
+<Figure/step-eps-converted-to.pdf, id=380, 614.295pt x 533.995pt>
 File: Figure/step-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figure/step-eps-converted-to.pdf>
 Package pdftex.def Info: Figure/step-eps-converted-to.pdf used on input line 88
 .
 (pdftex.def)             Requested size: 288.79422pt x 251.04286pt.
- [17]
+ [20]
 Underfull \hbox (badness 10000) in paragraph at lines 95--100
 
  []
 
-[18 <./Figure/step-eps-converted-to.pdf>]
-<Figure/stepUnfilt.png, id=361, 449.68pt x 337.26pt>
+[21 <./Figure/step-eps-converted-to.pdf>]
+<Figure/stepUnfilt.png, id=399, 449.68pt x 337.26pt>
 File: Figure/stepUnfilt.png Graphic file (type png)
 
 <use Figure/stepUnfilt.png>
 Package pdftex.def Info: Figure/stepUnfilt.png used on input line 104.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
- <Figure/stepfilt.png, id=362, 449.68pt x 337.26pt>
+ <Figure/stepfilt.png, id=400, 449.68pt x 337.26pt>
 File: Figure/stepfilt.png Graphic file (type png)
 
 <use Figure/stepfilt.png>
 Package pdftex.def Info: Figure/stepfilt.png used on input line 110.
 (pdftex.def)             Requested size: 165.02347pt x 123.7653pt.
- [19 <./Figure/stepUnfilt.png (PNG copy)> <./Figure/stepfilt.png (PNG copy)>]
-<Figure/pseudorandom_q.png, id=374, 449.68pt x 337.26pt>
+ [22 <./Figure/stepUnfilt.png (PNG copy)> <./Figure/stepfilt.png (PNG copy)>]
+<Figure/pseudorandom_q.png, id=412, 449.68pt x 337.26pt>
 File: Figure/pseudorandom_q.png Graphic file (type png)
 
 <use Figure/pseudorandom_q.png>
@@ -1202,59 +1213,59 @@ Package pdftex.def Info: Figure/pseudorandom_q.png used on input line 140.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] [21 <./Figure/pseudorandom_q.png (PNG copy)>]
-<Figure/delayGUI.png, id=393, 430.60875pt x 211.79124pt>
+[23] [24 <./Figure/pseudorandom_q.png (PNG copy)>]
+<Figure/delayGUI.png, id=430, 430.60875pt x 211.79124pt>
 File: Figure/delayGUI.png Graphic file (type png)
 
 <use Figure/delayGUI.png>
 Package pdftex.def Info: Figure/delayGUI.png used on input line 184.
 (pdftex.def)             Requested size: 206.28249pt x 101.4615pt.
- [22 <./Figure/delayGUI.png>]) [23]
+ [25 <./Figure/delayGUI.png>]) [26]
 \openout2 = `chapters/proposedcontrollers.aux'.
 
 
 (./chapters/proposedcontrollers.tex
 Chapter 5.
 
-LaTeX Warning: Reference `sec:openloopexp' on page 24 undefined on input line 2
-0.
+LaTeX Warning: Reference `sec:openloopexp' on page 27 undefined on input line 2
+5.
 
-[24
+[27
 
 
 
-] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[27]) [28]
+[30]) [31] [32]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 Chapter 6.
-) [29
+) [33
 
 
 
 ]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex) [30
+ (./chapters/conclusion.tex) [34
 
 
 
-] (./Tesi.bbl [31
+] (./Tesi.bbl [35
 
 
-])
+] [36])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
- [32]
+ [37]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
- (./Tesi.aux
-(./chapters/frontespizio.aux) (./chapters/abstract.aux) (./chapters/idea.aux)
-(./chapters/hardware.aux) (./chapters/software.aux) (./chapters/openloopexp.aux
-) (./chapters/proposedcontrollers.aux) (./chapters/results.aux)
+ (./Tesi.aux (./chapters/frontespizio.aux) (./chapters/abstract.aux)
+(./chapters/introduction.aux) (./chapters/idea.aux) (./chapters/hardware.aux)
+(./chapters/software.aux) (./chapters/openloopexp.aux)
+(./chapters/proposedcontrollers.aux) (./chapters/results.aux)
 (./chapters/conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
@@ -1273,13 +1284,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 16380 strings out of 493304
- 282135 string characters out of 6139871
- 367974 words of memory out of 5000000
- 19315 multiletter control sequences out of 15000+600000
+ 16415 strings out of 493304
+ 282770 string characters out of 6139871
+ 369782 words of memory out of 5000000
+ 19328 multiletter control sequences out of 15000+600000
  12015 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,8n,57p,940b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,8n,57p,994b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -1292,10 +1303,10 @@ public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on Tesi.pdf (36 pages, 2060127 bytes).
+Output written on Tesi.pdf (41 pages, 2071215 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 126 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

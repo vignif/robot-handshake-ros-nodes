@@ -1,29 +1,29 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}The Idea}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Hardware setup}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}The Pisa/IIT SoftHand}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}The Sensors}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Calibration of FSRs}{7}{subsection.2.2.1}
-\contentsline {chapter}{\numberline {3}Software setup}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Ros}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Nodes}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pisa/IIT SoftHand node}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}FSRs node}{14}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Auxiliary nodes}{14}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Open Loop Experiments}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Safety}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Step input}{17}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Description}{17}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Transient filter}{18}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Pseudorandom input}{19}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Description}{20}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Transient filter}{21}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Response time delay}{22}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Proposed Controllers}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1}Empirical Proportional controller}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Robot follower (C1)}{25}{section.5.2}
-\contentsline {section}{\numberline {5.3}Human follower with low force(C2)}{26}{section.5.3}
-\contentsline {section}{\numberline {5.4}Human follower with high force(C3)}{27}{section.5.4}
-\contentsline {section}{\numberline {5.5}Combined C1 and C2 (C4)}{28}{section.5.5}
-\contentsline {section}{\numberline {5.6}Combined C1 and C3 (C5)}{28}{section.5.6}
-\contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
+\contentsline {chapter}{\numberline {1}The Idea}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Hardware setup}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Pisa/IIT SoftHand}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}The Sensors}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Calibration of FSRs}{10}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {3}Software setup}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Ros}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Nodes}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pisa/IIT SoftHand node}{16}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}FSRs node}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Auxiliary nodes}{17}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Open Loop Experiments}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Safety}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Step input}{20}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Description}{20}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Transient filter}{21}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Pseudorandom input}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Description}{23}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Transient filter}{24}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Response time delay}{25}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Proposed Controllers}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Empirical Proportional controller}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Robot follower (C1)}{28}{section.5.2}
+\contentsline {section}{\numberline {5.3}Human follower with low force(C2)}{29}{section.5.3}
+\contentsline {section}{\numberline {5.4}Human follower with high force(C3)}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Combined C1 and C2 (C4)}{31}{section.5.5}
+\contentsline {section}{\numberline {5.6}Combined C1 and C3 (C5)}{31}{section.5.6}
+\contentsline {chapter}{\numberline {6}Results}{33}{chapter.6}

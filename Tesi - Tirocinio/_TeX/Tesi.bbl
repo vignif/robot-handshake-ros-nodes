@@ -1,12 +1,48 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{catalano2014adaptive}
-Manuel~G Catalano, Giorgio Grioli, Edoardo Farnioli, Alessandro Serio, Cristina
-  Piazza, and Antonio Bicchi.
-\newblock Adaptive synergies for the design and control of the pisa/iit
-  softhand.
-\newblock {\em The International Journal of Robotics Research}, 33(5):768--782,
-  2014.
+\bibitem{chaplin2000handshaking}
+William~F Chaplin, Jeffrey~B Phillips, Jonathan~D Brown, Nancy~R Clanton, and
+  Jennifer~L Stein.
+\newblock Handshaking, gender, personality, and first impressions.
+\newblock {\em Journal of personality and social psychology}, 79(1):110, 2000.
+
+\bibitem{sheridan2016human}
+Thomas~B Sheridan.
+\newblock Human--robot interaction: status and challenges.
+\newblock {\em Human factors}, 58(4):525--532, 2016.
+
+\bibitem{pedemonte2016design}
+Nicol{\`o} Pedemonte, Thierry Lalibert{\'e}, and Cl{\'e}ment Gosselin.
+\newblock Design, control, and experimental validation of a handshaking
+  reactive robotic interface.
+\newblock {\em Journal of Mechanisms and Robotics}, 8(1):011020, 2016.
+
+\bibitem{arns2017design}
+Moritz Arns, Thierry Lalibert{\'e}, and Cl{\'e}ment Gosselin.
+\newblock Design, control and experimental validation of a haptic robotic hand
+  performing human-robot handshake with human-like agility.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2017 IEEE/RSJ
+  International Conference on}, pages 4626--4633. IEEE, 2017.
+
+\bibitem{Tsalamlal2015}
+Mohamed~Yassine Tsalamlal, Jean-Claude Martin, Mehdi Ammi, A.~Tapus, and M-A.
+  Amorim.
+\newblock Affective handshake with a humanoid robot: How do participants
+  perceive and combine its facial and haptic expressions?
+\newblock {\em Proc. 6th Conf Affective Computing and Intelligent Interaction},
+  pages 334--340, 2015.
+
+\bibitem{wang2011handshake}
+Zheng Wang, Elias Giannopoulos, Mel Slater, and Angelika Peer.
+\newblock Handshake: Realistic human-robot interaction in haptic enhanced
+  virtual reality.
+\newblock {\em Presence}, 20(4):371--392, 2011.
+
+\bibitem{karniel2010turing}
+Amir Karniel, Ilana Nisky, Guy Avraham, Bat-Chen Peles, and Shelly Levy-Tzedek.
+\newblock A turing-like handshake test for motor intelligence.
+\newblock In {\em International Conference on Human Haptic Sensing and Touch
+  Enabled Computer Applications}, pages 197--204. Springer, 2010.
 
 \bibitem{johansson1992sensory}
 Roland~S Johansson and Kelly~J Cole.
@@ -19,6 +55,26 @@ AC~Eliasson, H~Forssberg, K~Ikuta, I~Apel, G~Westling, and R~Johansson.
   grip actions during sudden loading.
 \newblock {\em Experimental brain research}, 106(3):425, 1995.
 
+\bibitem{witney2004cutaneous}
+Alice~G Witney, Alan Wing, Jean-Louis Thonnard, and Allan~M Smith.
+\newblock The cutaneous contribution to adaptive precision grip.
+\newblock {\em Trends in neurosciences}, 27(10):637--643, 2004.
+
+\bibitem{ajoudani2016reflex}
+Arash Ajoudani, Elif Hocaoglu, Alessandro Altobelli, Matteo Rossi, Edoardo
+  Battaglia, Nikos Tsagarakis, and Antonio Bicchi.
+\newblock Reflex control of the pisa/iit softhand during object slippage.
+\newblock In {\em Robotics and Automation (ICRA), 2016 IEEE International
+  Conference on}, pages 1972--1979. IEEE, 2016.
+
+\bibitem{catalano2014adaptive}
+Manuel~G Catalano, Giorgio Grioli, Edoardo Farnioli, Alessandro Serio, Cristina
+  Piazza, and Antonio Bicchi.
+\newblock Adaptive synergies for the design and control of the pisa/iit
+  softhand.
+\newblock {\em The International Journal of Robotics Research}, 33(5):768--782,
+  2014.
+
 \bibitem{knoop2017handshakiness}
 Espen Knoop, Moritz B{\"a}cher, Vincent Wall, Raphael Deimel, Oliver Brock, and
   Paul Beardsley.
@@ -29,7 +85,7 @@ Espen Knoop, Moritz B{\"a}cher, Vincent Wall, Raphael Deimel, Oliver Brock, and
 \bibitem{fsrdatasheet}
 Interlink~Electronics Inc.
 \newblock Pn: 34-00015 model 402 short tail.
-\newblock In {\em FSR 402 Data Sheet}.
+\newblock In {\em FSR 402 Data Sheet}, pages 1--6.
 
 \bibitem{calibFSR}
 J.~A. Flórez and A.~Velásquez.
