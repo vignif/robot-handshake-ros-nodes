@@ -11,5 +11,5 @@ the folder GUI_handshake provides a useful program to easily try
 different demos. The GUI is built using GTK/C++. feel free to use 
 it as model for your personal GUI in ROS. 
 
-you can find more infos at 
-https://sites.google.com/view/human-robot-handshake/home
+you can find more infos at  https://sites.google.com/view/human-robot-handshake/home
+a cleaned version of the package can be found in https://github.com/vignif/robot-handshake-ros-release
